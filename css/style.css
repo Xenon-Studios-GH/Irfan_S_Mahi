@@ -1,16 +1,67 @@
 /* Base Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hero-name-font-size: 150px;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: system-ui, -apple-system, sans-serif;
-    background-color: #030303;
-    color: #f5f5f5;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  background-color: #030303;
+  color: #f5f5f5;
+}
+
+/* Hero Image */
+.hero-image {
+  position: relative;
+  display: inline-block;
+  z-index: 10;
+}
+
+.hero-image::before,
+.hero-image::after {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50px);
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: var(--hero-name-font-size);
+  white-space: nowrap;
+  opacity: 0.8;
+  width: 100%;
+  text-align: center;
+  line-height: 1;
+  z-index: 10;
+}
+
+.hero-image::before {
+  content: "Munthasir";
+  top: 0;
+  transform: translateX(-465px) translateY(355px);
+}
+
+.hero-image::after {
+  content: "Rahman";
+  bottom: 0;
+  transform: translateX(15px) translateY(55px);
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
 }
