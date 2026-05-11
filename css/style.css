@@ -31,6 +31,39 @@ html {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 1000px;
+  /* Animation Initial State */
+  width: 60px;
+  opacity: 0;
+  overflow: hidden;
+  animation: islandExpand 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes islandExpand {
+  0% {
+    width: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
+  40% {
+    width: 60px;
+    border-radius: 50%;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  60% {
+    width: 1000px;
+    border-radius: 50px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  100% {
+    width: 1000px;
+    border-radius: 50px;
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 .island-content {
@@ -38,6 +71,15 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+  opacity: 0;
+  animation: fadeInContent 0.6s ease forwards;
+  animation-delay: 1s;
+}
+
+@keyframes fadeInContent {
+  to {
+    opacity: 1;
+  }
 }
 
 .island-logo {
@@ -46,6 +88,46 @@ html {
   font-weight: bold;
   color: #2e5bff;
   text-shadow: 0 0 20px rgba(46, 91, 255, 0.5);
+  opacity: 0;
+  animation: fadeInLogo 0.4s ease forwards;
+  animation-delay: 1.1s;
+}
+
+@keyframes fadeInLogo {
+  to {
+    opacity: 1;
+  }
+}
+
+.island-menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  opacity: 0;
+  animation: fadeInMenu 0.4s ease forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInMenu {
+  to {
+    opacity: 1;
+  }
+}
+
+.island-menu li {
+  opacity: 0;
+  animation: fadeInItem 0.3s ease forwards;
+}
+
+.island-menu li:nth-child(1) { animation-delay: 1.3s; }
+.island-menu li:nth-child(2) { animation-delay: 1.4s; }
+.island-menu li:nth-child(3) { animation-delay: 1.5s; }
+.island-menu li:nth-child(4) { animation-delay: 1.6s; }
+
+@keyframes fadeInItem {
+  to {
+    opacity: 1;
+  }
 }
 
 .island-menu {
