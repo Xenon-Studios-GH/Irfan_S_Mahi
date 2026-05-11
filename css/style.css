@@ -65,3 +65,36 @@ body {
   object-fit: cover;
   opacity: 0.4;
 }
+
+/* Text Carousel */
+.carousel-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: inline-block;
+  animation: marquee 15s linear infinite;
+}
+
+.carousel-track span {
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3rem;
+  margin: 0 3rem;
+  opacity: 0.7;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
