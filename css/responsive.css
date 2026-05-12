@@ -1,370 +1,235 @@
 /* ===================================
    RESPONSIVE CSS
-   Breakpoints: 320px - 1024px+
+   Hero Circle + Typography only
    =================================== */
 
+/* Small Mobile: 320px - 359px */
 @media (min-width: 320px) and (max-width: 359px) {
     :root { --hero-circle-size: 280px; --hero-circle-radius: 140px; --hero-circle-bottom: 140px; }
     body { font-size: 12px; line-height: 1.45; }
-    h2 { font-size: 20px !important; line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 6px !important; }
-    h3 { font-size: 16px !important; line-height: 1.3; margin-bottom: 16px !important; }
-    p { font-size: 12px !important; line-height: 1.5; margin-bottom: 16px !important; }
-    .dynamic-island { bottom: 8px; padding: 6px 10px; border-radius: 20px; }
-    .dynamic-island.expand { width: calc(100% - 16px) !important; max-width: 300px; border-radius: 24px; }
+    h2 { font-size: 20px !important; margin-bottom: 6px !important; }
+    h3 { font-size: 16px !important; margin-bottom: 16px !important; }
+    p { font-size: 12px !important; margin-bottom: 16px !important; }
+    .skill-item { padding: 8px 10px; border-radius: 6px; }
+    .skill-item span { font-size: 9px !important; }
+    .skill-item p { font-size: 11px !important; }
+    .skill-item:hover { transform: translateX(2px); }
+    .video-wrapper { max-width: calc(100% - 8px); }
+    .video-glow { inset: -10px; filter: blur(20px); }
+    .video-frame { border-radius: 6px; }
+    .island-menu a { font-size: 8px !important; }
     .island-content { gap: 8px; }
     .island-menu { gap: 10px; }
-    .island-menu a { font-size: 8px !important; letter-spacing: 0.5px; }
-    .dynamic-island .font-bold.text-xl { font-size: 12px !important; letter-spacing: 1px; }
-    .video-wrapper { max-width: calc(100% - 8px); padding: 0 4px; }
-    .video-glow { inset: -10px; filter: blur(20px); }
-    .video-frame { border-radius: 6px; box-shadow: 0 0 0 0.5px rgba(255,255,255,0.04), 0 8px 16px -4px rgba(0,0,0,0.9); }
-    .video-frame::before { border-radius: 6px; padding: 0.5px; }
-    .plyr--video { border-radius: 6px; }
-    .plyr--video .plyr__control--overlaid { padding: 8px 12px !important; border-radius: 6px; }
-    .plyr__controls { padding: 6px !important; }
-    .plyr__control { padding: 6px !important; }
-    .plyr__control--overlaid svg { width: 16px; height: 16px; }
-    .skill-item { padding: 8px 10px; gap: 8px; border-radius: 6px; }
-    .skill-item span { font-size: 9px !important; }
-    .skill-item p { font-size: 11px !important; line-height: 1.4; }
-    #work .flex.gap-4 { flex-direction: column; gap: 8px; max-width: 240px; }
-    #work .flex.gap-4 a { padding: 10px 16px; font-size: 11px; border-radius: 6px; text-align: center; }
-    #work section, #about section { padding: 32px 8px !important; }
-    #about .w-full.max-w-7xl { padding: 0 4px; gap: 24px; }
-    #about .space-y-4 { gap: 6px; }
-    #contact h2 { font-size: 20px !important; }
-    .skill-item:hover { transform: translateX(2px); }
-    #contact form { max-width: 240px; }
-    #contact input, #contact textarea { padding: 10px 12px; font-size: 11px; border-radius: 6px; }
-    #contact button { padding: 10px 16px; font-size: 11px; border-radius: 6px; }
 }
 
+/* Mobile: 360px - 399px */
 @media (min-width: 360px) and (max-width: 399px) {
     :root { --hero-circle-size: 320px; --hero-circle-radius: 160px; --hero-circle-bottom: 160px; }
     body { font-size: 13px; line-height: 1.5; }
-    h2 { font-size: 22px !important; line-height: 1.2; letter-spacing: -0.3px; margin-bottom: 6px !important; }
-    h3 { font-size: 18px !important; line-height: 1.3; margin-bottom: 18px !important; }
-    p { font-size: 13px !important; line-height: 1.5; margin-bottom: 18px !important; }
-    .dynamic-island { bottom: 10px; padding: 8px 12px; border-radius: 24px; }
-    .dynamic-island.expand { width: calc(100% - 24px) !important; max-width: 320px; border-radius: 28px; }
+    h2 { font-size: 22px !important; margin-bottom: 6px !important; }
+    h3 { font-size: 18px !important; margin-bottom: 18px !important; }
+    p { font-size: 13px !important; margin-bottom: 18px !important; }
+    .skill-item { padding: 10px 12px; border-radius: 8px; }
+    .skill-item span { font-size: 10px !important; }
+    .skill-item p { font-size: 12px !important; }
+    .skill-item:hover { transform: translateX(3px); }
+    .video-wrapper { max-width: calc(100% - 12px); }
+    .video-glow { inset: -12px; filter: blur(24px); }
+    .video-frame { border-radius: 8px; }
+    .island-menu a { font-size: 9px !important; }
     .island-content { gap: 10px; }
     .island-menu { gap: 12px; }
-    .island-menu a { font-size: 9px !important; letter-spacing: 0.5px; }
-    .dynamic-island .font-bold.text-xl { font-size: 13px !important; letter-spacing: 1px; }
-    .video-wrapper { max-width: calc(100% - 12px); padding: 0 6px; }
-    .video-glow { inset: -12px; filter: blur(24px); }
-    .video-frame { border-radius: 8px; box-shadow: 0 0 0 0.5px rgba(255,255,255,0.05), 0 10px 20px -5px rgba(0,0,0,0.9); }
-    .video-frame::before { border-radius: 8px; padding: 0.5px; }
-    .plyr--video { border-radius: 8px; }
-    .plyr--video .plyr__control--overlaid { padding: 10px 14px !important; border-radius: 8px; }
-    .plyr__controls { padding: 8px !important; }
-    .plyr__control { padding: 6px !important; }
-    .plyr__control--overlaid svg { width: 18px; height: 18px; }
-    .skill-item { padding: 10px 12px; gap: 10px; border-radius: 8px; }
-    .skill-item span { font-size: 10px !important; }
-    .skill-item p { font-size: 12px !important; line-height: 1.4; }
-    #work .flex.gap-4 { flex-direction: column; gap: 10px; max-width: 260px; }
-    #work .flex.gap-4 a { padding: 11px 18px; font-size: 12px; border-radius: 8px; text-align: center; }
-    #work section, #about section { padding: 40px 12px !important; }
-    #about .w-full.max-w-7xl { padding: 0 6px; gap: 28px; }
-    #about .space-y-4 { gap: 8px; }
-    #contact h2 { font-size: 22px !important; }
-    .skill-item:hover { transform: translateX(3px); }
-    #contact h2 { font-size: 22px !important; }
-    #contact p { font-size: 13px !important; max-width: 280px !important; }
-    #contact .space-y-6 { gap: 10px; }
-    #contact form { max-width: 280px; }
-    #contact input, #contact textarea { padding: 11px 14px; font-size: 12px; border-radius: 8px; }
-    #contact button { padding: 11px 20px; font-size: 12px; border-radius: 8px; }
 }
 
+/* Large Mobile: 400px - 439px */
 @media (min-width: 400px) and (max-width: 439px) {
     :root { --hero-circle-size: 360px; --hero-circle-radius: 180px; --hero-circle-bottom: 180px; }
     body { font-size: 13px; line-height: 1.5; }
-    h2 { font-size: 24px !important; line-height: 1.2; letter-spacing: -0.2px; margin-bottom: 8px !important; }
-    h3 { font-size: 20px !important; line-height: 1.3; margin-bottom: 20px !important; }
-    p { font-size: 13px !important; line-height: 1.55; margin-bottom: 20px !important; }
-    .dynamic-island { bottom: 12px; padding: 10px 14px; border-radius: 28px; }
-    .dynamic-island.expand { width: calc(100% - 32px) !important; max-width: 340px; border-radius: 32px; }
+    h2 { font-size: 24px !important; margin-bottom: 8px !important; }
+    h3 { font-size: 20px !important; margin-bottom: 20px !important; }
+    p { font-size: 13px !important; margin-bottom: 20px !important; }
+    .skill-item { padding: 12px 14px; border-radius: 10px; }
+    .skill-item span { font-size: 10px !important; }
+    .skill-item p { font-size: 13px !important; }
+    .skill-item:hover { transform: translateX(4px); }
+    .video-wrapper { max-width: calc(100% - 16px); }
+    .video-glow { inset: -16px; filter: blur(28px); }
+    .video-frame { border-radius: 10px; }
+    .island-menu a { font-size: 10px !important; }
     .island-content { gap: 12px; }
     .island-menu { gap: 14px; }
-    .island-menu a { font-size: 10px !important; letter-spacing: 0.6px; }
-    .dynamic-island .font-bold.text-xl { font-size: 14px !important; letter-spacing: 1.5px; }
-    .video-wrapper { max-width: calc(100% - 16px); padding: 0 8px; }
-    .video-glow { inset: -16px; filter: blur(28px); }
-    .video-frame { border-radius: 10px; box-shadow: 0 0 0 0.5px rgba(255,255,255,0.06), 0 12px 24px -6px rgba(0,0,0,0.9); }
-    .video-frame::before { border-radius: 10px; padding: 1px; }
-    .plyr--video { border-radius: 10px; }
-    .plyr--video .plyr__control--overlaid { padding: 12px 16px !important; border-radius: 10px; }
-    .plyr__controls { padding: 10px !important; }
-    .plyr__control { padding: 8px !important; }
-    .plyr__control--overlaid svg { width: 20px; height: 20px; }
-    .skill-item { padding: 12px 14px; gap: 12px; border-radius: 10px; }
-    .skill-item span { font-size: 10px !important; }
-    .skill-item p { font-size: 13px !important; line-height: 1.4; }
-    #work .flex.gap-4 { flex-direction: column; gap: 12px; max-width: 280px; }
-    #work .flex.gap-4 a { padding: 12px 20px; font-size: 12px; border-radius: 10px; text-align: center; }
-    #work section, #about section { padding: 48px 16px !important; }
-    #about .w-full.max-w-7xl { padding: 0 8px; gap: 32px; }
-    #about .space-y-4 { gap: 10px; }
-    #contact h2 { font-size: 24px !important; }
-    #contact p { font-size: 13px !important; }
-    #contact .space-y-6 { gap: 12px; }
-    #contact .max-w-md { max-width: 300px !important; }
-    #contact input, #contact textarea { padding: 12px 14px; font-size: 12px; border-radius: 10px; }
-    #contact button { padding: 12px 20px; font-size: 12px; border-radius: 10px; }
-    .skill-item:hover { transform: translateX(4px); }
 }
 
+/* Mobile Plus: 440px - 479px */
 @media (min-width: 440px) and (max-width: 479px) {
     :root { --hero-circle-size: 400px; --hero-circle-radius: 200px; --hero-circle-bottom: 200px; }
-    body { font-size: 14px; line-height: 1.5; }
-    h2 { font-size: 26px !important; line-height: 1.2; letter-spacing: -0.2px; margin-bottom: 8px !important; }
-    h3 { font-size: 22px !important; line-height: 1.3; margin-bottom: 22px !important; }
-    p { font-size: 14px !important; line-height: 1.55; margin-bottom: 22px !important; }
-    .dynamic-island { bottom: 14px; padding: 10px 16px; border-radius: 30px; }
-    .dynamic-island.expand { width: calc(100% - 32px) !important; max-width: 360px; border-radius: 36px; }
-    .island-content { gap: 14px; }
-    .island-menu { gap: 16px; }
-    .island-menu a { font-size: 10px !important; letter-spacing: 0.7px; }
-    .dynamic-island .font-bold.text-xl { font-size: 15px !important; letter-spacing: 1.5px; }
-    .video-wrapper { max-width: calc(100% - 20px); padding: 0 10px; }
-    .video-glow { inset: -18px; filter: blur(30px); }
-    .video-frame { border-radius: 12px; box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 14px 28px -7px rgba(0,0,0,0.9); }
-    .video-frame::before { border-radius: 12px; padding: 1px; }
-    .plyr--video { border-radius: 12px; }
-    .plyr--video .plyr__control--overlaid { padding: 14px 18px !important; border-radius: 12px; }
-    .plyr__controls { padding: 12px !important; }
-    .plyr__control { padding: 8px !important; }
-    .plyr__control--overlaid svg { width: 22px; height: 22px; }
-    .skill-item { padding: 14px 16px; gap: 12px; border-radius: 12px; }
-    .skill-item span { font-size: 11px !important; }
-    .skill-item p { font-size: 14px !important; line-height: 1.4; }
-    #work .flex.gap-4 { flex-direction: column; gap: 12px; max-width: 300px; }
-    #work .flex.gap-4 a { padding: 14px 24px; font-size: 13px; border-radius: 12px; text-align: center; }
-    #work section, #about section { padding: 56px 20px !important; }
-    #about .w-full.max-w-7xl { padding: 0 10px; gap: 36px; }
-    #about .space-y-4 { gap: 12px; }
-    #contact h2 { font-size: 26px !important; }
-    #contact p { font-size: 14px !important; }
-    #contact .space-y-6 { gap: 12px; }
-    #contact .max-w-md { max-width: 320px !important; }
-    #contact input, #contact textarea { padding: 14px 16px; font-size: 13px; border-radius: 12px; }
-    #contact button { padding: 14px 24px; font-size: 13px; border-radius: 12px; }
-    .skill-item:hover { transform: translateX(4px); }
-}
-
-@media (min-width: 480px) and (max-width: 519px) {
-    :root { --hero-circle-size: 440px; --hero-circle-radius: 220px; --hero-circle-bottom: 220px; }
-    body { font-size: 14px; line-height: 1.5; }
-    h2 { font-size: 28px !important; line-height: 1.2; letter-spacing: -0.1px; margin-bottom: 10px !important; }
-    h3 { font-size: 24px !important; line-height: 1.25; margin-bottom: 24px !important; }
-    p { font-size: 14px !important; line-height: 1.6; margin-bottom: 24px !important; }
-    .dynamic-island { bottom: 16px; padding: 12px 18px; border-radius: 32px; }
-    .dynamic-island.expand { width: 90% !important; max-width: 400px; border-radius: 40px; }
-    .island-content { gap: 16px; }
-    .island-menu { gap: 18px; }
-    .island-menu a { font-size: 11px !important; letter-spacing: 0.8px; }
-    .dynamic-island .font-bold.text-xl { font-size: 16px !important; letter-spacing: 2px; }
-    .video-wrapper { max-width: calc(100% - 24px); padding: 0 12px; }
-    .video-glow { inset: -20px; filter: blur(35px); }
-    .video-frame { border-radius: 14px; box-shadow: 0 0 0 1px rgba(255,255,255,0.07), 0 16px 32px -8px rgba(0,0,0,0.9); }
-    .video-frame::before { border-radius: 14px; padding: 1px; }
-    .plyr--video { border-radius: 14px; }
-    .plyr--video .plyr__control--overlaid { padding: 16px 22px !important; border-radius: 14px; }
-    .plyr__controls { padding: 14px !important; }
-    .plyr__control { padding: 10px !important; }
-    .plyr__control--overlaid svg { width: 24px; height: 24px; }
-    .skill-item { padding: 14px 18px; gap: 14px; border-radius: 14px; }
+    body { font-size: 14px; }
+    h2 { font-size: 26px !important; margin-bottom: 8px !important; }
+    h3 { font-size: 22px !important; margin-bottom: 22px !important; }
+    p { font-size: 14px !important; margin-bottom: 22px !important; }
+    .skill-item { padding: 14px 16px; border-radius: 12px; }
     .skill-item span { font-size: 11px !important; }
     .skill-item p { font-size: 14px !important; }
-    #work .flex.gap-4 { flex-direction: row; flex-wrap: wrap; justify-content: center; max-width: 100%; }
-    #work .flex.gap-4 a { padding: 14px 24px; font-size: 13px; border-radius: 14px; }
-    #work section, #about section { padding: 64px 24px !important; }
-    #about .w-full.max-w-7xl { padding: 0 12px; gap: 40px; }
-    #about .space-y-4 { gap: 14px; }
-    #contact h2 { font-size: 28px !important; }
-    .skill-item:hover { transform: translateX(5px); }
+    .skill-item:hover { transform: translateX(4px); }
+    .video-wrapper { max-width: calc(100% - 20px); }
+    .video-glow { inset: -18px; filter: blur(30px); }
+    .video-frame { border-radius: 12px; }
+    .island-menu a { font-size: 10px !important; }
+    .island-content { gap: 14px; }
+    .island-menu { gap: 16px; }
 }
 
+/* Mobile Landscape: 480px - 519px */
+@media (min-width: 480px) and (max-width: 519px) {
+    :root { --hero-circle-size: 440px; --hero-circle-radius: 220px; --hero-circle-bottom: 220px; }
+    body { font-size: 14px; }
+    h2 { font-size: 28px !important; margin-bottom: 10px !important; }
+    h3 { font-size: 24px !important; margin-bottom: 24px !important; }
+    .skill-item { padding: 14px 18px; border-radius: 14px; }
+    .skill-item span { font-size: 11px !important; }
+    .skill-item p { font-size: 14px !important; }
+    .skill-item:hover { transform: translateX(5px); }
+    .video-wrapper { max-width: calc(100% - 24px); }
+    .video-glow { inset: -20px; filter: blur(35px); }
+    .video-frame { border-radius: 14px; }
+    .island-menu a { font-size: 11px !important; }
+    .island-content { gap: 16px; }
+    .island-menu { gap: 18px; }
+}
+
+/* Large Mobile Landscape: 520px - 599px */
 @media (min-width: 520px) and (max-width: 599px) {
     :root { --hero-circle-size: 480px; --hero-circle-radius: 240px; --hero-circle-bottom: 240px; }
-    body { font-size: 14px; line-height: 1.5; }
+    body { font-size: 14px; }
     h2 { font-size: 30px !important; margin-bottom: 12px !important; }
     h3 { font-size: 26px !important; margin-bottom: 28px !important; }
-    p { font-size: 14px !important; margin-bottom: 28px !important; }
-    .dynamic-island.expand { width: 88% !important; max-width: 440px; }
-    .island-content { gap: 20px; }
-    .island-menu { gap: 20px; }
-    .island-menu a { font-size: 11px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 17px !important; }
+    .skill-item { padding: 14px 20px; }
     .video-wrapper { max-width: calc(100% - 32px); }
     .video-glow { inset: -24px; }
     .video-frame { border-radius: 16px; }
-    #work .flex.gap-4 { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-    #work .flex.gap-4 a { padding: 14px 28px; }
-    #work section, #about section { padding: 72px 32px !important; }
-    #about .w-full.max-w-7xl { gap: 48px; }
-    .skill-item { padding: 14px 20px; }
-    #contact .max-w-lg { max-width: 400px; }
-    #contact .space-y-6 { gap: 14px; }
-    #contact input, #contact textarea { padding: 14px 20px; border-radius: 14px; }
-    #contact button { padding: 14px 28px; }
+    .island-menu a { font-size: 11px !important; }
+    .island-content { gap: 20px; }
+    .island-menu { gap: 20px; }
 }
 
+/* Small Tablet: 600px - 659px */
 @media (min-width: 600px) and (max-width: 659px) {
     :root { --hero-circle-size: 520px; --hero-circle-radius: 260px; --hero-circle-bottom: 260px; }
-    body { font-size: 14px; line-height: 1.5; }
+    body { font-size: 14px; }
     h2 { font-size: 32px !important; margin-bottom: 12px !important; }
     h3 { font-size: 28px !important; margin-bottom: 32px !important; }
-    p { font-size: 15px !important; margin-bottom: 32px !important; }
-    .dynamic-island.expand { width: 85% !important; max-width: 480px; }
-    .island-content { gap: 24px; }
-    .island-menu { gap: 24px; }
-    .island-menu a { font-size: 11px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 18px !important; }
+    .skill-item { padding: 16px 22px; }
     .video-wrapper { max-width: calc(100% - 40px); }
     .video-glow { inset: -28px; filter: blur(40px); }
     .video-frame { border-radius: 18px; }
-    #work section, #about section { padding: 80px 40px !important; }
-    .skill-item { padding: 16px 22px; }
-    #contact .max-w-lg { max-width: 440px; }
-    #contact .space-y-6 { gap: 16px; }
+    .island-menu a { font-size: 11px !important; }
+    .island-content { gap: 24px; }
+    .island-menu { gap: 24px; }
 }
 
+/* Tablet: 660px - 719px */
 @media (min-width: 660px) and (max-width: 719px) {
     :root { --hero-circle-size: 560px; --hero-circle-radius: 280px; --hero-circle-bottom: 280px; }
-    body { font-size: 15px; line-height: 1.5; }
+    body { font-size: 15px; }
     h2 { font-size: 34px !important; margin-bottom: 14px !important; }
     h3 { font-size: 30px !important; margin-bottom: 36px !important; }
-    p { font-size: 15px !important; margin-bottom: 36px !important; }
-    .dynamic-island.expand { width: 80% !important; max-width: 520px; }
-    .island-content { gap: 28px; }
-    .island-menu { gap: 28px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 18px !important; }
+    .skill-item { padding: 16px 24px; }
     .video-wrapper { max-width: calc(100% - 48px); }
     .video-glow { inset: -32px; filter: blur(45px); }
     .video-frame { border-radius: 20px; }
-    #work section, #about section { padding: 88px 48px !important; }
-    .skill-item { padding: 16px 24px; }
-    #contact .max-w-lg { max-width: 480px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 28px; }
+    .island-menu { gap: 28px; }
 }
 
+/* Large Tablet: 720px - 779px */
 @media (min-width: 720px) and (max-width: 779px) {
     :root { --hero-circle-size: 600px; --hero-circle-radius: 300px; --hero-circle-bottom: 300px; }
-    body { font-size: 15px; line-height: 1.5; }
+    body { font-size: 15px; }
     h2 { font-size: 36px !important; margin-bottom: 14px !important; }
     h3 { font-size: 32px !important; margin-bottom: 40px !important; }
-    p { font-size: 16px !important; margin-bottom: 40px !important; }
-    .dynamic-island.expand { width: 75% !important; max-width: 560px; }
-    .island-content { gap: 32px; }
-    .island-menu { gap: 32px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 20px !important; }
+    .skill-item { padding: 18px 26px; }
     .video-wrapper { max-width: calc(100% - 56px); }
     .video-glow { inset: -36px; filter: blur(50px); }
     .video-frame { border-radius: 22px; }
-    #work section, #about section { padding: 96px 56px !important; }
-    #about .w-full.max-w-7xl { gap: 48px; }
-    .skill-item { padding: 18px 26px; }
-    #contact .max-w-lg { max-width: 520px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 32px; }
+    .island-menu { gap: 32px; }
 }
 
+/* Tablet Landscape: 780px - 839px */
 @media (min-width: 780px) and (max-width: 839px) {
     :root { --hero-circle-size: 640px; --hero-circle-radius: 320px; --hero-circle-bottom: 320px; }
-    body { font-size: 15px; line-height: 1.5; }
+    body { font-size: 15px; }
     h2 { font-size: 38px !important; margin-bottom: 16px !important; }
     h3 { font-size: 34px !important; margin-bottom: 44px !important; }
-    p { font-size: 16px !important; margin-bottom: 44px !important; }
-    .dynamic-island.expand { width: 70% !important; max-width: 600px; }
-    .island-content { gap: 36px; }
-    .island-menu { gap: 36px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 20px !important; }
+    .skill-item { padding: 18px 28px; }
     .video-wrapper { max-width: calc(100% - 64px); }
     .video-glow { inset: -40px; filter: blur(55px); }
     .video-frame { border-radius: 24px; }
-    #work section, #about section { padding: 104px 64px !important; }
-    .skill-item { padding: 18px 28px; }
-    #contact .max-w-lg { max-width: 560px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 36px; }
+    .island-menu { gap: 36px; }
 }
 
+/* Large Tablet Landscape: 840px - 899px */
 @media (min-width: 840px) and (max-width: 899px) {
     :root { --hero-circle-size: 680px; --hero-circle-radius: 340px; --hero-circle-bottom: 340px; }
-    body { font-size: 16px; line-height: 1.5; }
+    body { font-size: 16px; }
     h2 { font-size: 40px !important; margin-bottom: 16px !important; }
     h3 { font-size: 36px !important; margin-bottom: 48px !important; }
-    p { font-size: 16px !important; margin-bottom: 48px !important; }
-    .dynamic-island.expand { width: 65% !important; max-width: 640px; }
-    .island-content { gap: 40px; }
-    .island-menu { gap: 40px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 22px !important; }
+    .skill-item { padding: 20px 30px; }
     .video-wrapper { max-width: 720px; }
     .video-glow { inset: -44px; filter: blur(60px); }
     .video-frame { border-radius: 26px; }
-    #work section, #about section { padding: 112px 72px !important; }
-    .skill-item { padding: 20px 30px; }
-    #contact .max-w-lg { max-width: 600px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 40px; }
+    .island-menu { gap: 40px; }
 }
 
+/* Small Desktop: 900px - 959px */
 @media (min-width: 900px) and (max-width: 959px) {
     :root { --hero-circle-size: 720px; --hero-circle-radius: 360px; --hero-circle-bottom: 360px; }
-    body { font-size: 16px; line-height: 1.5; }
+    body { font-size: 16px; }
     h2 { font-size: 42px !important; margin-bottom: 16px !important; }
     h3 { font-size: 38px !important; margin-bottom: 52px !important; }
-    p { font-size: 17px !important; margin-bottom: 52px !important; }
-    .dynamic-island.expand { width: 600px; }
-    .island-content { gap: 44px; }
-    .island-menu { gap: 44px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 22px !important; }
+    .skill-item { padding: 20px 32px; }
     .video-wrapper { max-width: 800px; }
     .video-glow { inset: -48px; filter: blur(60px); }
     .video-frame { border-radius: 28px; }
-    #work section, #about section { padding: 120px 80px !important; }
-    .skill-item { padding: 20px 32px; }
-    #contact .max-w-lg { max-width: 640px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 44px; }
+    .island-menu { gap: 44px; }
 }
 
+/* Desktop: 960px - 1023px */
 @media (min-width: 960px) and (max-width: 1023px) {
     :root { --hero-circle-size: 760px; --hero-circle-radius: 380px; --hero-circle-bottom: 380px; }
-    body { font-size: 16px; line-height: 1.5; }
+    body { font-size: 16px; }
     h2 { font-size: 44px !important; margin-bottom: 18px !important; }
     h3 { font-size: 40px !important; margin-bottom: 56px !important; }
-    p { font-size: 17px !important; margin-bottom: 56px !important; }
-    .dynamic-island.expand { width: 640px; }
-    .island-content { gap: 48px; }
-    .island-menu { gap: 48px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 24px !important; }
+    .skill-item { padding: 22px 34px; }
     .video-wrapper { max-width: 900px; }
     .video-glow { inset: -52px; filter: blur(60px); }
     .video-frame { border-radius: 28px; }
-    #work section, #about section { padding: 128px 88px !important; }
-    .skill-item { padding: 22px 34px; }
-    #contact .max-w-lg { max-width: 640px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 48px; }
+    .island-menu { gap: 48px; }
 }
 
+/* Large Desktop: 1024px+ */
 @media (min-width: 1024px) {
     :root { --hero-circle-size: 800px; --hero-circle-radius: 400px; --hero-circle-bottom: 400px; }
-    body { font-size: 16px; line-height: 1.5; }
+    body { font-size: 16px; }
     h2 { font-size: 48px !important; margin-bottom: 20px !important; }
     h3 { font-size: 44px !important; margin-bottom: 64px !important; }
-    p { font-size: 18px !important; margin-bottom: 64px !important; }
-    .dynamic-island.expand { width: 680px; }
-    .island-content { gap: 56px; }
-    .island-menu { gap: 56px; }
-    .island-menu a { font-size: 12px !important; }
-    .dynamic-island .font-bold.text-xl { font-size: 26px !important; }
+    .skill-item { padding: 24px 36px; }
     .video-wrapper { max-width: 1100px; }
     .video-glow { inset: -60px; filter: blur(60px); }
     .video-frame { border-radius: 30px; }
-    #work section, #about section { padding: 144px 96px !important; }
-    .skill-item { padding: 24px 36px; }
-    #contact .max-w-lg { max-width: 500px; }
-    #contact .space-y-6 { gap: 20px; }
+    .island-menu a { font-size: 12px !important; }
+    .island-content { gap: 56px; }
+    .island-menu { gap: 56px; }
 }
 
 /* ===================================
@@ -374,7 +239,6 @@
     h2 { font-size: 24px !important; }
     h3 { font-size: 20px !important; }
     p { font-size: 12px !important; }
-    #work section, #about section { padding: 24px 48px !important; }
     .video-glow { inset: -16px; filter: blur(24px); }
 }
 
