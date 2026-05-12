@@ -1,0 +1,105 @@
+.collab-carousel {
+    position: relative;
+    max-width: 1400px;
+    margin: 60px auto 0;
+    overflow: hidden;
+}
+
+.carousel-1, .carousel-2 {
+    position: relative;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
+.carousel-1 {
+    margin-bottom: 2px;
+}
+
+.carousel-2 {
+    margin-top: 2px;
+}
+
+.carousel-track {
+    display: inline-block;
+    animation: carouselScroll 25s linear infinite;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(113, 90, 90, 0.9);
+    letter-spacing: 0.12em;
+}
+
+.carousel-2 .carousel-track {
+    animation: carouselScroll 25s linear infinite;
+    color: rgba(68, 68, 78, 0.95);
+    animation-direction: reverse;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes carouselScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.carousel-track-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.carousel-track {
+    display: flex;
+    gap: 40px;
+    animation: scrollCarousel 28s linear infinite;
+    width: max-content;
+    padding: 10px 0;
+}
+
+.carousel-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.carousel-logo {
+    flex-shrink: 0;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(55, 53, 62, 0.3);
+    border: 1px solid rgba(211, 218, 217, 0.08);
+    border-radius: 12px;
+    padding: 12px 20px;
+    transition: all 0.4s ease;
+    filter: grayscale(100%) brightness(1.6);
+    opacity: 0.6;
+}
+
+.carousel-logo:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+    border-color: rgba(113, 90, 90, 0.4);
+    background: rgba(113, 90, 90, 0.15);
+    transform: scale(1.05);
+}
+
+.carousel-logo span {
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: #D3DAD9;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
