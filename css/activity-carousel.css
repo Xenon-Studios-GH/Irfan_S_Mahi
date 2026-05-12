@@ -1,0 +1,67 @@
+.activity-carousel-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.activity-track {
+    display: flex;
+    gap: 24px;
+    animation: activityScroll 30s linear infinite;
+    width: max-content;
+    padding: 10px 0;
+}
+
+.activity-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes activityScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.activity-card {
+    flex-shrink: 0;
+    width: 288px;
+    background: rgba(55, 53, 62, 0.3);
+    border: 1px solid rgba(211, 218, 217, 0.08);
+    border-radius: 20px;
+    padding: 24px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(113, 90, 90, 0.4);
+    background: rgba(113, 90, 90, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.activity-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.activity-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    color: #715A5A;
+}
+
+.activity-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #D3DAD9;
+    margin-top: 8px;
+}
+
+.activity-card p {
+    font-size: 0.875rem;
+    color: rgba(211, 218, 217, 0.5);
+    margin-top: 8px;
+    line-height: 1.6;
+}

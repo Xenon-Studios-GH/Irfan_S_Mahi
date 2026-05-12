@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/collab.css">
     <link rel="stylesheet" href="css/collab-counter.css">
+    <link rel="stylesheet" href="css/collab-carousel.css">
+    <link rel="stylesheet" href="css/activity-carousel.css">
     <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -48,6 +50,19 @@
     <section id="hero" class="min-h-screen relative overflow-hidden">
         <div class="hero-circle absolute left-1/2 -translate-x-1/2 bg-accent"></div>
     </section>
+
+    <div class="collab-carousel">
+        <div class="carousel-1">
+            <div class="carousel-track">
+                XENON STUDIOS // DIGITAL EMPIRE // TECH BUddY // FUTURE ACADEMY // MEDIA NETWORK // BRAND LAB // CREATIVE ALLIANCE // EDU TECH BD //
+            </div>
+        </div>
+        <div class="carousel-2">
+            <div class="carousel-track">
+                XENON STUDIOS // DIGITAL EMPIRE // TECH BUddY // FUTURE ACADEMY // MEDIA NETWORK // BRAND LAB // CREATIVE ALLIANCE // EDU TECH BD //
+            </div>
+        </div>
+    </div>
 
     <section id="work" class="min-h-screen flex flex-col items-center justify-center px-8 py-20">
         <h2 class="text-4xl font-bold text-light mb-4">Section Title</h2>
@@ -275,7 +290,55 @@
                 </div>
                 <div class="collab-card-arrow">→</div>
             </div>
-        </div>  
+        </div>
+    </section>
+
+    <section id="activities" class="py-20 px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-light mb-4">Recent Activities</h2>
+            <p class="text-light/60 text-lg">Stay updated with my latest work</p>
+        </div>
+
+        <div class="activity-carousel-wrapper overflow-hidden">
+            <div class="activity-track flex gap-6" id="activityTrack">
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">🎬</div>
+                    <span class="text-accent font-mono text-sm">Today</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">Music Video Completed</h4>
+                    <p class="text-light/50 text-sm mt-2">Finished editing a 4-minute music video with color grading and VFX</p>
+                </div>
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">📱</div>
+                    <span class="text-accent font-mono text-sm">Yesterday</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">Social Media Reels</h4>
+                    <p class="text-light/50 text-sm mt-2">Created 5 viral reels for Instagram with trending transitions</p>
+                </div>
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">🎥</div>
+                    <span class="text-accent font-mono text-sm">2 days ago</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">Documentary Edit</h4>
+                    <p class="text-light/50 text-sm mt-2">Completed 15-minute documentary with complex narrative structure</p>
+                </div>
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">✨</div>
+                    <span class="text-accent font-mono text-sm">3 days ago</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">Brand Campaign</h4>
+                    <p class="text-light/50 text-sm mt-2">Delivered a full brand video series with 3 episodes</p>
+                </div>
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">🌟</div>
+                    <span class="text-accent font-mono text-sm">4 days ago</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">YouTube Collab</h4>
+                    <p class="text-light/50 text-sm mt-2">Published a collab video that reached 100K views</p>
+                </div>
+                <div class="activity-card flex-shrink-0 w-72 bg-secondary/30 border border-light/10 rounded-2xl p-6">
+                    <div class="activity-icon mb-4">🎨</div>
+                    <span class="text-accent font-mono text-sm">5 days ago</span>
+                    <h4 class="text-xl font-semibold text-light mt-2">Motion Graphics</h4>
+                    <p class="text-light/50 text-sm mt-2">Created animated logo intro for a startup brand</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.polyfilled.min.js"></script>
@@ -283,6 +346,8 @@
     <script src="js/video.js"></script>
     <script src="js/collab.js"></script>
     <script src="js/collab-counter.js"></script>
+    <script src="js/collab-carousel.js"></script>
+    <script src="js/activity-carousel.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
