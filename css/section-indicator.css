@@ -1,0 +1,56 @@
+.section-indicator {
+    position: fixed;
+    top: 24px;
+    left: 24px;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.section-indicator-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+}
+
+.section-indicator-item.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-indicator-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(113, 90, 90, 0.3);
+    transition: all 0.3s ease;
+}
+
+.section-indicator-item.active .section-indicator-dot {
+    background: #715A5A;
+    box-shadow: 0 0 12px rgba(113, 90, 90, 0.5);
+}
+
+.section-indicator-line {
+    width: 32px;
+    height: 1px;
+    background: rgba(211, 218, 217, 0.1);
+}
+
+.section-indicator-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.6rem;
+    color: rgba(211, 218, 217, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    transition: all 0.3s ease;
+}
+
+.section-indicator-item.active .section-indicator-text {
+    color: rgba(211, 218, 217, 0.6);
+}
