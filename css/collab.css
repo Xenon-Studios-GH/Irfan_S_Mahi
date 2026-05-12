@@ -60,31 +60,13 @@
 .collab-card:hover {
     transform: translateY(-12px) scale(1.02);
     border-color: rgba(113, 90, 90, 0.4);
-    box-shadow: 
-        0 40px 80px rgba(0, 0, 0, 0.4),
-        0 0 60px rgba(113, 90, 90, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .collab-card:hover::before {
     opacity: 1;
 }
 
-.collab-card-glow {
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(113, 90, 90, 0.3), transparent 50%);
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
 
-.collab-card:hover .collab-card-glow {
-    opacity: 1;
-}
 
 .collab-card-icon {
     width: 64px;
@@ -193,19 +175,16 @@
     text-align: center;
 }
 
-.collab-stat-number {
+.collab-stat .stat-number {
     font-size: 56px;
     font-weight: 700;
     color: #D3DAD9;
     line-height: 1;
     margin-bottom: 8px;
+    text-shadow: 0 0 20px rgba(113, 90, 90, 0.5);
 }
 
-.collab-stat-number span {
-    color: #715A5A;
-}
-
-.collab-stat-label {
+.stat-label {
     font-size: 14px;
     color: rgba(211, 218, 217, 0.5);
     text-transform: uppercase;
@@ -232,17 +211,7 @@
         flex-wrap: wrap;
     }
 
-    .collab-stat-number {
+    .collab-stat .stat-number {
         font-size: 40px;
-    }
-
-    .collab-timeline {
-        padding-left: 40px;
-    }
-
-    .collab-timeline-item::before {
-        left: -32px;
-        width: 12px;
-        height: 12px;
     }
 }
