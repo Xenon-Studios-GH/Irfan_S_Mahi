@@ -25,43 +25,122 @@
 
 .activity-card {
     flex-shrink: 0;
-    width: 288px;
-    background: rgba(55, 53, 62, 0.3);
+    width: 280px;
+    background: rgba(55, 53, 62, 0.4);
     border: 1px solid rgba(211, 218, 217, 0.08);
     border-radius: 20px;
-    padding: 24px;
+    overflow: hidden;
     transition: all 0.4s ease;
     cursor: pointer;
 }
 
 .activity-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-8px) scale(1.02);
     border-color: rgba(113, 90, 90, 0.4);
-    background: rgba(113, 90, 90, 0.15);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
 }
 
-.activity-icon {
-    font-size: 2rem;
-    margin-bottom: 16px;
+.reel-thumbnail {
+    position: relative;
+    height: 160px;
+    background: linear-gradient(135deg, #37353E, #44444E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.activity-date {
+.reel-thumbnail::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.6) 100%);
+}
+
+.reel-play {
+    width: 50px;
+    height: 50px;
+    background: rgba(113, 90, 90, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #D3DAD9;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover .reel-play {
+    transform: scale(1.1);
+    background: #715A5A;
+}
+
+.reel-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4px 8px;
+    border-radius: 6px;
     font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    color: #715A5A;
+    font-size: 0.7rem;
+    color: #D3DAD9;
 }
 
-.activity-card h4 {
-    font-size: 1.25rem;
+.reel-content {
+    display: flex;
+    gap: 12px;
+    padding: 16px;
+}
+
+.reel-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.reel-info {
+    flex: 1;
+}
+
+.reel-date {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.7rem;
+    color: #715A5A;
+    text-transform: uppercase;
+}
+
+.reel-title {
+    font-size: 1rem;
     font-weight: 600;
     color: #D3DAD9;
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
-.activity-card p {
-    font-size: 0.875rem;
+.reel-desc {
+    font-size: 0.8rem;
     color: rgba(211, 218, 217, 0.5);
-    margin-top: 8px;
-    line-height: 1.6;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.reel-stats {
+    display: flex;
+    gap: 16px;
+    padding: 12px 16px;
+    border-top: 1px solid rgba(211, 218, 217, 0.05);
+}
+
+.reel-stats span {
+    font-size: 0.75rem;
+    color: rgba(211, 218, 217, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.reel-stats span::before {
+    content: '♥';
+    font-size: 0.65rem;
 }
