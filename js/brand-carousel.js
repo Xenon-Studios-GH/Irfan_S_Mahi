@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  initDualCarousel();
+  initBrandCarousel();
 });
 
-function initDualCarousel() {
+function initBrandCarousel() {
   const carousels = document.querySelectorAll(".carousel-track");
 
   carousels.forEach((track) => {

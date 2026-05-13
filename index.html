@@ -13,7 +13,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/collab.css">
     <link rel="stylesheet" href="css/collab-counter.css">
-    <link rel="stylesheet" href="css/collab-carousel.css">
+    <link rel="stylesheet" href="css/brand-carousel.css">
     <link rel="stylesheet" href="css/activity-carousel.css">
     <link rel="stylesheet" href="css/cta.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -90,17 +90,24 @@
     </div>
 
     <section id="hero" class="min-h-screen relative overflow-hidden flex items-center justify-center">
+        <div class="hero-particles" id="heroParticles"></div>
         <div class="hero-circle absolute left-1/2 -translate-x-1/2 bg-accent"></div>
         <div class="hero-content relative z-10 text-center px-6">
-            <div class="hero-badge font-mono text-xs tracking-widest text-accent mb-6 uppercase">Portfolio</div>
-            <h1 class="hero-name text-6xl md:text-8xl font-bold text-light mb-4 tracking-tight">Irfan</h1>
-            <h1 class="hero-name text-6xl md:text-8xl font-bold text-accent mb-6 tracking-tight">Sadiq Mahi</h1>
-            <p class="hero-tagline text-lg md:text-xl text-light/60 max-w-xl mx-auto">Video Editor & Motion Graphics
-                Artist</p>
+            <div class="hero-badge font-mono text-xs tracking-widest text-accent mb-6 uppercase opacity-0 animate-fade-in">Portfolio</div>
+            <h1 class="hero-name text-6xl md:text-8xl font-bold text-light mb-4 tracking-tight opacity-0 animate-slide-up">Irfan</h1>
+            <h1 class="hero-name text-6xl md:text-8xl font-bold text-accent mb-6 tracking-tight opacity-0 animate-slide-up delay-100">Sadiq Mahi</h1>
+            <p class="hero-tagline text-lg md:text-xl text-light/60 max-w-xl mx-auto opacity-0 animate-fade-in delay-200">Video Editor & Motion Graphics Artist</p>
+            <div class="hero-cta mt-12 opacity-0 animate-slide-up delay-300">
+                <div class="scroll-indicator">
+                    <div class="scroll-line"></div>
+                    <span class="scroll-text">Scroll to explore</span>
+                </div>
+            </div>
         </div>
+        <div class="hero-gradient-overlay"></div>
     </section>
 
-    <div class="collab-carousel">
+    <div class="brand-carousel">
         <div class="carousel-1">
             <div class="carousel-track">
                 XENON STUDIOS // DIGITAL EMPIRE // TECH BUddY // FUTURE ACADEMY // MEDIA NETWORK // BRAND LAB //
@@ -578,7 +585,7 @@
     <script src="js/video.js"></script>
     <script src="js/collab.js"></script>
     <script src="js/collab-counter.js"></script>
-    <script src="js/collab-carousel.js"></script>
+    <script src="js/brand-carousel.js"></script>
     <script src="js/activity-carousel.js"></script>
     <script src="js/cta.js"></script>
     <script src="js/footer.js"></script>
