@@ -3,6 +3,8 @@
    Premium Rolling Number Animation
    ======================================== */
 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
+
 :root {
   --counter-digit-height: 50px;
   --counter-duration: 2.5s;
@@ -10,14 +12,32 @@
   --counter-easing: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+/* Stats Container */
+.stats-container {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 80px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-item {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 /* Counter Container */
 .stat-number {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Orbitron", sans-serif;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #d3dad9;
+  color: #00ffff;
+  text-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
   gap: 2px;
   position: relative;
   min-height: 60px;
@@ -115,6 +135,16 @@
   opacity: 0.6;
 }
 
+/* Stat Label Styling */
+.stat-label {
+  font-family: "Fira Code", monospace;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 /* ========================================
    RESPONSIVE ADJUSTMENTS
    ======================================== */
@@ -140,17 +170,6 @@
 }
 
 /* ========================================
-    STAT LABEL STYLING
-    ======================================== */
-.stat-label {
-  font-size: 0.7rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin-top: 8px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* ========================================
    ANIMATION COMPLETE STATE
    ======================================== */
 .stat-number.animation-complete .digit-inner {
@@ -158,6 +177,17 @@
 }
 
 /* Subtle glow pulse after animation */
+@keyframes subtlePulse {
+  0%,
+  100% {
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+  }
+  50% {
+    text-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+  }
+}
+
 .stat-number.animation-complete {
-  animation: none;
+  animation: subtlePulse 3s ease-in-out infinite;
+  animation-delay: 2.5s;
 }
