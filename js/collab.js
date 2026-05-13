@@ -10,8 +10,8 @@ function initCollabAnimations() {
       entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
           setTimeout(() => {
-            entry.target.classList.add("collab-card-visible");
-          }, index * 100);
+            entry.target.classList.add("visible");
+          }, index * 150);
         }
       });
     },
@@ -47,6 +47,5 @@ function handleCardMouseLeave(e) {
 document.querySelectorAll(".collab-card").forEach((card) => {
   card.addEventListener("click", () => {
     const title = card.querySelector("h3").textContent;
-    console.log(`Opening collaboration: ${title}`);
   });
 });

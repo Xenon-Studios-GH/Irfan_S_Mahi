@@ -4,9 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initBrandCarousel() {
   const carousels = document.querySelectorAll(".carousel-track");
-
+  
   carousels.forEach((track) => {
-    const content = track.textContent.trim();
-    track.textContent = content + " " + content;
+    const items = track.querySelectorAll(".carousel-item");
+    if (items.length > 0) {
+      const itemsCopy = Array.from(items).map(item => item.cloneNode(true));
+      itemsCopy.forEach(item => track.appendChild(item));
+    }
   });
 }

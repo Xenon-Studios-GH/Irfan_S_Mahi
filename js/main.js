@@ -1,20 +1,97 @@
 /* ===================================
-   MAHI PORTFOLIO - MAIN JS
-   =================================== */
+    MAHI PORTFOLIO - MAIN JS
+    =================================== */
 
 /* ===================================
-    HELPERS
-    =================================== */
+     HELPERS
+     =================================== */
 function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
     };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
+}
+
+function throttle(func, limit) {
+    let inThrottle;
+    return function executedFunction(...args) {
+        if (!inThrottle) {
+            func(...args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+/* ===================================
+    PARTICLE SYSTEM
+    =================================== */
+function initParticles() {
+    const container = document.getElementById('heroParticles');
+    if (!container) return;
+    
+    const particleCount = 30;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 15 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        particle.style.width = (2 + Math.random() * 4) + 'px';
+        particle.style.height = particle.style.width;
+        particle.style.opacity = Math.random() * 0.5 + 0.2;
+        container.appendChild(particle);
+    }
+}
+
+/* ===================================
+    PARALLAX EFFECTS
+    =================================== */
+function initParallax() {
+    const heroCircle = document.querySelector('.hero-circle');
+    const heroContent = document.querySelector('.hero-content');
+    
+    if (!heroCircle || !heroContent) return;
+    
+    window.addEventListener('scroll', throttle(() => {
+        const scrollY = window.scrollY;
+        const maxScroll = window.innerHeight;
+        const progress = Math.min(scrollY / maxScroll, 1);
+        
+        heroCircle.style.transform = `translateX(-50%) translateY(${scrollY * 0.3}px) scale(${1 + progress * 0.2})`;
+        heroContent.style.transform = `translateY(${-scrollY * 0.2}px)`;
+        heroContent.style.opacity = 1 - progress * 1.5;
+    }, 16), { passive: true });
+}
+
+/* ===================================
+    SMOOTH SCROLL REVEAL
+    =================================== */
+function initScrollReveal() {
+    const revealElements = document.querySelectorAll('section > *');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '-50px' });
+    
+    revealElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        observer.observe(el);
+    });
 }
 
 function throttle(func, limit) {
@@ -211,11 +288,14 @@ function initPixelPerfectAccessibility() {
 }
 
 /* ===================================
-    INIT ON DOM READY
-    =================================== */
-document.addEventListener("DOMContentLoaded", () => {
-  initPixelPerfectSkills();
-  initPixelPerfectScroll();
-  initPixelPerfectTouch();
-  initPixelPerfectAccessibility();
+     INIT ON DOM READY
+     =================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    initParticles();
+    initParallax();
+    initScrollReveal();
+    initPixelPerfectSkills();
+    initPixelPerfectScroll();
+    initPixelPerfectTouch();
+    initPixelPerfectAccessibility();
 });
