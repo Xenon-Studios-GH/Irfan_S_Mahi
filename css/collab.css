@@ -191,27 +191,33 @@
 }
 
 .stat-label {
-  @media (max-width: 768px) {
-    .collab-header h2 {
-      font-size: 36px;
-    }
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  color: rgba(211, 218, 217, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
 
-    .collab-grid {
-      grid-template-columns: 1fr;
-    }
+@media (max-width: 768px) {
+  .collab-header h2 {
+    font-size: 36px;
+  }
 
-    .collab-featured {
-      grid-column: span 1;
-      padding: 32px;
-    }
+  .collab-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .collab-stats {
-      gap: 24px;
-      flex-wrap: wrap;
-    }
+  .collab-featured {
+    grid-column: span 1;
+    padding: 32px;
+  }
 
-    .collab-stat .stat-number {
-      font-size: 40px;
-    }
+  .collab-stats {
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .collab-stat .stat-number {
+    font-size: 40px;
   }
 }
