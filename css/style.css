@@ -2,6 +2,78 @@
   --hero-circle-size: 600px;
   --hero-circle-radius: 300px;
   --hero-circle-bottom: 300px;
+  --accent-glow: rgba(113, 90, 90, 0.6);
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: rgba(113, 90, 90, 0.4);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #715A5A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8a6a6a;
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(113, 90, 90, 0.4);
+  border-radius: 50%;
+  animation: float 15s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(50px);
+    opacity: 0;
+  }
+}
+
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 20%, rgba(113, 90, 90, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(68, 68, 78, 0.05) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .hero-circle {
@@ -12,20 +84,152 @@
   height: var(--hero-circle-size);
   border-radius: var(--hero-circle-radius);
   bottom: calc(var(--hero-circle-bottom) * -1);
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.6;
+    filter: blur(60px);
+  }
+  50% {
+    opacity: 0.9;
+    filter: blur(80px);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 1s var(--transition-smooth) forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--transition-smooth) forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(180deg, rgba(113, 90, 90, 0.6), transparent);
+  animation: scroll-line 2s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+  0%, 100% {
+    transform: scaleY(0.5);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.scroll-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(211, 218, 217, 0.3);
+  text-transform: uppercase;
 }
 
 .skill-item {
-  transition: all 0.3s ease;
+  transition: all 0.4s var(--transition-smooth);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
     0 4px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #715A5A, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
 }
 
 .skill-item:hover {
   background: rgba(113, 90, 90, 0.3) !important;
   border-color: rgba(113, 90, 90, 0.5) !important;
   box-shadow:
-    0 0 30px rgba(113, 90, 90, 0.3),
+    0 0 40px rgba(113, 90, 90, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  transform: translateX(8px);
+  transform: translateX(8px) scale(1.02);
+}
+
+.skill-item:hover span {
+  transform: translateX(4px);
+}
+
+.skill-item span {
+  transition: transform 0.3s ease;
+}
+
+.skill-item::after {
+  content: '→';
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-10px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  color: #715A5A;
+  font-size: 14px;
+}
+
+.skill-item:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
