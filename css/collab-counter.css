@@ -4,162 +4,160 @@
    ======================================== */
 
 :root {
-    --counter-digit-height: 50px;
-    --counter-duration: 2.5s;
-    --counter-stagger: 0.15s;
-    --counter-easing: cubic-bezier(0.19, 1, 0.22, 1);
+  --counter-digit-height: 50px;
+  --counter-duration: 2.5s;
+  --counter-stagger: 0.15s;
+  --counter-easing: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* Counter Container */
 .stat-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #D3DAD9;
-    gap: 2px;
-    position: relative;
-    min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #d3dad9;
+  gap: 2px;
+  position: relative;
+  min-height: 60px;
 }
 
 /* Digit Stack Wrapper */
 .digit-stack {
-    position: relative;
-    width: 1em;
-    height: var(--counter-digit-height);
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
+  position: relative;
+  width: 1em;
+  height: var(--counter-digit-height);
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
 }
 
 /* Single Digit Outer (mask) */
 .digit-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* Digit Inner (the rolling element) */
 .digit-inner {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    will-change: transform;
-    transform: translate3d(0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 /* Each digit number */
 .digit-inner span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: var(--counter-digit-height);
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--counter-digit-height);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1;
 }
 
 /* Suffix (%, +, X, etc.) */
 .counter-suffix {
-    display: inline-flex;
-    align-items: center;
-    margin-left: 2px;
-    font-size: 0.7em;
-    opacity: 0.8;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 2px;
+  font-size: 0.7em;
+  opacity: 0.8;
 }
 
 /* Animation States */
 .stat-number.is-visible .digit-inner {
-    animation: rollDigit var(--counter-duration) var(--counter-easing) forwards;
+  animation: rollDigit var(--counter-duration) var(--counter-easing) forwards;
 }
 
 /* Keyframe for rolling */
 @keyframes rollDigit {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(0, calc(-1 * var(--target-percent)), 0);
-    }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, calc(-1 * var(--target-percent)), 0);
+  }
 }
 
 /* Stagger delays for multi-digit numbers */
 .stat-number.is-visible .digit-stack:nth-child(1) .digit-inner {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .stat-number.is-visible .digit-stack:nth-child(2) .digit-inner {
-    animation-delay: var(--counter-stagger);
+  animation-delay: var(--counter-stagger);
 }
 
 .stat-number.is-visible .digit-stack:nth-child(3) .digit-inner {
-    animation-delay: calc(var(--counter-stagger) * 2);
+  animation-delay: calc(var(--counter-stagger) * 2);
 }
 
 .stat-number.is-visible .digit-stack:nth-child(4) .digit-inner {
-    animation-delay: calc(var(--counter-stagger) * 3);
+  animation-delay: calc(var(--counter-stagger) * 3);
 }
 
 /* Decimal support */
 .stat-number .decimal-point {
-    margin: 0 2px;
-    opacity: 0.6;
+  margin: 0 2px;
+  opacity: 0.6;
 }
 
 /* ========================================
    RESPONSIVE ADJUSTMENTS
    ======================================== */
 @media (max-width: 768px) {
-    :root {
-        --counter-digit-height: 40px;
-    }
-    
-    .stat-number {
-        font-size: 2rem;
-    }
+  :root {
+    --counter-digit-height: 40px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
-    :root {
-        --counter-digit-height: 35px;
-    }
-    
-    .stat-number {
-        font-size: 1.5rem;
-        min-height: 45px;
-    }
+  :root {
+    --counter-digit-height: 35px;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+    min-height: 45px;
+  }
 }
 
 /* ========================================
-   STAT LABEL STYLING
-   ======================================== */
+    STAT LABEL STYLING
+    ======================================== */
 .stat-label {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 8px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* ========================================
    ANIMATION COMPLETE STATE
    ======================================== */
 .stat-number.animation-complete .digit-inner {
-    transform: translate3d(0, calc(-1 * var(--target-percent)), 0);
+  transform: translate3d(0, calc(-1 * var(--target-percent)), 0);
 }
 
 /* Subtle glow pulse after animation */
 .stat-number.animation-complete {
-    animation: none;
+  animation: none;
 }

@@ -189,35 +189,3 @@
   margin-bottom: 8px;
   text-shadow: 0 0 20px rgba(113, 90, 90, 0.5);
 }
-
-.stat-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.8rem;
-  color: rgba(211, 218, 217, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-@media (max-width: 768px) {
-  .collab-header h2 {
-    font-size: 36px;
-  }
-
-  .collab-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .collab-featured {
-    grid-column: span 1;
-    padding: 32px;
-  }
-
-  .collab-stats {
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-
-  .collab-stat .stat-number {
-    font-size: 40px;
-  }
-}

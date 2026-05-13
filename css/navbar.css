@@ -1,101 +1,120 @@
 .dynamic-island {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%) translateY(100px);
-    width: 60px;
-    height: 60px;
-    opacity: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 
-        0 25px 50px -12px rgba(0, 0, 0, 0.8),
-        inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out, width 0.4s ease-out;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  width: 60px;
+  height: 60px;
+  opacity: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.4s ease-out,
+    opacity 0.4s ease-out,
+    width 0.4s ease-out;
 }
 
 .dynamic-island.visible {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
 .dynamic-island.expand {
-    width: 950px;
-    border-radius: 50px;
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out, width 0.4s ease-out, border-radius 0.4s ease-out;
+  width: 950px;
+  border-radius: 50px;
+  transition:
+    transform 0.4s ease-out,
+    opacity 0.4s ease-out,
+    width 0.4s ease-out,
+    border-radius 0.4s ease-out;
 }
 
 .island-content {
-    opacity: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: opacity 0.2s ease-out;
-    width: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s ease-out;
+  width: 100%;
 }
 
 .dynamic-island.expand .island-content {
-    opacity: 1;
+  opacity: 1;
 }
 
 .island-logo {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 16px;
-    color: #715A5A;
-    padding: 0 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #715a5a;
+  padding: 0 20px;
 }
 
 .island-menu {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .island-menu.left {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .island-menu.right {
-    justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .island-menu li {
-    opacity: 0;
+  opacity: 0;
 }
 
 .dynamic-island.expand .island-menu li {
-    animation: fadeInItem 0.25s ease forwards;
+  animation: fadeInItem 0.25s ease forwards;
 }
 
-.dynamic-island.expand .island-menu li:nth-child(1) { animation-delay: 0.2s; }
-.dynamic-island.expand .island-menu li:nth-child(2) { animation-delay: 0.3s; }
-.dynamic-island.expand .island-menu li:nth-child(3) { animation-delay: 0.4s; }
-.dynamic-island.expand .island-menu li:nth-child(4) { animation-delay: 0.5s; }
+.dynamic-island.expand .island-menu li:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.dynamic-island.expand .island-menu li:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.dynamic-island.expand .island-menu li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.dynamic-island.expand .island-menu li:nth-child(4) {
+  animation-delay: 0.5s;
+}
 
 @keyframes fadeInItem {
-    from { opacity: 0; transform: translateY(5px); }
-    to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .island-menu a {
-    font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 1px;
-    color: rgba(211, 218, 217, 0.7);
-    transition: color 0.2s ease;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(211, 218, 217, 0.7);
+  transition: color 0.2s ease;
 }
 
 .island-menu a:hover {
-    color: #715A5A;
+  color: #715a5a;
 }
-
-/* Responsive - use from responsive.css */
