@@ -1,28 +1,52 @@
+/* ============================================================
+   FOOTER SECTION
+   ============================================================
+   The footer contains:
+   - Brand logo and tagline
+   - Navigation links (4 columns)
+   - Social media icons
+   - Copyright and availability status
+   ============================================================ */
+
+/* Main footer container */
 .footer-section {
   position: relative;
+  /* Gradient from slightly lighter to darker */
   background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
   border-top: 1px solid rgba(211, 218, 217, 0.04);
   overflow: hidden;
 }
 
+/* Main footer content area */
 .footer-main {
   padding: 80px 32px 60px;
   position: relative;
   z-index: 1;
 }
 
+/* ============================================================
+   FOOTER GRID LAYOUT
+   ============================================================ */
+
+/* 4-column grid for footer content */
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr; /* Brand column is wider */
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Brand section - leftmost column */
 .footer-brand {
   max-width: 320px;
 }
 
+/* ============================================================
+   LOGO & BRAND
+   ============================================================ */
+
+/* Logo container with icon and text */
 .footer-logo {
   display: flex;
   align-items: center;
@@ -30,6 +54,7 @@
   margin-bottom: 24px;
 }
 
+/* Logo icon (initials "MR") */
 .footer-logo-mark {
   width: 48px;
   height: 48px;
@@ -44,6 +69,7 @@
   color: #d3dad9;
 }
 
+/* Logo text */
 .footer-logo-text {
   font-size: 1.25rem;
   font-weight: 600;
@@ -51,6 +77,7 @@
   letter-spacing: -0.02em;
 }
 
+/* Brand description */
 .footer-tagline {
   font-size: 14px;
   color: rgba(211, 218, 217, 0.4);
@@ -58,11 +85,17 @@
   margin-bottom: 28px;
 }
 
+/* ============================================================
+   SOCIAL MEDIA LINKS
+   ============================================================ */
+
+/* Container for social icons */
 .footer-social {
   display: flex;
   gap: 10px;
 }
 
+/* Individual social link */
 .footer-social-link {
   width: 40px;
   height: 40px;
@@ -78,6 +111,7 @@
   transition: all 0.3s ease;
 }
 
+/* Social link hover */
 .footer-social-link:hover {
   background: rgba(113, 90, 90, 0.15);
   border-color: rgba(113, 90, 90, 0.2);
@@ -85,6 +119,11 @@
   transform: translateY(-2px);
 }
 
+/* ============================================================
+   FOOTER COLUMNS (Navigation, Services, Contact)
+   ============================================================ */
+
+/* Column header style */
 .footer-column-title {
   font-family: "Space Mono", monospace;
   font-size: 0.65rem;
@@ -94,12 +133,14 @@
   margin-bottom: 24px;
 }
 
+/* Links container */
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
 
+/* Individual link styling */
 .footer-link {
   font-size: 14px;
   color: rgba(211, 218, 217, 0.5);
@@ -107,10 +148,16 @@
   transition: color 0.2s ease;
 }
 
+/* Link hover */
 .footer-link:hover {
   color: #d3dad9;
 }
 
+/* ============================================================
+   CONTACT INFO IN FOOTER
+   ============================================================ */
+
+/* Contact item container */
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
@@ -118,24 +165,32 @@
   margin-bottom: 16px;
 }
 
+/* Contact icon (emoji) */
 .footer-contact-icon {
   font-size: 0.9rem;
   opacity: 0.5;
   margin-top: 3px;
 }
 
+/* Contact text */
 .footer-contact-text {
   font-size: 13px;
   color: rgba(211, 218, 217, 0.5);
   line-height: 1.6;
 }
 
+/* ============================================================
+   FOOTER BOTTOM (Copyright & Status)
+   ============================================================ */
+
+/* Bottom section with border top */
 .footer-bottom {
   position: relative;
   border-top: 1px solid rgba(211, 218, 217, 0.04);
   padding: 28px 32px;
 }
 
+/* Content container */
 .footer-bottom-content {
   display: flex;
   justify-content: space-between;
@@ -144,16 +199,19 @@
   margin: 0 auto;
 }
 
+/* Copyright text */
 .footer-copyright {
   font-family: "Space Mono", monospace;
   font-size: 0.7rem;
   color: rgba(211, 218, 217, 0.25);
 }
 
+/* Special styling for "×" symbol */
 .footer-copyright span {
   color: #715a5a;
 }
 
+/* Availability status container */
 .footer-status {
   display: flex;
   align-items: center;
@@ -163,14 +221,16 @@
   color: rgba(211, 218, 217, 0.3);
 }
 
+/* Green dot indicating availability */
 .footer-status-dot {
   width: 6px;
   height: 6px;
-  background: #4ade80;
+  background: #4ade80; /* Green color */
   border-radius: 50%;
-  animation: statusPulse 2s ease-in-out infinite;
+  animation: statusPulse 2s ease-in-out infinite; /* Pulsing animation */
 }
 
+/* Pulsing animation for status dot */
 @keyframes statusPulse {
   0%,
   100% {
@@ -181,6 +241,7 @@
   }
 }
 
+/* Decorative line at top of footer */
 .footer-line {
   position: absolute;
   top: 0;
@@ -191,23 +252,33 @@
   background: linear-gradient(180deg, rgba(113, 90, 90, 0.4), transparent);
 }
 
+/* ============================================================
+   RESPONSIVE STYLES
+   ============================================================ */
+
+/* Tablet breakpoint (968px and below) */
 @media (max-width: 968px) {
+  /* 2-column grid */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
 
+  /* Brand spans both columns */
   .footer-brand {
     grid-column: span 2;
     max-width: 100%;
   }
 }
 
+/* Mobile breakpoint (640px and below) */
 @media (max-width: 640px) {
+  /* Reduced padding */
   .footer-main {
     padding: 60px 24px 40px;
   }
 
+  /* Single column grid */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 36px;
@@ -217,6 +288,7 @@
     grid-column: span 1;
   }
 
+  /* Stack bottom content vertically */
   .footer-bottom-content {
     flex-direction: column;
     gap: 16px;
