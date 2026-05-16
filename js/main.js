@@ -172,20 +172,7 @@ function initScrollReveal() {
   });
 }
 
-/**
- * Alternative throttle implementation (appears duplicated)
- * This ensures throttle is available if not defined elsewhere
- */
-function throttle(func, limit) {
-  let inThrottle;
-  return function executedFunction(...args) {
-    if (!inThrottle) {
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  };
-}
+
 
 /* ============================================================
    PIXEL PERFECT SKILLS SECTION
@@ -199,12 +186,12 @@ function throttle(func, limit) {
 const SKILL_BREAKPOINT = 960; // Breakpoint for responsive layout
 
 function initPixelPerfectSkills() {
-  const aboutSection = document.getElementById("about");
-  if (!aboutSection) return;
+  const skillsSection = document.getElementById("skills");
+  if (!skillsSection) return;
 
   // Get video wrapper and skills container elements
-  const videoWrapper = aboutSection.querySelector(".video-wrapper");
-  const skillsContainer = aboutSection.querySelector(".w-\\[40\\%\\]");
+  const videoWrapper = skillsSection.querySelector(".video-wrapper");
+  const skillsContainer = skillsSection.querySelector(".w-\\[40\\%\\]");
 
   /**
    * Updates the layout based on viewport width

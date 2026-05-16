@@ -56,7 +56,7 @@ function initPlyrVideo() {
   }
 
   // Get the work/video section
-  const videoSection = document.getElementById("work");
+  const videoSection = document.getElementById("about");
   if (!videoSection) return;
 
   // Create observer to auto-play/pause based on visibility
