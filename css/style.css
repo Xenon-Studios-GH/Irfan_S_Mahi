@@ -1,86 +1,40 @@
-/* ============================================================
-   MAHI PORTFOLIO - MAIN STYLES
-   ============================================================
-   This file contains core styles for the portfolio including:
-   - CSS custom properties (variables)
-   - Hero section styling
-   - Particle effects
-   - Scroll indicator
-   - Skill items
-   - Animation utilities
-   ============================================================ */
+﻿:root {
 
-:root {
-  /* Hero Section Variables */
-  --hero-circle-size: 600px; /* Size of the background circle */
-  --hero-circle-radius: 300px; /* Border radius for circle shape */
-  --hero-circle-bottom: 300px; /* Position from bottom */
+  --hero-circle-size: 600px;
+  --hero-circle-radius: 300px;
+  --hero-circle-bottom: 300px;
 
-  /* Color Variables */
-  --accent-glow: rgba(113, 90, 90, 0.6); /* Accent color with transparency */
+  --accent-glow: rgba(113, 90, 90, 0.6);
 
-  /* Animation Easing */
   --transition-smooth: cubic-bezier(
     0.4,
     0,
     0.2,
     1
-  ); /* Standard smooth transition */
+  );
   --transition-bounce: cubic-bezier(
     0.68,
     -0.55,
     0.265,
     1.55
-  ); /* Bouncy effect */
+  );
 }
 
-/* ============================================================
-   BASE STYLES & RESET
-   ============================================================ */
-
-/* Enable smooth scrolling for anchor links */
 * {
   scroll-behavior: smooth;
 }
 
-/* Custom selection color - highlights text with accent color */
 ::selection {
   background: rgba(113, 90, 90, 0.4);
   color: #fff;
 }
 
-/* ============================================================
-   HERO SECTION
-   ============================================================ */
-
 #hero {
   background-color: #352f20;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-
-.hero-btns {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  z-index: 20;
 }
 
 .hero-btn {
-  padding: 12px 24px;
-  border-radius: 8px;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
   transition: all 0.3s ease;
 }
 
@@ -104,23 +58,8 @@
   border-color: #fff;
 }
 
-.hero-btns-bottom {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 20;
-}
-
 .hero-btn-outline {
-  padding: 12px 24px;
-  border-radius: 8px;
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  text-decoration: none;
   color: #fff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(0, 0, 0, 0.3);
@@ -173,20 +112,11 @@
   }
 }
 
-.hero-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .hero-wrapper img {
   max-width: 100%;
   max-height: 700px;
   width: auto;
   height: auto;
-  object-fit: contain;
-  object-position: center;
   position: relative;
   z-index: 10;
 }
@@ -207,20 +137,7 @@
   white-space: nowrap;
 }
 
-.hero-text-carousel {
-  position: absolute;
-  top: 150px;
-  width: 100%;
-  text-align: center;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
 .hero-text-carousel .carousel-track {
-  display: flex;
-  gap: 60px;
-  justify-content: center;
   animation: infiniteScroll 20s linear infinite;
 }
 
@@ -287,54 +204,39 @@
   }
 }
 
-/* ============================================================
-   CUSTOM SCROLLBAR STYLING
-   ============================================================ */
-
-/* Scrollbar width */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
-/* Scrollbar track background */
 ::-webkit-scrollbar-track {
   background: #1a1a1a;
 }
 
-/* Scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
   background: #715a5a;
   border-radius: 4px;
 }
 
-/* Thumb color on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #8a6a6a;
 }
 
-/* ============================================================
-   HERO PARTICLE SYSTEM
-   ============================================================ */
-
-/* Container for floating particles in hero section */
 .hero-particles {
   position: absolute;
-  inset: 0; /* top, right, bottom, left = 0 */
+  inset: 0;
   overflow: hidden;
   z-index: 1;
 }
 
-/* Individual particle - created dynamically via JS */
 .particle {
   position: absolute;
   width: 4px;
   height: 4px;
-  background: rgba(113, 90, 90, 0.4); /* Accent color with 40% opacity */
-  border-radius: 50%; /* Makes it circular */
+  background: rgba(113, 90, 90, 0.4);
+  border-radius: 50%;
   animation: float 15s infinite ease-in-out;
 }
 
-/* Particle floating animation - rises up and fades */
 @keyframes float {
   0%,
   100% {
@@ -348,53 +250,42 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(-100vh) translateX(50px); /* Move up full viewport height */
+    transform: translateY(-100vh) translateX(50px);
     opacity: 0;
   }
 }
 
-/* ============================================================
-   HERO GRADIENT OVERLAY
-   ============================================================ */
-
-/* Ambient gradient layers behind hero content for depth */
 .hero-gradient-overlay {
   position: absolute;
   inset: 0;
   background:
-    /* Top-center glow - accent color with low opacity */
+
     radial-gradient(
       ellipse 80% 60% at 50% 20%,
       rgba(113, 90, 90, 0.08) 0%,
       transparent 50%
     ),
-    /* Bottom-right subtle gradient - secondary color */
+
     radial-gradient(
         ellipse 60% 40% at 80% 80%,
         rgba(68, 68, 78, 0.05) 0%,
         transparent 40%
       );
-  pointer-events: none; /* Allows clicking through to elements below */
+  pointer-events: none;
   z-index: 0;
 }
 
-/* ============================================================
-   HERO BACKGROUND CIRCLE
-   ============================================================ */
-
-/* Large decorative circle behind hero content */
 .hero-circle {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%);
   width: var(--hero-circle-size);
   height: var(--hero-circle-size);
-  border-radius: var(--hero-circle-radius); /* Makes it a circle (not oval) */
-  bottom: calc(var(--hero-circle-bottom) * -1); /* Position below viewport */
-  animation: pulse-glow 6s ease-in-out infinite; /* Continuous pulsing glow */
+  border-radius: var(--hero-circle-radius);
+  bottom: calc(var(--hero-circle-bottom) * -1);
+  animation: pulse-glow 6s ease-in-out infinite;
 }
 
-/* Pulsing glow animation - opacity and blur change */
 @keyframes pulse-glow {
   0%,
   100% {
@@ -403,27 +294,21 @@
   }
   50% {
     opacity: 0.9;
-    filter: blur(80px); /* Increased blur creates larger glow */
+    filter: blur(80px);
   }
 }
 
-/* ============================================================
-   ANIMATION KEYFRAMES
-   ============================================================ */
-
-/* Slide up animation - for hero content entrance */
 @keyframes slide-up {
   from {
     opacity: 0;
-    transform: translateY(40px); /* Start 40px below */
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* End at original position */
+    transform: translateY(0);
   }
 }
 
-/* Simple fade in animation */
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -433,42 +318,30 @@
   }
 }
 
-/* ============================================================
-   ANIMATION UTILITY CLASSES
-   ============================================================ */
-
-/* Slide up with smooth easing - uses forwards to keep final state */
 .animate-slide-up {
   animation: slide-up 1s var(--transition-smooth) forwards;
 }
 
-/* Fade in with smooth easing */
 .animate-fade-in {
   animation: fade-in 1s var(--transition-smooth) forwards;
 }
 
-/* Animation delay utilities - create staggered entrance effect */
 .delay-100 {
   animation-delay: 0.1s;
-} /* 100ms delay */
+}
 .delay-200 {
   animation-delay: 0.2s;
-} /* 200ms delay */
+}
 .delay-300 {
   animation-delay: 0.3s;
-} /* 300ms delay */
+}
 .delay-400 {
   animation-delay: 0.4s;
-} /* 400ms delay */
+}
 .delay-500 {
   animation-delay: 0.5s;
-} /* 500ms delay */
+}
 
-/* ============================================================
-   SCROLL INDICATOR
-   ============================================================ */
-
-/* Container for scroll indicator at bottom of hero */
 .scroll-indicator {
   display: flex;
   flex-direction: column;
@@ -477,54 +350,45 @@
   margin-top: 60px;
 }
 
-/* The vertical line that animates */
 .scroll-line {
   width: 1px;
   height: 60px;
-  /* Gradient from accent color to transparent */
+
   background: linear-gradient(180deg, rgba(113, 90, 90, 0.6), transparent);
-  animation: scroll-line 2s ease-in-out infinite; /* Repeating animation */
+  animation: scroll-line 2s ease-in-out infinite;
 }
 
-/* Vertical line pulse animation */
 @keyframes scroll-line {
   0%,
   100% {
-    transform: scaleY(0.5); /* Compressed */
+    transform: scaleY(0.5);
     opacity: 0.5;
   }
   50% {
-    transform: scaleY(1); /* Full height */
+    transform: scaleY(1);
     opacity: 1;
   }
 }
 
-/* "Scroll to explore" text styling */
 .scroll-text {
   font-family: "Space Mono", monospace;
   font-size: 0.6rem;
   letter-spacing: 0.2em;
   color: rgba(211, 218, 217, 0.3);
-  text-transform: uppercase; /* ALL CAPS */
+  text-transform: uppercase;
 }
 
-/* ============================================================
-   SKILL ITEMS (Skills Section)
-   ============================================================ */
-
-/* Base style for skill cards in the skills section */
 .skill-item {
-  transition: all 0.4s var(--transition-smooth); /* Smooth transition on all properties */
-  /* Inner glow effect + subtle shadow */
+  transition: all 0.4s var(--transition-smooth);
+
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    /* Top inner highlight */ 0 4px 20px rgba(0, 0, 0, 0.3); /* Drop shadow */
+     0 4px 20px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   position: relative;
-  overflow: hidden; /* Keeps pseudo-elements contained */
+  overflow: hidden;
 }
 
-/* Left accent bar - appears on hover */
 .skill-item::before {
   content: "";
   position: absolute;
@@ -537,61 +401,233 @@
   transition: opacity 0.4s ease;
 }
 
-/* Show left bar on hover */
 .skill-item:hover::before {
   opacity: 1;
 }
 
-/* Full hover effect - background, border, shadow, and movement */
 .skill-item:hover {
   background: rgba(113, 90, 90, 0.3) !important;
   border-color: rgba(113, 90, 90, 0.5) !important;
   box-shadow:
     0 0 40px rgba(113, 90, 90, 0.4),
-    /* Glowing effect */ inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Inner highlight */
-  transform: translateX(8px) scale(1.02); /* Move right and scale up slightly */
+     inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: translateX(8px) scale(1.02);
 }
 
-/* Move number span on hover */
 .skill-item:hover span {
   transform: translateX(4px);
 }
 
-/* Number span (01, 02, etc.) transition */
 .skill-item span {
   transition: transform 0.3s ease;
 }
 
-/* Arrow that appears on right side on hover */
 .skill-item::after {
-  content: "→";
+  content: "â†’";
   position: absolute;
   right: 20px;
   top: 50%;
-  transform: translateY(-50%) translateX(-10px); /* Start slightly hidden */
+  transform: translateY(-50%) translateX(-10px);
   opacity: 0;
   transition: all 0.3s ease;
   color: #715a5a;
   font-size: 14px;
 }
 
-/* Show arrow on hover */
 .skill-item:hover::after {
   opacity: 1;
-  transform: translateY(-50%) translateX(0); /* Move to final position */
+  transform: translateY(-50%) translateX(0);
 }
 
-/* ============================================================
-   ACCESSIBILITY - REDUCED MOTION
-   ============================================================ */
+.skills-section {
+  background: #09090b;
+}
 
-/* Disable animations for users who prefer reduced motion */
+.about-section {
+  background: #000;
+}
+
+.about-bg-gradient {
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 100%, rgba(113, 90, 90, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 0%, rgba(68, 68, 78, 0.06) 0%, transparent 50%);
+}
+
+.about-container {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.about-label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+}
+
+.about-label::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: #715a5a;
+}
+
+.about-headline {
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 700;
+  color: #d3dad9;
+  line-height: 1.1;
+  letter-spacing: -2px;
+}
+
+.about-headline-line {
+  display: block;
+}
+
+.about-headline-line:last-child {
+  background: linear-gradient(135deg, #715a5a, #8a6a6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-description {
+  color: rgba(211, 218, 217, 0.7);
+  line-height: 1.8;
+}
+
+.about-description-secondary {
+  color: rgba(211, 218, 217, 0.45);
+  line-height: 1.7;
+}
+
+.about-btn {
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-btn.primary {
+  background: #715a5a;
+  color: #fff;
+}
+
+.about-btn.primary:hover {
+  background: #8a6a6a;
+}
+
+.about-btn.secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.about-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.workspace-tool {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(211, 218, 217, 0.05);
+}
+
+.workspace-tool:hover {
+  background: rgba(113, 90, 90, 0.1);
+  border-color: rgba(113, 90, 90, 0.2);
+  transform: translateX(4px);
+}
+
+.workspace-tool-icon {
+  background: rgba(113, 90, 90, 0.15);
+}
+
+.workspace-tool-name {
+  color: rgba(211, 218, 217, 0.85);
+}
+
+.workspace-tool-desc {
+  font-family: "Space Mono", monospace;
+  color: rgba(211, 218, 217, 0.3);
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 968px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+
+  .about-left {
+    align-items: center;
+  }
+
+  .about-description,
+  .about-description-secondary {
+    max-width: 100%;
+  }
+
+  .about-btns {
+    justify-content: center;
+  }
+
+  .about-right {
+    max-width: 420px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-section {
+    padding: 80px 24px;
+  }
+
+  .about-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .about-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.company-card {
+  background: rgba(55, 53, 62, 0.15);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(211, 218, 217, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.company-card-label {
+  font-family: "Space Mono", monospace;
+  font-size: 0.55rem;
+  color: rgba(211, 218, 217, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 10px;
+}
+
+.company-card-list span {
+  font-size: 0.8rem;
+  color: rgba(211, 218, 217, 0.8);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important; /* Nearly instant */
-    animation-iteration-count: 1 !important; /* No repeats */
-    transition-duration: 0.01ms !important; /* Nearly instant */
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,12 +1,4 @@
-/* ===================================
-   RESPONSIVE CSS
-   Hero Circle + Typography + Sections
-   =================================== */
-
-/* ===================================
-   MOBILE NAVBAR RESPONSIVE
-   =================================== */
-@media (max-width: 768px) {
+﻿@media (max-width: 768px) {
   .dynamic-island.expand {
     width: calc(100% - 32px) !important;
     max-width: 400px;
@@ -72,9 +64,6 @@
   }
 }
 
-/* ===================================
-   SECTION INDICATOR RESPONSIVE
-   =================================== */
 @media (max-width: 768px) {
   .section-indicator {
     top: 16px;
@@ -103,9 +92,6 @@
   }
 }
 
-/* ===================================
-   ACTIVITY CARDS RESPONSIVE
-   =================================== */
 @media (max-width: 768px) {
   .activity-card {
     width: 240px;
@@ -174,9 +160,6 @@
   }
 }
 
-/* ===================================
-   CTA RESPONSIVE
-   =================================== */
 @media (max-width: 768px) {
   .cta-input {
     padding: 16px 18px;
@@ -209,9 +192,6 @@
   }
 }
 
-/* ===================================
-   COLLABCAROUSEL RESPONSIVE
-   =================================== */
 @media (max-width: 768px) {
   .carousel-track {
     font-size: 1rem;
@@ -240,7 +220,6 @@
   }
 }
 
-/* Small Mobile: 320px - 359px */
 @media (min-width: 320px) and (max-width: 359px) {
   :root {
     --hero-circle-size: 280px;
@@ -311,7 +290,6 @@
   }
 }
 
-/* Mobile: 360px - 399px */
 @media (min-width: 360px) and (max-width: 399px) {
   :root {
     --hero-circle-size: 320px;
@@ -382,7 +360,6 @@
   }
 }
 
-/* Large Mobile: 400px - 439px */
 @media (min-width: 400px) and (max-width: 439px) {
   :root {
     --hero-circle-size: 360px;
@@ -453,7 +430,6 @@
   }
 }
 
-/* Mobile Plus: 440px - 479px */
 @media (min-width: 440px) and (max-width: 479px) {
   :root {
     --hero-circle-size: 400px;
@@ -523,7 +499,6 @@
   }
 }
 
-/* Mobile Landscape: 480px - 519px */
 @media (min-width: 480px) and (max-width: 519px) {
   :root {
     --hero-circle-size: 440px;
@@ -588,7 +563,6 @@
   }
 }
 
-/* Large Mobile Landscape: 520px - 599px */
 @media (min-width: 520px) and (max-width: 599px) {
   :root {
     --hero-circle-size: 480px;
@@ -639,7 +613,6 @@
   }
 }
 
-/* Small Tablet: 600px - 659px */
 @media (min-width: 600px) and (max-width: 659px) {
   :root {
     --hero-circle-size: 520px;
@@ -691,7 +664,6 @@
   }
 }
 
-/* Tablet: 660px - 719px */
 @media (min-width: 660px) and (max-width: 719px) {
   :root {
     --hero-circle-size: 560px;
@@ -743,7 +715,6 @@
   }
 }
 
-/* Large Tablet: 720px - 779px */
 @media (min-width: 720px) and (max-width: 779px) {
   :root {
     --hero-circle-size: 600px;
@@ -795,7 +766,6 @@
   }
 }
 
-/* Tablet Landscape: 780px - 839px */
 @media (min-width: 780px) and (max-width: 839px) {
   :root {
     --hero-circle-size: 640px;
@@ -847,7 +817,6 @@
   }
 }
 
-/* Large Tablet Landscape: 840px - 899px */
 @media (min-width: 840px) and (max-width: 899px) {
   :root {
     --hero-circle-size: 680px;
@@ -899,7 +868,6 @@
   }
 }
 
-/* Small Desktop: 900px - 959px */
 @media (min-width: 900px) and (max-width: 959px) {
   :root {
     --hero-circle-size: 720px;
@@ -951,7 +919,6 @@
   }
 }
 
-/* Desktop: 960px - 1023px */
 @media (min-width: 960px) and (max-width: 1023px) {
   :root {
     --hero-circle-size: 760px;
@@ -1003,7 +970,6 @@
   }
 }
 
-/* Large Desktop: 1024px+ */
 @media (min-width: 1024px) {
   :root {
     --hero-circle-size: 800px;
@@ -1055,9 +1021,6 @@
   }
 }
 
-/* ===================================
-   SPECIAL CASES
-   =================================== */
 @media (max-height: 500px) and (orientation: landscape) {
   h2 {
     font-size: 24px !important;

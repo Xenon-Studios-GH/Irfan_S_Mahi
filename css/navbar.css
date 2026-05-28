@@ -1,67 +1,42 @@
-/* ============================================================
-   DYNAMIC ISLAND NAVBAR
-   ============================================================
-   A floating navigation bar inspired by Apple's Dynamic Island.
-   Features:
-   - Starts as a small circle
-   - Expands to show navigation menu on scroll
-   - Uses backdrop-filter for glass effect
-   - Fixed to bottom of viewport
-   ============================================================ */
-
-/* Base state - collapsed circle at bottom */
-.dynamic-island {
+﻿.dynamic-island {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  /* Center horizontally and start below viewport */
+
   transform: translateX(-50%) translateY(100px);
-  width: 60px; /* Initial compact width */
-  height: 60px; /* Circular shape */
-  opacity: 0; /* Hidden initially */
+  width: 60px;
+  height: 60px;
+  opacity: 0;
   border-radius: 50%;
 
-  /* Glassmorphism effect - frosted glass look */
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(40px); /* Blur behind the element */
-  -webkit-backdrop-filter: blur(40px); /* Safari support */
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
   border: 1px solid rgba(255, 255, 255, 0.15);
 
-  /* Layered shadow for depth */
   box-shadow:
     0 25px 50px -12px rgba(0, 0, 0, 0.8),
-    /* Large diffuse shadow */ inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Inner top highlight */
+     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
-  z-index: 9999; /* Always on top */
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* Smooth transitions for all state changes */
   transition:
     transform 0.4s ease-out,
     opacity 0.4s ease-out,
     width 0.4s ease-out;
 }
 
-/* ============================================================
-   NAVBAR VISIBLE STATE
-   ============================================================ */
-
-/* When navbar becomes visible (after scrolling past hero) */
 .dynamic-island.visible {
-  transform: translateX(-50%) translateY(0); /* Move to final position */
-  opacity: 1; /* Fade in */
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
 }
 
-/* ============================================================
-   NAVBAR EXPANDED STATE
-   ============================================================ */
-
-/* When navbar expands to show menu items */
 .dynamic-island.expand {
-  width: 950px; /* Wide enough for menu items */
-  border-radius: 50px; /* Pill shape instead of circle */
+  width: 950px;
+  border-radius: 50px;
   transition:
     transform 0.4s ease-out,
     opacity 0.4s ease-out,
@@ -69,13 +44,8 @@
     border-radius 0.4s ease-out;
 }
 
-/* ============================================================
-   NAVBAR CONTENT
-   ============================================================ */
-
-/* Container for logo and menu items */
 .island-content {
-  opacity: 0; /* Hidden when collapsed */
+  opacity: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,56 +54,40 @@
   width: 100%;
 }
 
-/* Show content when expanded */
 .dynamic-island.expand .island-content {
   opacity: 1;
 }
 
-/* ============================================================
-   NAVBAR LOGO
-   ============================================================ */
-
-/* Center logo/brand name in navbar */
 .island-logo {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #715a5a; /* Accent color */
+  color: #715a5a;
   padding: 0 20px;
 }
 
-/* ============================================================
-   NAVIGATION MENU
-   ============================================================ */
-
-/* Menu container - flexbox for alignment */
 .island-menu {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Left menu - items aligned to end (right side of left section) */
 .island-menu.left {
   justify-content: flex-end;
 }
 
-/* Right menu - items aligned to start (left side of right section) */
 .island-menu.right {
   justify-content: flex-start;
 }
 
-/* Menu list items - start invisible for animation */
 .island-menu li {
   opacity: 0;
 }
 
-/* Animate menu items in when navbar expands */
 .dynamic-island.expand .island-menu li {
   animation: fadeInItem 0.25s ease forwards;
 }
 
-/* Staggered animation delays for each menu item */
 .dynamic-island.expand .island-menu li:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -147,32 +101,25 @@
   animation-delay: 0.5s;
 }
 
-/* Fade in animation for menu items */
 @keyframes fadeInItem {
   from {
     opacity: 0;
-    transform: translateY(5px); /* Start slightly below */
+    transform: translateY(5px);
   }
   to {
     opacity: 1;
-    transform: translateY(0); /* End at normal position */
+    transform: translateY(0);
   }
 }
 
-/* ============================================================
-   MENU LINKS
-   ============================================================ */
-
-/* Navigation link styling */
 .island-menu a {
   font-family: "Space Mono", monospace;
   font-size: 11px;
   letter-spacing: 1px;
-  color: rgba(211, 218, 217, 0.7); /* Light color with reduced opacity */
+  color: rgba(211, 218, 217, 0.7);
   transition: color 0.2s ease;
 }
 
-/* Link hover state */
 .island-menu a:hover {
-  color: #715a5a; /* Accent color on hover */
+  color: #715a5a;
 }

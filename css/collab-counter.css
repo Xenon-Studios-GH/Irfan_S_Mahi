@@ -1,9 +1,4 @@
-/* ========================================
-   PREMIUM ODOMETER COUNTER SYSTEM
-   Premium Rolling Number Animation
-   ======================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
 
 :root {
   --counter-digit-height: 50px;
@@ -12,7 +7,6 @@
   --counter-easing: cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Stats Container */
 .stats-container {
   display: flex;
   gap: 80px;
@@ -28,7 +22,6 @@
   z-index: 1;
 }
 
-/* Counter Container */
 .stat-number {
   display: flex;
   align-items: center;
@@ -43,7 +36,6 @@
   min-height: 60px;
 }
 
-/* Digit Stack Wrapper */
 .digit-stack {
   position: relative;
   width: 1em;
@@ -53,7 +45,6 @@
   vertical-align: top;
 }
 
-/* Single Digit Outer (mask) */
 .digit-outer {
   position: absolute;
   top: 0;
@@ -63,7 +54,6 @@
   overflow: hidden;
 }
 
-/* Digit Inner (the rolling element) */
 .digit-inner {
   position: absolute;
   top: 0;
@@ -76,7 +66,6 @@
   transform: translate3d(0, 0, 0);
 }
 
-/* Each digit number */
 .digit-inner span {
   display: flex;
   align-items: center;
@@ -88,7 +77,6 @@
   line-height: 1;
 }
 
-/* Suffix (%, +, X, etc.) */
 .counter-suffix {
   display: inline-flex;
   align-items: center;
@@ -97,12 +85,10 @@
   opacity: 0.8;
 }
 
-/* Animation States */
 .stat-number.is-visible .digit-inner {
   animation: rollDigit var(--counter-duration) var(--counter-easing) forwards;
 }
 
-/* Keyframe for rolling */
 @keyframes rollDigit {
   0% {
     transform: translate3d(0, 0, 0);
@@ -112,7 +98,6 @@
   }
 }
 
-/* Stagger delays for multi-digit numbers */
 .stat-number.is-visible .digit-stack:nth-child(1) .digit-inner {
   animation-delay: 0s;
 }
@@ -129,13 +114,11 @@
   animation-delay: calc(var(--counter-stagger) * 3);
 }
 
-/* Decimal support */
 .stat-number .decimal-point {
   margin: 0 2px;
   opacity: 0.6;
 }
 
-/* Stat Label Styling */
 .stat-label {
   font-family: "Fira Code", monospace;
   font-size: 0.7rem;
@@ -145,9 +128,6 @@
   letter-spacing: 2px;
 }
 
-/* ========================================
-   RESPONSIVE ADJUSTMENTS
-   ======================================== */
 @media (max-width: 768px) {
   :root {
     --counter-digit-height: 40px;
@@ -169,14 +149,10 @@
   }
 }
 
-/* ========================================
-   ANIMATION COMPLETE STATE
-   ======================================== */
 .stat-number.animation-complete .digit-inner {
   transform: translate3d(0, calc(-1 * var(--target-percent)), 0);
 }
 
-/* Subtle glow pulse after animation */
 @keyframes subtlePulse {
   0%,
   100% {

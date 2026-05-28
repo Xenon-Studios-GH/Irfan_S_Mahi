@@ -1,53 +1,28 @@
-/* ============================================================
-   CALL TO ACTION (CONTACT) SECTION
-   ============================================================
-   This section contains:
-   - Contact form (name, email, project type, message)
-   - Contact information (email, phone, location)
-   - Social media links
-   - Gradient backgrounds for visual depth
-   ============================================================ */
-
-/* Main CTA section container */
-.cta-section {
-  position: relative;
-  min-height: 100vh; /* Full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 140px 32px;
-  overflow: hidden;
-}
-
-/* Background gradient effect - layered radial gradients */
-.cta-section::before {
+﻿.cta-section::before {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center the gradient */
-  width: 120%; /* Slightly larger than viewport */
+  transform: translate(-50%, -50%);
+  width: 120%;
   height: 120%;
-  background: 
-        /* Bottom-center glow - accent color */
+  background:
+
     radial-gradient(
       ellipse 100% 60% at 50% 100%,
       rgba(113, 90, 90, 0.15) 0%,
       transparent 60%
     ),
-    /* Top-left subtle gradient - secondary color */
+
     radial-gradient(
         ellipse 80% 50% at 20% 0%,
         rgba(68, 68, 78, 0.1) 0%,
         transparent 50%
       );
-  pointer-events: none; /* Allows clicking through */
+  pointer-events: none;
 }
 
-/* Additional gradient overlay for depth */
 .cta-bg-gradient {
-  position: absolute;
-  inset: 0;
   background:
     radial-gradient(
       ellipse 80% 50% at 50% 100%,
@@ -59,37 +34,16 @@
       rgba(68, 68, 78, 0.08) 0%,
       transparent 50%
     );
-  pointer-events: none;
 }
 
-/* Content container with max width */
-.cta-container {
-  position: relative;
-  z-index: 1; /* Above background gradients */
-  max-width: 1200px;
-  width: 100%;
-}
-
-/* Two-column grid layout */
 .cta-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr; /* Left side wider */
-  gap: 120px;
-  align-items: center;
+  grid-template-columns: 1.5fr 1fr;
 }
 
-/* Left column - form section */
-.cta-left {
-  padding-right: 80px;
-}
-
-/* Right column - contact info */
 .cta-right {
-  padding-left: 60px;
   position: relative;
 }
 
-/* Vertical divider line between columns */
 .cta-right::before {
   content: "";
   position: absolute;
@@ -106,25 +60,12 @@
   );
 }
 
-/* ============================================================
-   SECTION LABELS & HEADLINES
-   ============================================================ */
-
-/* Label above headline (e.g., "GET IN TOUCH") */
 .cta-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
   font-family: "Space Mono", monospace;
   font-size: 0.7rem;
-  color: #715a5a; /* Accent color */
-  text-transform: uppercase;
   letter-spacing: 0.3em;
-  margin-bottom: 32px;
-  padding-left: 32px;
 }
 
-/* Decorative line before label */
 .cta-label::before {
   content: "";
   width: 32px;
@@ -132,26 +73,16 @@
   background: #715a5a;
 }
 
-/* ============================================================
-   HEADLINES & DESCRIPTION
-   ============================================================ */
-
-/* Main headline text */
 .cta-headline {
-  font-size: clamp(48px, 6vw, 72px); /* Responsive with min/max */
-  font-weight: 700;
-  color: #d3dad9;
+  font-size: clamp(48px, 6vw, 72px);
   line-height: 1.1;
-  margin-bottom: 32px;
-  letter-spacing: -3px; /* Tight letter spacing */
+  letter-spacing: -3px;
 }
 
-/* Each line of headline is a block */
 .cta-headline-line {
   display: block;
 }
 
-/* Last line gets gradient effect */
 .cta-headline-line:last-child {
   background: linear-gradient(135deg, #715a5a, #8a6a6a);
   -webkit-background-clip: text;
@@ -159,45 +90,21 @@
   background-clip: text;
 }
 
-/* Description text below headline */
 .cta-subheadline {
-  font-size: 18px;
   color: rgba(211, 218, 217, 0.5);
   line-height: 1.8;
-  margin-bottom: 48px;
-  font-weight: 300;
 }
 
-/* ============================================================
-   CONTACT FORM STYLES
-   ============================================================ */
-
-/* Form container */
-.cta-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Input field base styling */
 .cta-input {
-  width: 100%;
-  padding: 24px 28px;
-  background: rgba(55, 53, 62, 0.3); /* Semi-transparent background */
-  border: 1px solid rgba(211, 218, 217, 0.08); /* Subtle border */
-  border-radius: 16px;
-  font-size: 1rem;
-  color: #d3dad9;
-  outline: none;
+  background: rgba(55, 53, 62, 0.3);
+  border: 1px solid rgba(211, 218, 217, 0.08);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Placeholder text styling */
 .cta-input::placeholder {
   color: rgba(211, 218, 217, 0.3);
 }
 
-/* Focus state - highlighted border and glow */
 .cta-input:focus {
   border-color: rgba(113, 90, 90, 0.5);
   background: rgba(55, 53, 62, 0.4);
@@ -206,38 +113,20 @@
     0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Textarea specific - message field */
 .cta-textarea {
-  min-height: 140px; /* Taller for message */
-  resize: vertical; /* Only allow vertical resizing */
+  resize: vertical;
 }
 
-/* Submit button wrapper */
-.cta-submit-wrapper {
-  position: relative;
-  align-self: flex-start; /* Align to left */
-}
-
-/* Submit button styling */
 .cta-submit {
-  position: relative;
-  padding: 24px 48px;
   background: linear-gradient(
     135deg,
     #715a5a,
     #5a4a4a
-  ); /* Gradient background */
+  );
   border: none;
-  border-radius: 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #d3dad9;
-  cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden; /* Contains the shine effect */
 }
 
-/* Shine effect - animated gradient sweep */
 .cta-submit::before {
   content: "";
   position: absolute;
@@ -254,160 +143,81 @@
   transition: left 0.8s ease;
 }
 
-/* Hover state - lift up with shadow */
 .cta-submit:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 50px rgba(113, 90, 90, 0.5);
 }
 
-/* Animate shine on hover */
 .cta-submit:hover::before {
   left: 100%;
 }
 
-/* Active/click state - slight press down */
 .cta-submit:active {
   transform: translateY(-2px);
 }
 
-/* ============================================================
-   CONTACT INFORMATION CARDS
-   ============================================================ */
-
-/* Label above contact list (e.g., "CONTACT INFO") */
 .cta-contact-label {
   font-family: "Space Mono", monospace;
   font-size: 0.65rem;
-  color: rgba(211, 218, 217, 0.3);
-  text-transform: uppercase;
   letter-spacing: 0.25em;
-  margin-bottom: 28px;
 }
 
-/* Container for contact info cards */
-.cta-contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  margin-bottom: 56px;
-}
-
-/* Individual contact item (email, phone, location) */
 .cta-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 16px;
   background: rgba(55, 53, 62, 0.2);
   border: 1px solid rgba(211, 218, 217, 0.05);
-  border-radius: 16px;
-  transition: all 0.4s ease;
 }
 
-/* Hover effect on contact item */
 .cta-contact-item:hover {
   border-color: rgba(113, 90, 90, 0.2);
   background: rgba(113, 90, 90, 0.1);
 }
 
-/* Icon container for contact type */
 .cta-contact-icon {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(
     135deg,
     rgba(113, 90, 90, 0.3),
     rgba(113, 90, 90, 0.1)
   );
   border: 1px solid rgba(113, 90, 90, 0.2);
-  border-radius: 14px;
-  font-size: 1.3rem;
 }
 
-/* Info text container */
-.cta-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-/* Type label (e.g., "Email", "Phone") */
 .cta-contact-type {
   font-family: "Space Mono", monospace;
   font-size: 0.6rem;
   color: rgba(211, 218, 217, 0.3);
-  text-transform: uppercase;
   letter-spacing: 0.15em;
 }
 
-/* Actual value (e.g., "hello@mahi.com") */
-.cta-contact-value {
-  font-size: 1rem;
-  color: rgba(211, 218, 217, 0.9);
-}
-
-/* ============================================================
-   SOCIAL MEDIA LINKS
-   ============================================================ */
-
-/* Container for social icons */
-.cta-socials {
-  display: flex;
-  gap: 16px;
-}
-
-/* Individual social link button */
 .cta-social-link {
-  width: 56px;
-  height: 56px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background: rgba(55, 53, 62, 0.2);
   border: 1px solid rgba(211, 218, 217, 0.05);
-  border-radius: 14px;
-  font-size: 1.3rem;
-  color: rgba(211, 218, 217, 0.4);
-  text-decoration: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Social link hover effect */
 .cta-social-link:hover {
   background: rgba(113, 90, 90, 0.2);
   border-color: rgba(113, 90, 90, 0.3);
   color: #d3dad9;
-  transform: translateY(-6px); /* Lift up */
+  transform: translateY(-6px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-/* ============================================================
-   RESPONSIVE STYLES
-   ============================================================ */
-
-/* Tablet breakpoint (968px and below) */
 @media (max-width: 968px) {
-  /* Stack columns vertically */
+
   .cta-grid {
     grid-template-columns: 1fr;
     gap: 80px;
   }
 
-  /* Remove side padding */
   .cta-left,
   .cta-right {
     padding: 0;
   }
 
-  /* Hide vertical divider */
   .cta-right::before {
     display: none;
   }
 
-  /* Full width submit button */
   .cta-submit-wrapper {
     width: 100%;
   }
@@ -417,311 +227,14 @@
   }
 }
 
-/* Mobile breakpoint (640px and below) */
 @media (max-width: 640px) {
-  /* Reduced padding */
+
   .cta-section {
     padding: 100px 24px;
   }
 
-  /* Smaller headline */
   .cta-headline {
     font-size: 40px;
   }
 }
 
-.cta-bg-gradient {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(
-      ellipse 80% 50% at 50% 100%,
-      rgba(113, 90, 90, 0.12) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 60% 40% at 20% 0%,
-      rgba(68, 68, 78, 0.08) 0%,
-      transparent 50%
-    );
-  pointer-events: none;
-}
-
-.cta-container {
-  position: relative;
-  z-index: 1;
-  max-width: 1100px;
-  width: 100%;
-}
-
-.cta-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 100px;
-  align-items: center;
-}
-
-.cta-left {
-  padding-right: 60px;
-}
-
-.cta-right {
-  padding-left: 40px;
-  position: relative;
-}
-
-.cta-right::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 60%;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(113, 90, 90, 0.3),
-    transparent
-  );
-}
-
-.cta-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: "Space Mono", monospace;
-  font-size: 0.65rem;
-  color: #715a5a;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin-bottom: 28px;
-}
-
-.cta-label::before {
-  content: "";
-  width: 24px;
-  height: 1px;
-  background: #715a5a;
-}
-
-.cta-headline {
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 600;
-  color: #d3dad9;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  letter-spacing: -0.03em;
-}
-
-.cta-headline-line {
-  display: block;
-}
-
-.cta-headline-line:last-child {
-  color: #715a5a;
-}
-
-.cta-subheadline {
-  font-size: 16px;
-  color: rgba(211, 218, 217, 0.4);
-  line-height: 1.8;
-  margin-bottom: 48px;
-  font-weight: 300;
-}
-
-.cta-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.cta-input {
-  width: 100%;
-  padding: 20px 24px;
-  background: rgba(55, 53, 62, 0.2);
-  border: 1px solid rgba(211, 218, 217, 0.06);
-  border-radius: 14px;
-  font-size: 0.9rem;
-  color: #d3dad9;
-  outline: none;
-  transition: all 0.4s ease;
-}
-
-.cta-input::placeholder {
-  color: rgba(211, 218, 217, 0.2);
-}
-
-.cta-input:focus {
-  border-color: rgba(113, 90, 90, 0.3);
-  background: rgba(55, 53, 62, 0.3);
-  box-shadow: 0 0 0 4px rgba(113, 90, 90, 0.08);
-}
-
-.cta-textarea {
-  min-height: 120px;
-  resize: vertical;
-}
-
-.cta-submit-wrapper {
-  position: relative;
-  align-self: flex-start;
-}
-
-.cta-submit {
-  position: relative;
-  padding: 20px 40px;
-  background: linear-gradient(135deg, #715a5a, #5a4a4a);
-  border: none;
-  border-radius: 14px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #d3dad9;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-.cta-submit::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
-  transition: left 0.6s ease;
-}
-
-.cta-submit:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(113, 90, 90, 0.35);
-}
-
-.cta-submit:hover::before {
-  left: 100%;
-}
-
-.cta-submit:active {
-  transform: translateY(0);
-}
-
-.cta-contact-label {
-  font-family: "Space Mono", monospace;
-  font-size: 0.6rem;
-  color: rgba(211, 218, 217, 0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
-  margin-bottom: 20px;
-}
-
-.cta-contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 48px;
-}
-
-.cta-contact-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.cta-contact-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(55, 53, 62, 0.15);
-  border: 1px solid rgba(211, 218, 217, 0.04);
-  border-radius: 12px;
-  font-size: 1.1rem;
-}
-
-.cta-contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.cta-contact-type {
-  font-family: "Space Mono", monospace;
-  font-size: 0.55rem;
-  color: rgba(211, 218, 217, 0.25);
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-}
-
-.cta-contact-value {
-  font-size: 0.95rem;
-  color: rgba(211, 218, 217, 0.8);
-}
-
-.cta-socials {
-  display: flex;
-  gap: 10px;
-}
-
-.cta-social-link {
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(55, 53, 62, 0.15);
-  border: 1px solid rgba(211, 218, 217, 0.05);
-  border-radius: 12px;
-  font-size: 1.15rem;
-  color: rgba(211, 218, 217, 0.35);
-  text-decoration: none;
-  transition: all 0.4s ease;
-}
-
-.cta-social-link:hover {
-  background: rgba(113, 90, 90, 0.12);
-  border-color: rgba(113, 90, 90, 0.15);
-  color: #d3dad9;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 968px) {
-  .cta-grid {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-
-  .cta-left,
-  .cta-right {
-    padding: 0;
-  }
-
-  .cta-right::before {
-    display: none;
-  }
-
-  .cta-submit-wrapper {
-    width: 100%;
-  }
-
-  .cta-submit {
-    width: 100%;
-  }
-}
-
-@media (max-width: 640px) {
-  .cta-section {
-    padding: 80px 24px;
-  }
-
-  .cta-headline {
-    font-size: 36px;
-  }
-}
