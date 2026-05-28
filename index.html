@@ -1,10 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Irfan</title>
+    <script>
+      const _twOrigWarn = console.warn;
+      console.warn = function (m) {
+        if (typeof m === "string" && m.includes("cdn.tailwindcss.com")) return;
+        _twOrigWarn.apply(console, arguments);
+      };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +29,17 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/section-indicator.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+    <script>
+      const _twOrigWarn = console.warn;
+      console.warn = function (m) {
+        if (typeof m === "string" && m.includes("cdn.tailwindcss.com")) return;
+        _twOrigWarn.apply(console, arguments);
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -33,23 +50,28 @@
                         accent: '#715A5A',
                         light: '#D3DAD9',
                         dark: '#1a1a1a',
-                    }
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                        space: ['Space Mono', 'monospace'],
+                        sedgwick: ['Sedgwick Ave Display', 'cursive'],
+                    },
                 }
             }
         }
     </script>
 </head>
 
-<body class="bg-[#1a1a1a] text-light font-sans antialiased">
-    <nav class="dynamic-island">
-        <div class="island-content">
-            <ul class="island-menu left">
+<body class="bg-[#352f20] text-light font-sans antialiased">
+    <nav class="dynamic-island fixed bottom-[20px] left-1/2 z-[9999] flex items-center justify-center w-[60px] h-[60px] opacity-0 rounded-full">
+        <div class="island-content flex items-center justify-center gap-[8px] opacity-0 w-full">
+            <ul class="island-menu left flex items-center gap-[20px]">
                 <li><a href="#activities">Activity</a></li>
                 <li><a href="#collab">Projects</a></li>
                 <li><a href="#cta">Contact</a></li>
             </ul>
             <span class="island-logo">Irfan</span>
-            <ul class="island-menu right">
+            <ul class="island-menu right flex items-center gap-[20px]">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#collab">collaboration</a></li>
@@ -57,50 +79,58 @@
         </div>
     </nav>
 
-    <div class="section-indicator">
-        <div class="section-indicator-item" data-section="hero">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
+    <div class="section-indicator fixed top-[24px] left-[24px] z-[9998] flex flex-col gap-[8px] pointer-events-none">
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="hero">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
             <span class="section-indicator-text">01 Hero</span>
         </div>
-        <div class="section-indicator-item" data-section="about">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
-            <span class="section-indicator-text">02 Work</span>
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="about">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
+            <span class="section-indicator-text">02 About</span>
         </div>
-        <div class="section-indicator-item" data-section="skills">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="skills">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
             <span class="section-indicator-text">03 Skills</span>
         </div>
-        <div class="section-indicator-item" data-section="collab">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="collab">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
             <span class="section-indicator-text">04 Projects</span>
         </div>
-        <div class="section-indicator-item" data-section="activities">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="activities">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
             <span class="section-indicator-text">05 Activities</span>
         </div>
-        <div class="section-indicator-item" data-section="cta">
-            <span class="section-indicator-dot"></span>
-            <span class="section-indicator-line"></span>
+        <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300" data-section="cta">
+            <span class="section-indicator-dot w-[8px] h-[8px] rounded-full"></span>
+            <span class="section-indicator-line w-[32px] h-[1px]"></span>
             <span class="section-indicator-text">06 Contact</span>
         </div>
     </div>
 
-    <section id="hero">
-        <div class="hero-btns">
+    <section id="hero" class="w-full min-h-screen flex items-center justify-center overflow-hidden relative">
+        <div class="hero-btns absolute top-[40px] right-[40px] flex flex-row gap-[12px] z-[20]">
             <a href="#cta" class="hero-btn primary">Hire Me</a>
             <a href="#collab" class="hero-btn secondary">View Work</a>
         </div>
-        <div class="hero-btns-bottom">
-            <a href="#about" class="hero-btn-outline">My Work</a>
+        <div class="hero-btns-bottom absolute bottom-[40px] left-[40px] flex flex-col gap-[12px] z-[20]">
+            <a href="#about" class="hero-btn-outline">About Me</a>
             <a href="#skills" class="hero-btn-outline">My Skills</a>
         </div>
-        <div class="hero-text-carousel">
-            <div class="carousel-track">
+        <div class="company-card absolute bottom-[40px] right-[40px] z-[20] rounded-[16px] p-[16px_20px] min-w-[160px]">
+            <div class="company-card-label">Worked with</div>
+            <div class="company-card-list flex flex-col gap-[6px]">
+                <span>techbuddy</span>
+                <span>xenon studios</span>
+                <span>MrNomster</span>
+            </div>
+        </div>
+        <div class="hero-text-carousel absolute top-[150px] w-full text-center overflow-hidden pointer-events-none z-0">
+            <div class="carousel-track flex gap-[60px] justify-center">
                 <span>Video Editor</span>
                 <span>Motion Graphics</span>
                 <span>Visual Effects</span>
@@ -119,63 +149,97 @@
                 <span>Content Creator</span>
             </div>
         </div>
-        <div class="hero-wrapper">
-
+        <div class="hero-wrapper relative flex items-center justify-center">
             <img src="assets/img/Black Creative What is Hustle Culture YouTube Thumbnailytjtgjtg.png" alt="Hero">
         </div>
     </section>
 
-    <section class="brand-carousel">
+    <section class="brand-carousel relative max-w-[1600px] p-[40px_0] overflow-hidden">
         <div class="carousel-1">
-            <div class="carousel-track">
-                <div class="carousel-item"><span>XENON STUDIOS</span></div>
-                <div class="carousel-item"><span>DIGITAL EMPIRE</span></div>
-                <div class="carousel-item"><span>TECH BUddY</span></div>
-                <div class="carousel-item"><span>FUTURE ACADEMY</span></div>
-                <div class="carousel-item"><span>MEDIA NETWORK</span></div>
-                <div class="carousel-item"><span>BRAND LAB</span></div>
-                <div class="carousel-item"><span>CREATIVE ALLIANCE</span></div>
-                <div class="carousel-item"><span>EDU TECH BD</span></div>
+            <div class="carousel-track flex gap-[8px] w-max p-[20px_0]">
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>XENON STUDIOS</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>DIGITAL EMPIRE</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>TECH BUddY</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>FUTURE ACADEMY</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>MEDIA NETWORK</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>BRAND LAB</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>CREATIVE ALLIANCE</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>EDU TECH BD</span></div>
             </div>
         </div>
         <div class="carousel-2">
-            <div class="carousel-track">
-                <div class="carousel-item"><span>XENON STUDIOS</span></div>
-                <div class="carousel-item"><span>DIGITAL EMPIRE</span></div>
-                <div class="carousel-item"><span>TECH BUddY</span></div>
-                <div class="carousel-item"><span>FUTURE ACADEMY</span></div>
-                <div class="carousel-item"><span>MEDIA NETWORK</span></div>
-                <div class="carousel-item"><span>BRAND LAB</span></div>
-                <div class="carousel-item"><span>CREATIVE ALLIANCE</span></div>
-                <div class="carousel-item"><span>EDU TECH BD</span></div>
+            <div class="carousel-track flex gap-[8px] w-max p-[20px_0]">
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>XENON STUDIOS</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>DIGITAL EMPIRE</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>TECH BUddY</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>FUTURE ACADEMY</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>MEDIA NETWORK</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>BRAND LAB</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>CREATIVE ALLIANCE</span></div>
+                <div class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]"><span>EDU TECH BD</span></div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="min-h-screen flex flex-col items-center justify-center px-8 py-20">
-        <h2 class="text-4xl font-bold text-light mb-4">Work</h2>
-        <p class="text-light/60 text-lg mb-12">Showcasing creative excellence in motion</p>
-        <div class="video-wrapper">
-            <div class="video-glow"></div>
-            <div class="video-frame">
-                <div class="plyr video-player" id="player">
-                    <video id="customVideo" playsinline controls autoplay muted>
-                        <source src="assets/video/HeroSection_background_Video.mp4" type="video/mp4">
-                    </video>
+    <section id="about" class="about-section relative min-h-screen flex items-center justify-center p-[120px_32px] overflow-hidden">
+        <div class="about-bg-gradient absolute inset-0 pointer-events-none"></div>
+        <div class="about-container relative z-[1] max-w-[1200px] w-full grid grid-cols-[1.2fr_1fr] gap-[80px] items-center">
+            <div class="about-left flex flex-col gap-[24px]">
+                <span class="about-label inline-flex items-center gap-[12px] text-accent uppercase">About Me</span>
+                <h2 class="about-headline font-[700] text-light">
+                    <span class="about-headline-line block">Transforming Ideas</span>
+                    <span class="about-headline-line block">Into Visual Stories</span>
+                </h2>
+                <p class="about-description text-[16px] text-light/70 font-[300] max-w-[520px]">
+                    I'm Irfan Sadiq Mahi, a professional video editor and motion graphics artist with over 5 years of
+                    experience crafting visual narratives that captivate and inspire. Based in Dhaka, Bangladesh, I've
+                    had the privilege of working with brands like TechBuddy, Xenon Studios, and MrNomster.
+                </p>
+                <p class="about-description-secondary text-[14px] text-light/45 font-[300] max-w-[520px]">
+                    From video editing and color grading to 3D animation and VFX, I bring a meticulous eye for detail to
+                    every project. My work spans music videos, documentaries, brand campaigns, and social media content &mdash; each piece tailored to tell a unique story.
+                </p>
+                <div class="about-btns flex gap-[16px] pt-[8px]">
+                    <a href="#cta" class="about-btn primary">Get in Touch</a>
+                    <a href="#collab" class="about-btn secondary">View Projects</a>
+                </div>
+            </div>
+            <div class="about-right flex items-center justify-center">
+                <div class="workspace-card relative w-full max-w-[420px]">
+                    <a href="#" class="workspace-tool flex items-center gap-[18px] p-[22px_24px] mb-[14px] rounded-[16px] transition-all duration-300 ease-out no-underline">
+                        <div class="workspace-tool-icon w-[52px] h-[52px] flex items-center justify-center rounded-[10px]"><i class="fa-solid fa-rocket text-[1.6rem]"></i></div>
+                        <div class="workspace-tool-info flex flex-col gap-[4px]">
+                            <span class="workspace-tool-name text-[16px] font-[600]">TechBuddy</span>
+                            <span class="workspace-tool-desc text-[12px] uppercase">Tech Brand Partner</span>
+                        </div>
+                    </a>
+                    <a href="#" class="workspace-tool flex items-center gap-[18px] p-[22px_24px] mb-[14px] rounded-[16px] transition-all duration-300 ease-out no-underline">
+                        <div class="workspace-tool-icon w-[52px] h-[52px] flex items-center justify-center rounded-[10px]"><i class="fa-solid fa-film text-[1.6rem]"></i></div>
+                        <div class="workspace-tool-info flex flex-col gap-[4px]">
+                            <span class="workspace-tool-name text-[16px] font-[600]">Xenon Studios</span>
+                            <span class="workspace-tool-desc text-[12px] uppercase">Co-founder & Creative Lead</span>
+                        </div>
+                    </a>
+                    <a href="#" class="workspace-tool flex items-center gap-[18px] p-[22px_24px] mb-[14px] rounded-[16px] transition-all duration-300 ease-out no-underline">
+                        <div class="workspace-tool-icon w-[52px] h-[52px] flex items-center justify-center rounded-[10px]"><i class="fa-solid fa-gamepad text-[1.6rem]"></i></div>
+                        <div class="workspace-tool-info flex flex-col gap-[4px]">
+                            <span class="workspace-tool-name text-[16px] font-[600]">MrNomster</span>
+                            <span class="workspace-tool-desc text-[12px] uppercase">Content Collaboration</span>
+                        </div>
+                    </a>
+                    <a href="#" class="workspace-tool flex items-center gap-[18px] p-[22px_24px] mb-[14px] rounded-[16px] transition-all duration-300 ease-out no-underline">
+                        <div class="workspace-tool-icon w-[52px] h-[52px] flex items-center justify-center rounded-[10px]"><i class="fa-solid fa-futbol text-[1.6rem]"></i></div>
+                        <div class="workspace-tool-info flex flex-col gap-[4px]">
+                            <span class="workspace-tool-name text-[16px] font-[600]">Dribbling BD</span>
+                            <span class="workspace-tool-desc text-[12px] uppercase">Sports Media Partner</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="mt-12 flex gap-4">
-            <a href="#contact"
-                class="px-8 py-4 bg-accent text-light rounded-lg font-semibold hover:bg-accent/80 transition-colors">Get
-                in Touch</a>
-            <a href="#projects"
-                class="px-8 py-4 border border-light/30 text-light rounded-lg font-semibold hover:bg-light/10 transition-colors">View
-                All Projects</a>
-        </div>
     </section>
 
-    <section id="skills" class="min-h-screen flex flex-col items-center justify-start px-8 py-20">
+    <section id="skills" class="skills-section min-h-screen flex flex-col items-center justify-start px-8 py-20">
         <h2 class="text-4xl font-bold text-light mb-4">Skills</h2>
         <p class="text-light/60 text-lg mb-12">What I bring to the table</p>
         <div class="w-full max-w-7xl flex gap-12 items-start justify-center">
@@ -237,115 +301,115 @@
         </div>
     </section>
 
-    <section id="collab" class="collab-section flex flex-col items-center justify-center">
-        <div class="collab-header">
-            <h2>Collaborations</h2>
-            <p>Projects I've worked on with amazing people and brands</p>
+    <section id="collab" class="collab-section min-h-screen p-[120px_32px] relative overflow-hidden flex flex-col items-center justify-center">
+        <div class="collab-header text-center mb-[80px] relative">
+            <h2 class="font-[700] text-light mb-[16px]">Collaborations</h2>
+            <p class="text-[18px] text-light/60 max-w-[500px] mx-auto">Projects I've worked on with amazing people and brands</p>
         </div>
 
-        <div class="stats-container">
-            <div class="stat-item">
+        <div class="stats-container flex gap-[80px] mb-[80px] justify-center relative overflow-hidden">
+            <div class="stat-item text-center relative z-[1]">
                 <div class="stat-number" data-target="5" data-suffix="+"></div>
                 <div class="stat-label">Years Experience</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item text-center relative z-[1]">
                 <div class="stat-number" data-target="97" data-suffix="%"></div>
                 <div class="stat-label">Client Satisfaction</div>
             </div>
-            <div class="stat-item">
+            <div class="stat-item text-center relative z-[1]">
                 <div class="stat-number" data-target="99" data-suffix="+"></div>
                 <div class="stat-label">Projects Completed</div>
             </div>
         </div>
 
-        <div class="collab-grid">
-            <div class="collab-card collab-featured">
-                <div class="collab-card-icon">🎬</div>
-                <h3>Featured Project</h3>
-                <p class="collab-card-description">A major collaboration that pushed creative boundaries and delivered
+        <div class="collab-grid grid gap-[32px] max-w-[1400px] mx-auto relative z-[1] items-stretch">
+            <div class="collab-card collab-featured relative rounded-[24px] p-[48px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
+                <div class="collab-card-icon w-[88px] h-[88px] rounded-[24px] flex items-center justify-center mb-[24px]"><i class="fa-solid fa-film text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Featured Project</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">A major collaboration that pushed creative boundaries and delivered
                     exceptional results for a global audience.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2024</span>
-                    <span class="collab-card-role">Lead Editor</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Lead Editor</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card">
-                <div class="collab-card-icon">🎨</div>
-                <h3>Brand Video Series</h3>
-                <p class="collab-card-description">Created a complete video series for a startup brand, handling
+            <div class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10">
+                <div class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px] text-[32px]"><i class="fa-solid fa-palette text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Brand Video Series</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Created a complete video series for a startup brand, handling
                     everything from concept to final delivery.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2024</span>
-                    <span class="collab-card-role">Video Editor</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Video Editor</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card">
+            <div class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10">
 
-                <div class="collab-card-icon">✨</div>
-                <h3>Music Video Production</h3>
-                <p class="collab-card-description">Post-production work for an independent music artist, including color
+                <div class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px] text-[32px]"><i class="fa-solid fa-sparkles text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Music Video Production</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Post-production work for an independent music artist, including color
                     grading and motion graphics.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2023</span>
-                    <span class="collab-card-role">VFX Artist</span>
+                    <span class="collab-card-role text-[13px] text-light/50">VFX Artist</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card">
+            <div class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10">
 
-                <div class="collab-card-icon">📱</div>
-                <h3>Social Media Content</h3>
-                <p class="collab-card-description">Produced engaging short-form content for multiple social media
+                <div class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px] text-[32px]"><i class="fa-solid fa-mobile text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Social Media Content</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Produced engaging short-form content for multiple social media
                     platforms with viral results.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2023</span>
-                    <span class="collab-card-role">Content Creator</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Content Creator</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card">
+            <div class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10">
 
-                <div class="collab-card-icon">🎥</div>
-                <h3>Documentary Project</h3>
-                <p class="collab-card-description">Long-form documentary editing with complex narrative structure and
+                <div class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px] text-[32px]"><i class="fa-solid fa-video text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Documentary Project</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Long-form documentary editing with complex narrative structure and
                     archival footage integration.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2022</span>
-                    <span class="collab-card-role">Editor</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Editor</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card">
+            <div class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10">
 
-                <div class="collab-card-icon">🌟</div>
-                <h3>YouTube Channel Collab</h3>
-                <p class="collab-card-description">Ongoing collaboration with a YouTube channel, handling all
+                <div class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px] text-[32px]"><i class="fa-solid fa-star text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">YouTube Channel Collab</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Ongoing collaboration with a YouTube channel, handling all
                     post-production requirements.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2021-24</span>
-                    <span class="collab-card-role">Video Editor</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Video Editor</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
 
-            <div class="collab-card collab-featured">
+            <div class="collab-card collab-featured relative rounded-[24px] p-[48px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
 
-                <div class="collab-card-icon">🚀</div>
-                <h3>Agency Partnership</h3>
-                <p class="collab-card-description">Ongoing partnership with a creative agency, delivering high-quality
+                <div class="collab-card-icon w-[88px] h-[88px] rounded-[24px] flex items-center justify-center mb-[24px]"><i class="fa-solid fa-rocket text-[32px]"></i></div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Agency Partnership</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Ongoing partnership with a creative agency, delivering high-quality
                     video content for various clients and campaigns.</p>
-                <div class="collab-card-meta">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year">2024</span>
-                    <span class="collab-card-role">Senior Editor</span>
+                    <span class="collab-card-role text-[13px] text-light/50">Senior Editor</span>
                 </div>
-                <div class="collab-card-arrow">→</div>
+                <div class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent"><i class="fa-solid fa-arrow-right"></i></div>
             </div>
         </div>
     </section>
@@ -356,260 +420,262 @@
             <p class="text-light/60 text-lg">Stay updated with my latest work</p>
         </div>
 
-        <div class="activity-carousel-wrapper overflow-hidden">
-            <div class="activity-track flex gap-6" id="activityTrack">
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">4:12</div>
+        <div class="activity-carousel-wrapper overflow-hidden max-w-[1600px] mx-auto p-[60px_0]">
+            <div class="activity-track flex gap-6 w-max p-[20px_60px] relative" id="activityTrack">
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">4:12</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">🎬</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-film text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">Today</span>
-                            <h4 class="reel-title">Music Video Completed</h4>
-                            <p class="reel-desc">Finished editing a 4-minute music video with color grading and VFX</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">Music Video Completed</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Finished editing a 4-minute music video with color grading and VFX</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>2.5K views</span>
-                        <span>98 likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 2.5K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 98 likes</span>
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">0:45</div>
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">0:45</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">📱</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-mobile text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">Yesterday</span>
-                            <h4 class="reel-title">Social Media Reels</h4>
-                            <p class="reel-desc">Created 5 viral reels for Instagram with trending transitions</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">Social Media Reels</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Created 5 viral reels for Instagram with trending transitions</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>15K views</span>
-                        <span>1.2K likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 15K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 1.2K likes</span>
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">15:30</div>
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">15:30</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">🎥</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-video text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">2 days ago</span>
-                            <h4 class="reel-title">Documentary Edit</h4>
-                            <p class="reel-desc">Completed 15-minute documentary with complex narrative structure</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">Documentary Edit</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Completed 15-minute documentary with complex narrative structure</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>8K views</span>
-                        <span>650 likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 8K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 650 likes</span>
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">2:00</div>
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">2:00</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">✨</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-sparkles text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">3 days ago</span>
-                            <h4 class="reel-title">Brand Campaign</h4>
-                            <p class="reel-desc">Delivered a full brand video series with 3 episodes</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">Brand Campaign</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Delivered a full brand video series with 3 episodes</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>5K views</span>
-                        <span>420 likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 5K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 420 likes</span>
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">8:45</div>
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">8:45</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">🌟</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-star text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">4 days ago</span>
-                            <h4 class="reel-title">YouTube Collab</h4>
-                            <p class="reel-desc">Published a collab video that reached 100K views</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">YouTube Collab</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Published a collab video that reached 100K views</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>100K views</span>
-                        <span>8.5K likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 100K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 8.5K likes</span>
                     </div>
                 </div>
-                <div class="activity-card">
-                    <div class="reel-thumbnail">
-                        <div class="reel-play">▶</div>
-                        <div class="reel-duration">0:30</div>
+                <div class="activity-card flex-shrink-0 w-[340px] rounded-[24px] overflow-hidden cursor-pointer relative flex flex-col">
+                    <div class="reel-thumbnail relative h-[200px] flex items-center justify-center overflow-hidden">
+                        <div class="reel-play w-[72px] h-[72px] rounded-full flex items-center justify-center relative z-[2]"><i class="fa-solid fa-play text-[28px]"></i></div>
+                        <div class="reel-duration absolute bottom-[16px] right-[16px] p-[8px_14px] rounded-[10px] z-[2]">0:30</div>
                     </div>
-                    <div class="reel-content">
-                        <div class="reel-icon">🎨</div>
-                        <div class="reel-info">
+                    <div class="reel-content flex gap-[16px] p-[28px]">
+                        <div class="reel-icon flex-shrink-0"><i class="fa-solid fa-palette text-[2.2rem]"></i></div>
+                        <div class="reel-info flex-1">
                             <span class="reel-date">5 days ago</span>
-                            <h4 class="reel-title">Motion Graphics</h4>
-                            <p class="reel-desc">Created animated logo intro for a startup brand</p>
+                            <h4 class="reel-title text-[1.2rem] font-[600] text-light mt-[10px]">Motion Graphics</h4>
+                            <p class="reel-desc text-[0.9rem] text-light/50 mt-[10px]">Created animated logo intro for a startup brand</p>
                         </div>
                     </div>
-                    <div class="reel-stats">
-                        <span>3K views</span>
-                        <span>250 likes</span>
+                    <div class="reel-stats flex gap-[24px] p-[20px_28px] border-t border-light/5">
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 3K views</span>
+                        <span class="text-[0.85rem] text-light/60 font-[500] flex items-center gap-[8px]"><i class="fa-solid fa-heart"></i> 250 likes</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="cta" class="cta-section">
-        <div class="cta-bg-gradient"></div>
+    <section id="cta" class="cta-section relative min-h-screen flex items-center justify-center p-[140px_32px] overflow-hidden">
+        <div class="cta-bg-gradient absolute inset-0 pointer-events-none"></div>
 
-        <div class="cta-container">
-            <div class="cta-grid">
-                <div class="cta-left">
-                    <span class="cta-label">Get in Touch</span>
-                    <h2 class="cta-headline">
-                        <span class="cta-headline-line">Let's Build</span>
-                        <span class="cta-headline-line">Something Great</span>
+        <div class="cta-container relative z-[1] max-w-[1200px] w-full">
+            <div class="cta-grid grid grid-cols-[1.5fr_1fr] gap-[120px] items-center">
+                <div class="cta-left pr-[80px]">
+                    <span class="cta-label inline-flex items-center gap-[16px] text-accent uppercase mb-[32px] pl-[32px]">Get in Touch</span>
+                    <h2 class="cta-headline text-light mb-[32px] font-[700]">
+                        <span class="cta-headline-line block">Let's Build</span>
+                        <span class="cta-headline-line block">Something Great</span>
                     </h2>
-                    <p class="cta-subheadline">Have a project in mind? Fill out the form and Irfan Sadiq Mahi will get
+                    <p class="cta-subheadline text-[18px] text-light/50 leading-[1.8] mb-[48px] font-[300]">Have a project in mind? Fill out the form and Irfan Sadiq Mahi will get
                         back to you within 24 hours.</p>
 
-                    <form class="cta-form" id="ctaForm">
-                        <input type="text" class="cta-input" placeholder="Your Name" required>
-                        <input type="email" class="cta-input" placeholder="Email Address" required>
-                        <input type="text" class="cta-input" placeholder="Project Type">
-                        <textarea class="cta-input cta-textarea" placeholder="Tell me about your project..."></textarea>
-                        <div class="cta-submit-wrapper">
-                            <button type="submit" class="cta-submit">Send Message →</button>
+                    <form class="cta-form flex flex-col gap-[20px]" id="ctaForm">
+                        <input type="text" class="cta-input w-full p-[24px_28px] rounded-[16px] text-[1rem] text-light outline-none" placeholder="Your Name" required>
+                        <input type="email" class="cta-input w-full p-[24px_28px] rounded-[16px] text-[1rem] text-light outline-none" placeholder="Email Address" required>
+                        <input type="text" class="cta-input w-full p-[24px_28px] rounded-[16px] text-[1rem] text-light outline-none" placeholder="Project Type">
+                        <textarea class="cta-input cta-textarea w-full p-[24px_28px] rounded-[16px] text-[1rem] text-light outline-none min-h-[140px]" placeholder="Tell me about your project..."></textarea>
+                        <div class="cta-submit-wrapper relative self-start">
+                            <button type="submit" class="cta-submit relative p-[24px_48px] rounded-[16px] text-[1rem] font-[600] text-light cursor-pointer overflow-hidden">Send Message <i class="fa-solid fa-arrow-right"></i></button>
                         </div>
                     </form>
                 </div>
 
-                <div class="cta-right">
-                    <span class="cta-label">Contact Info</span>
+                <div class="cta-right pl-[60px] relative">
+                    <span class="cta-label inline-flex items-center gap-[16px] text-accent uppercase mb-[32px] pl-[32px]">Contact Info</span>
 
-                    <div class="cta-contact-list">
-                        <div class="cta-contact-item">
-                            <div class="cta-contact-icon">📧</div>
-                            <div class="cta-contact-info">
+                    <div class="cta-contact-list flex flex-col gap-[28px] mb-[56px]">
+                        <div class="cta-contact-item flex items-center gap-[20px] p-[16px] rounded-[16px] transition-all duration-300">
+                            <div class="cta-contact-icon w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem]"><i class="fa-solid fa-envelope text-[1.3rem]"></i></div>
+                            <div class="cta-contact-info flex flex-col gap-[4px]">
                                 <span class="cta-contact-type">Email</span>
-                                <span class="cta-contact-value">hello@mahi.com</span>
+                                <span class="cta-contact-value text-[1rem] text-light/90">hello@mahi.com</span>
                             </div>
                         </div>
-                        <div class="cta-contact-item">
-                            <div class="cta-contact-icon">📱</div>
-                            <div class="cta-contact-info">
+                        <div class="cta-contact-item flex items-center gap-[20px] p-[16px] rounded-[16px] transition-all duration-300">
+                            <div class="cta-contact-icon w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem]"><i class="fa-solid fa-mobile text-[1.3rem]"></i></div>
+                            <div class="cta-contact-info flex flex-col gap-[4px]">
                                 <span class="cta-contact-type">Phone</span>
-                                <span class="cta-contact-value">+880 1234 567890</span>
+                                <span class="cta-contact-value text-[1rem] text-light/90">+880 1234 567890</span>
                             </div>
                         </div>
-                        <div class="cta-contact-item">
-                            <div class="cta-contact-icon">📍</div>
-                            <div class="cta-contact-info">
+                        <div class="cta-contact-item flex items-center gap-[20px] p-[16px] rounded-[16px] transition-all duration-300">
+                            <div class="cta-contact-icon w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem]"><i class="fa-solid fa-location-dot text-[1.3rem]"></i></div>
+                            <div class="cta-contact-info flex flex-col gap-[4px]">
                                 <span class="cta-contact-type">Location</span>
-                                <span class="cta-contact-value">Dhaka, Bangladesh</span>
+                                <span class="cta-contact-value text-[1rem] text-light/90">Dhaka, Bangladesh</span>
                             </div>
                         </div>
                     </div>
 
-                    <p class="cta-contact-label">Follow Me</p>
+                    <p class="cta-contact-label text-light/30 uppercase mb-[28px]">Follow Me</p>
 
-                    <div class="cta-socials">
-                        <a href="#" class="cta-social-link">📸</a>
-                        <a href="#" class="cta-social-link">🐦</a>
-                        <a href="#" class="cta-social-link">💼</a>
-                        <a href="#" class="cta-social-link">🎬</a>
+                    <div class="cta-socials flex gap-[16px]">
+                        <a href="#" class="cta-social-link w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem] text-light/40 no-underline"><i class="fa-solid fa-camera text-[1.3rem]"></i></a>
+                        <a href="#" class="cta-social-link w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem] text-light/40 no-underline"><i class="fa-solid fa-twitter text-[1.3rem]"></i></a>
+                        <a href="#" class="cta-social-link w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem] text-light/40 no-underline"><i class="fa-solid fa-briefcase text-[1.3rem]"></i></a>
+                        <a href="#" class="cta-social-link w-[56px] h-[56px] flex items-center justify-center rounded-[14px] text-[1.3rem] text-light/40 no-underline"><i class="fa-solid fa-film text-[1.3rem]"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer-section">
-        <div class="footer-line"></div>
+    <footer class="footer-section relative overflow-hidden">
+        <div class="footer-line absolute top-0 left-1/2 w-[1px] h-[40px]"></div>
 
-        <div class="footer-main">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <div class="footer-logo-mark">MR</div>
-                        <span class="footer-logo-text">Irfan</span>
+        <div class="footer-main p-[80px_32px_60px] relative z-[1]">
+            <div class="footer-grid grid grid-cols-[2fr_1fr_1fr_1fr] gap-[60px] max-w-[1200px] mx-auto">
+                <div class="footer-brand max-w-[320px]">
+                    <div class="footer-logo flex items-center gap-[16px] mb-[24px]">
+                        <div class="footer-logo-mark w-[48px] h-[48px] rounded-[12px] flex items-center justify-center font-[700] text-light">MR</div>
+                        <span class="footer-logo-text text-[1.25rem] font-[600] text-light">Irfan</span>
                     </div>
-                    <p class="footer-tagline">Creating visual stories that captivate and inspire. Specializing in video
+                    <p class="footer-tagline text-[14px] text-light/40 leading-[1.7] mb-[28px]">Creating visual stories that captivate and inspire. Specializing in video
                         editing, motion graphics, and visual effects.</p>
-                    <div class="footer-social">
-                        <a href="#" class="footer-social-link">📸</a>
-                        <a href="#" class="footer-social-link">🐦</a>
-                        <a href="#" class="footer-social-link">💼</a>
-                        <a href="#" class="footer-social-link">🎬</a>
+                    <div class="footer-social flex gap-[10px]">
+                        <a href="#" class="footer-social-link w-[40px] h-[40px] flex items-center justify-center rounded-[10px] text-[1rem] text-light/40 no-underline"><i class="fa-solid fa-camera text-[1rem]"></i></a>
+                        <a href="#" class="footer-social-link w-[40px] h-[40px] flex items-center justify-center rounded-[10px] text-[1rem] text-light/40 no-underline"><i class="fa-solid fa-twitter text-[1rem]"></i></a>
+                        <a href="#" class="footer-social-link w-[40px] h-[40px] flex items-center justify-center rounded-[10px] text-[1rem] text-light/40 no-underline"><i class="fa-solid fa-briefcase text-[1rem]"></i></a>
+                        <a href="#" class="footer-social-link w-[40px] h-[40px] flex items-center justify-center rounded-[10px] text-[1rem] text-light/40 no-underline"><i class="fa-solid fa-film text-[1rem]"></i></a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-column-title">Navigation</h4>
-                    <div class="footer-links">
-                        <a href="#hero" class="footer-link">Home</a>
-                        <a href="#about" class="footer-link">About</a>
-                        <a href="#skills" class="footer-link">Skills</a>
-                        <a href="#collab" class="footer-link">Collaborations</a>
-                        <a href="#activities" class="footer-link">Activities</a>
-                        <a href="#cta" class="footer-link">Contact</a>
+                    <h4 class="footer-column-title uppercase mb-[24px]">Navigation</h4>
+                    <div class="footer-links flex flex-col gap-[14px]">
+                        <a href="#hero" class="footer-link text-[14px] text-light/50 no-underline">Home</a>
+                        <a href="#about" class="footer-link text-[14px] text-light/50 no-underline">About</a>
+                        <a href="#skills" class="footer-link text-[14px] text-light/50 no-underline">Skills</a>
+                        <a href="#collab" class="footer-link text-[14px] text-light/50 no-underline">Collaborations</a>
+                        <a href="#activities" class="footer-link text-[14px] text-light/50 no-underline">Activities</a>
+                        <a href="#cta" class="footer-link text-[14px] text-light/50 no-underline">Contact</a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-column-title">Services</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Video Editing</a>
-                        <a href="#" class="footer-link">Motion Graphics</a>
-                        <a href="#" class="footer-link">Color Grading</a>
-                        <a href="#" class="footer-link">VFX</a>
-                        <a href="#" class="footer-link">Sound Design</a>
+                    <h4 class="footer-column-title uppercase mb-[24px]">Services</h4>
+                    <div class="footer-links flex flex-col gap-[14px]">
+                        <a href="#" class="footer-link text-[14px] text-light/50 no-underline">Video Editing</a>
+                        <a href="#" class="footer-link text-[14px] text-light/50 no-underline">Motion Graphics</a>
+                        <a href="#" class="footer-link text-[14px] text-light/50 no-underline">Color Grading</a>
+                        <a href="#" class="footer-link text-[14px] text-light/50 no-underline">VFX</a>
+                        <a href="#" class="footer-link text-[14px] text-light/50 no-underline">Sound Design</a>
                     </div>
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-column-title">Contact</h4>
-                    <div class="footer-links">
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon">📧</span>
-                            <span class="footer-contact-text">hello@mahi.com</span>
+                    <h4 class="footer-column-title uppercase mb-[24px]">Contact</h4>
+                    <div class="footer-links flex flex-col gap-[14px]">
+                        <div class="footer-contact-item flex items-start gap-[12px] mb-[16px]">
+                            <span class="footer-contact-icon text-[0.9rem] opacity-50 mt-[3px]"><i class="fa-solid fa-envelope text-[0.9rem]"></i></span>
+                            <span class="footer-contact-text text-[13px] text-light/50">hello@mahi.com</span>
                         </div>
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon">📱</span>
-                            <span class="footer-contact-text">+880 1234 567890</span>
+                        <div class="footer-contact-item flex items-start gap-[12px] mb-[16px]">
+                            <span class="footer-contact-icon text-[0.9rem] opacity-50 mt-[3px]"><i class="fa-solid fa-mobile text-[0.9rem]"></i></span>
+                            <span class="footer-contact-text text-[13px] text-light/50">+880 1234 567890</span>
                         </div>
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon">📍</span>
-                            <span class="footer-contact-text">Dhaka, Bangladesh</span>
+                        <div class="footer-contact-item flex items-start gap-[12px] mb-[16px]">
+                            <span class="footer-contact-icon text-[0.9rem] opacity-50 mt-[3px]"><i class="fa-solid fa-location-dot text-[0.9rem]"></i></span>
+                            <span class="footer-contact-text text-[13px] text-light/50">Dhaka, Bangladesh</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p class="footer-copyright">© <span class="footer-year">2024</span> <span>×</span> Irfan. All rights
+        <div class="footer-bottom relative border-t border-light/4 p-[28px_32px]">
+            <div class="footer-bottom-content flex justify-between items-center max-w-[1200px] mx-auto">
+                <p class="footer-copyright text-light/25">&copy; <span class="footer-year">2024</span> <span>&times;</span> Irfan. All rights
                     reserved.</p>
-                <div class="footer-status">
-                    <span class="footer-status-dot"></span>
+                <div class="footer-status flex items-center gap-[8px] text-light/30">
+                    <span class="footer-status-dot w-[6px] h-[6px] rounded-full"></span>
                     <span>Available for work</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.polyfilled.min.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/video.js"></script>
