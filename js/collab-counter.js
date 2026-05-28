@@ -1,11 +1,4 @@
-/**
- * ========================================
- * PREMIUM ODOMETER COUNTER SYSTEM
- * Scroll-Triggered Rolling Number Animation
- * ========================================
- */
-
-(function () {
+﻿(function () {
   "use strict";
 
   const CONFIG = {
