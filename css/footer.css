@@ -9,7 +9,10 @@
 }
 
 .footer-grid {
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px;
+  justify-items: center;
 }
 
 .footer-logo-mark {
@@ -40,6 +43,12 @@
   transform: translateY(-2px);
 }
 
+.footer-social-link:hover .fa-facebook-f { color: #1877f2; }
+.footer-social-link:hover .fa-instagram { color: #e4405f; }
+.footer-social-link:hover .fa-x-twitter { color: #fff; }
+.footer-social-link:hover .fa-linkedin-in { color: #0a66c2; }
+.footer-social-link:hover .fa-threads { color: #fff; }
+
 .footer-column-title {
   font-family: "Space Mono", monospace;
   font-size: 0.65rem;
@@ -68,6 +77,10 @@
 
 .footer-copyright span {
   color: #715a5a;
+}
+
+.footer-copyright a {
+  text-shadow: 0 0 10px rgba(113,90,90,0.6);
 }
 
 .footer-status {

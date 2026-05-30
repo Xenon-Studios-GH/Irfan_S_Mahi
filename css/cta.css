@@ -1,4 +1,8 @@
-﻿.cta-section::before {
+﻿.cta-section {
+  background: #000000;
+}
+
+.cta-section::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -201,6 +205,12 @@
   transform: translateY(-6px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
+
+.cta-social-link:hover .fa-facebook-f { color: #1877f2; }
+.cta-social-link:hover .fa-instagram { color: #e4405f; }
+.cta-social-link:hover .fa-x-twitter { color: #fff; }
+.cta-social-link:hover .fa-linkedin-in { color: #0a66c2; }
+.cta-social-link:hover .fa-threads { color: #fff; }
 
 @media (max-width: 968px) {
 
