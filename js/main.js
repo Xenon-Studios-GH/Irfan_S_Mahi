@@ -1,16 +1,4 @@
-﻿function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
-function throttle(func, limit) {
+﻿function throttle(func, limit) {
   let inThrottle;
   return function executedFunction(...args) {
     if (!inThrottle) {
@@ -49,22 +37,23 @@ function initParticles() {
 
 function initScrollReveal() {
   gsap.registerPlugin(ScrollTrigger);
-  gsap.from("section > *", {
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    ease: "power2.out",
-    stagger: 0.08,
-    scrollTrigger: {
-      trigger: "section",
-      start: "top 90%",
-      toggleActions: "play none none reverse",
-    },
+  document.querySelectorAll("section").forEach((section) => {
+    gsap.from(section.children, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.08,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 90%",
+        toggleActions: "play none none reverse",
+      },
+    });
   });
 }
 
 function initPixelPerfectScroll() {
-
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -75,10 +64,13 @@ function initPixelPerfectScroll() {
           e.preventDefault();
 
           const offset = 40;
-          const targetPosition =
-            target.getBoundingClientRect().top + window.pageYOffset - offset;
-
-          window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          if (window.lenis) {
+            window.lenis.scrollTo(target, { offset, duration: 1.2 });
+          } else {
+            const targetPosition =
+              target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top: targetPosition, behavior: "smooth" });
+          }
         }
       }
     });
@@ -102,7 +94,6 @@ function initPixelPerfectScroll() {
       ) {
         const id = section.getAttribute("id");
         navItems.forEach((item) => {
-
           if (item.getAttribute("href") === "#" + id) {
             item.classList.add("text-accent");
           } else {
@@ -122,7 +113,6 @@ function initPixelPerfectTouch() {
   const skillItems = document.querySelectorAll(".skill-item");
 
   skillItems.forEach((item) => {
-
     item.addEventListener(
       "touchstart",
       function () {
@@ -141,19 +131,9 @@ function initPixelPerfectTouch() {
       { passive: true },
     );
   });
-
-  const touchStyles = document.createElement("style");
-  touchStyles.textContent = `
-        .skill-item.touch-active {
-            background: rgba(113, 90, 90, 0.4) !important;
-            transform: scale(0.98);
-        }
-    `;
-  document.head.appendChild(touchStyles);
 }
 
 function initPixelPerfectAccessibility() {
-
   document.addEventListener("keydown", (e) => {
     if (e.key === "Tab") {
       document.body.classList.add("keyboard-nav");
@@ -163,34 +143,6 @@ function initPixelPerfectAccessibility() {
   document.addEventListener("mousedown", () => {
     document.body.classList.remove("keyboard-nav");
   });
-
-  const focusStyles = document.createElement("style");
-  focusStyles.textContent = `
-        .keyboard-nav *:focus {
-            outline: 2px solid #715A5A !important;
-            outline-offset: 2px !important;
-        }
-        .keyboard-nav .dynamic-island:focus-within {
-            outline: 2px solid #715A5A !important;
-            outline-offset: 4px !important;
-        }
-    `;
-  document.head.appendChild(focusStyles);
-
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  );
-
-  function handleReducedMotion() {
-    if (prefersReducedMotion.matches) {
-      document.body.classList.add("reduced-motion");
-    } else {
-      document.body.classList.remove("reduced-motion");
-    }
-  }
-
-  handleReducedMotion();
-  prefersReducedMotion.addEventListener("change", handleReducedMotion);
 }
 
 document.addEventListener("DOMContentLoaded", () => {

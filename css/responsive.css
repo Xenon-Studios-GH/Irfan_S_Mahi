@@ -139,13 +139,7 @@
     display: none;
   }
 
-  .reel-stats {
-    padding: 10px 12px;
-  }
 
-  .reel-stats span {
-    font-size: 0.7rem;
-  }
 }
 
 @media (max-width: 380px) {
@@ -197,11 +191,6 @@
     font-size: 1rem;
     gap: 30px;
   }
-
-  .carousel-logo {
-    width: 130px;
-    height: 44px;
-  }
 }
 
 @media (max-width: 540px) {
@@ -210,23 +199,12 @@
     gap: 24px;
   }
 
-  .carousel-logo {
-    width: 110px;
-    height: 38px;
-  }
-
   .brand-carousel {
     margin-top: 40px;
   }
 }
 
 @media (min-width: 320px) and (max-width: 359px) {
-  :root {
-    --hero-circle-size: 280px;
-    --hero-circle-radius: 140px;
-    --hero-circle-bottom: 140px;
-  }
-
   body {
     font-size: 12px;
     line-height: 1.45;
@@ -261,12 +239,6 @@
 }
 
 @media (min-width: 360px) and (max-width: 399px) {
-  :root {
-    --hero-circle-size: 320px;
-    --hero-circle-radius: 160px;
-    --hero-circle-bottom: 160px;
-  }
-
   body {
     font-size: 13px;
     line-height: 1.5;
@@ -301,12 +273,6 @@
 }
 
 @media (min-width: 400px) and (max-width: 439px) {
-  :root {
-    --hero-circle-size: 360px;
-    --hero-circle-radius: 180px;
-    --hero-circle-bottom: 180px;
-  }
-
   body {
     font-size: 13px;
     line-height: 1.5;
@@ -341,12 +307,6 @@
 }
 
 @media (min-width: 440px) and (max-width: 479px) {
-  :root {
-    --hero-circle-size: 400px;
-    --hero-circle-radius: 200px;
-    --hero-circle-bottom: 200px;
-  }
-
   body {
     font-size: 14px;
   }
@@ -380,12 +340,6 @@
 }
 
 @media (min-width: 480px) and (max-width: 519px) {
-  :root {
-    --hero-circle-size: 440px;
-    --hero-circle-radius: 220px;
-    --hero-circle-bottom: 220px;
-  }
-
   body {
     font-size: 14px;
   }
@@ -414,12 +368,6 @@
 }
 
 @media (min-width: 520px) and (max-width: 599px) {
-  :root {
-    --hero-circle-size: 480px;
-    --hero-circle-radius: 240px;
-    --hero-circle-bottom: 240px;
-  }
-
   body {
     font-size: 14px;
   }
@@ -448,12 +396,6 @@
 }
 
 @media (min-width: 600px) and (max-width: 659px) {
-  :root {
-    --hero-circle-size: 520px;
-    --hero-circle-radius: 260px;
-    --hero-circle-bottom: 260px;
-  }
-
   body {
     font-size: 14px;
   }
@@ -482,12 +424,6 @@
 }
 
 @media (min-width: 660px) and (max-width: 719px) {
-  :root {
-    --hero-circle-size: 560px;
-    --hero-circle-radius: 280px;
-    --hero-circle-bottom: 280px;
-  }
-
   body {
     font-size: 15px;
   }
@@ -516,12 +452,6 @@
 }
 
 @media (min-width: 720px) and (max-width: 779px) {
-  :root {
-    --hero-circle-size: 600px;
-    --hero-circle-radius: 300px;
-    --hero-circle-bottom: 300px;
-  }
-
   body {
     font-size: 15px;
   }
@@ -550,12 +480,6 @@
 }
 
 @media (min-width: 780px) and (max-width: 839px) {
-  :root {
-    --hero-circle-size: 640px;
-    --hero-circle-radius: 320px;
-    --hero-circle-bottom: 320px;
-  }
-
   body {
     font-size: 15px;
   }
@@ -584,12 +508,6 @@
 }
 
 @media (min-width: 840px) and (max-width: 899px) {
-  :root {
-    --hero-circle-size: 680px;
-    --hero-circle-radius: 340px;
-    --hero-circle-bottom: 340px;
-  }
-
   body {
     font-size: 16px;
   }
@@ -618,12 +536,6 @@
 }
 
 @media (min-width: 900px) and (max-width: 959px) {
-  :root {
-    --hero-circle-size: 720px;
-    --hero-circle-radius: 360px;
-    --hero-circle-bottom: 360px;
-  }
-
   body {
     font-size: 16px;
   }
@@ -652,12 +564,6 @@
 }
 
 @media (min-width: 960px) and (max-width: 1023px) {
-  :root {
-    --hero-circle-size: 760px;
-    --hero-circle-radius: 380px;
-    --hero-circle-bottom: 380px;
-  }
-
   body {
     font-size: 16px;
   }
@@ -686,12 +592,6 @@
 }
 
 @media (min-width: 1024px) {
-  :root {
-    --hero-circle-size: 800px;
-    --hero-circle-radius: 400px;
-    --hero-circle-bottom: 400px;
-  }
-
   body {
     font-size: 16px;
   }
@@ -731,6 +631,7 @@
   p {
     font-size: 12px !important;
   }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .dynamic-island {
@@ -744,7 +645,6 @@
     border-width: 2px !important;
     border-color: #fff !important;
   }
-
 }
 
 @media print {
@@ -765,4 +665,3 @@
     min-width: 44px;
   }
 }
-

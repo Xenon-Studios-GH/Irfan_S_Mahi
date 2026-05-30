@@ -2,8 +2,12 @@
   animation: activityScroll 35s linear infinite;
 }
 
-.activity-track::before,
-.activity-track::after {
+.activity-carousel-wrapper {
+  position: relative;
+}
+
+.activity-carousel-wrapper::before,
+.activity-carousel-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
@@ -13,14 +17,14 @@
   pointer-events: none;
 }
 
-.activity-track::before {
+.activity-carousel-wrapper::before {
   left: 0;
-  background: linear-gradient(90deg, #1a1a1a, transparent);
+  background: linear-gradient(90deg, #09090b, transparent);
 }
 
-.activity-track::after {
+.activity-carousel-wrapper::after {
   right: 0;
-  background: linear-gradient(-90deg, #1a1a1a, transparent);
+  background: linear-gradient(-90deg, #09090b, transparent);
 }
 
 .activity-track:hover {
@@ -140,10 +144,6 @@
   font-size: 0.7rem;
   color: #715a5a;
   letter-spacing: 0.15em;
-}
-
-.reel-stats {
-  background: rgba(0, 0, 0, 0.2);
 }
 
 

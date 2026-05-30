@@ -10,6 +10,7 @@
   transform: translateX(-50%);
   width: 800px;
   height: 400px;
+  background: radial-gradient(ellipse at center, rgba(113, 90, 90, 0.15), transparent);
   filter: blur(60px);
   pointer-events: none;
 }
@@ -21,7 +22,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .collab-header p {
@@ -98,11 +99,7 @@
 }
 
 .collab-card-icon {
-  background: linear-gradient(
-    135deg,
-    #715a5a,
-    #37353e
-  );
+  background: linear-gradient(135deg, #715a5a, #37353e);
   box-shadow: 0 10px 40px rgba(113, 90, 90, 0.4);
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -158,7 +155,7 @@
   background: linear-gradient(
     145deg,
     rgba(113, 90, 90, 0.15),
-     rgba(55, 53, 62, 0.4)
+    rgba(55, 53, 62, 0.4)
   );
 }
 
@@ -167,7 +164,6 @@
 }
 
 @media (max-width: 768px) {
-
   .collab-header h2 {
     font-size: 36px;
   }
@@ -181,12 +177,5 @@
     padding: 32px;
   }
 
-  .collab-stats {
-    gap: 40px;
-    flex-wrap: wrap;
-  }
 
-  .collab-stat .stat-number {
-    font-size: 40px;
-  }
 }
