@@ -4,10 +4,11 @@ function randomChar() {
   return CHARS[Math.floor(Math.random() * CHARS.length)];
 }
 
-function decodeText(element, text, speed = 15) {
+function decodeText(element, text, totalDuration) {
   element.textContent = "";
   const chars = text.split("");
   let currentIndex = 0;
+  const perCharTime = totalDuration / chars.length;
   const intervals = [];
 
   function updateFrame(index) {
@@ -29,7 +30,7 @@ function decodeText(element, text, speed = 15) {
 
     const charInterval = setInterval(() => {
       updateFrame(currentIndex);
-    }, speed / 2);
+    }, perCharTime / 4);
 
     intervals.push(charInterval);
 
@@ -37,13 +38,13 @@ function decodeText(element, text, speed = 15) {
       clearInterval(charInterval);
       currentIndex++;
       revealNext();
-    }, speed * 3);
+    }, perCharTime);
   }
 
   revealNext();
 }
 
-function typeText(element, text, speed = 8) {
+function typeText(element, text, speed = 3) {
   element.textContent = "";
   let i = 0;
   function typeChar() {
@@ -56,6 +57,7 @@ function typeText(element, text, speed = 8) {
     }
   }
   typeChar();
+  return text.length * speed;
 }
 
 function initTextEffects() {
@@ -90,8 +92,8 @@ function initTextEffects() {
           let delay = 0;
           rows.forEach((_, index) => {
             setTimeout(() => {
-              if (descriptions[index]) typeText(descriptions[index], descriptions[index].dataset.original);
-              if (skillNames[index]) decodeText(skillNames[index], skillNames[index].closest("td").dataset.original);
+              const duration = descriptions[index] ? typeText(descriptions[index], descriptions[index].dataset.original) : 0;
+              if (skillNames[index]) decodeText(skillNames[index], skillNames[index].closest("td").dataset.original, duration);
             }, delay);
             delay += 800;
           });
@@ -105,9 +107,9 @@ function initTextEffects() {
   if (skillsSection) observer.observe(skillsSection);
 }
 
-function initWatermark() {
-  const watermark = document.querySelector(".watermark");
-  const section = document.getElementById("skills");
+function initWatermark(selector, sectionId) {
+  const watermark = document.querySelector(selector);
+  const section = document.getElementById(sectionId);
   if (!watermark || !section) return;
 
   watermark.style.opacity = "0";
@@ -141,9 +143,9 @@ function initWatermark() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", () => {
     initTextEffects();
-    initWatermark();
+    initWatermark(".watermark", "skills");
   });
 } else {
   initTextEffects();
-  initWatermark();
+  initWatermark(".watermark", "skills");
 }

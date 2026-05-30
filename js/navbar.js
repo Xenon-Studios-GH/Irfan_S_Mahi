@@ -35,10 +35,12 @@
     const viewportHeight = window.innerHeight;
     const threshold = viewportHeight * 0.8;
 
-    if (scrollY > threshold) {
+    const footer = document.getElementById("footer");
+    const footerInView = footer && footer.getBoundingClientRect().top < viewportHeight;
+
+    if (scrollY > threshold && !footerInView) {
       expandNavbar();
     } else {
-
       collapseNavbar();
     }
   }
