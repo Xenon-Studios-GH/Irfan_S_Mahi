@@ -1,0 +1,13 @@
+#skills .skill-item td:first-child div::after {
+  content: "|";
+  animation: blink 0.7s step-end infinite;
+  color: rgba(113, 90, 90, 0.8);
+}
+
+#skills .skill-item td:first-child div.typing-done::after {
+  display: none;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
