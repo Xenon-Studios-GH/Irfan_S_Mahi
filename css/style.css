@@ -33,6 +33,10 @@
   background-color: #352f20;
 }
 
+#activities {
+  background: #09090b;
+}
+
 .hero-btn {
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;

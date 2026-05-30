@@ -31,4 +31,9 @@
 
 .watermark-text {
   font-family: 'Orbitron', sans-serif;
+  transform: rotate(90deg);
+}
+
+#skills col:first-child {
+  width: 385px;
 }
