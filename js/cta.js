@@ -16,12 +16,18 @@ function initCTAForm() {
 
     if (!name || !email) {
       if (!name) {
-        form.querySelector("[name='name']").style.borderColor = "rgba(255, 100, 100, 0.5)";
-        setTimeout(() => { form.querySelector("[name='name']").style.borderColor = ""; }, 1500);
+        form.querySelector("[name='name']").style.borderColor =
+          "rgba(255, 100, 100, 0.5)";
+        setTimeout(() => {
+          form.querySelector("[name='name']").style.borderColor = "";
+        }, 1500);
       }
       if (!email || !isValidEmail(email)) {
-        form.querySelector("[name='email']").style.borderColor = "rgba(255, 100, 100, 0.5)";
-        setTimeout(() => { form.querySelector("[name='email']").style.borderColor = ""; }, 1500);
+        form.querySelector("[name='email']").style.borderColor =
+          "rgba(255, 100, 100, 0.5)";
+        setTimeout(() => {
+          form.querySelector("[name='email']").style.borderColor = "";
+        }, 1500);
       }
       return;
     }

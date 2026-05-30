@@ -1,6 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap");
-
-:root {
+﻿:root {
   --counter-digit-height: 50px;
   --counter-duration: 2.5s;
   --counter-stagger: 0.15s;

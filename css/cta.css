@@ -11,18 +11,16 @@
   width: 120%;
   height: 120%;
   background:
-
     radial-gradient(
       ellipse 100% 60% at 50% 100%,
       rgba(113, 90, 90, 0.15) 0%,
       transparent 60%
     ),
-
     radial-gradient(
-        ellipse 80% 50% at 20% 0%,
-        rgba(68, 68, 78, 0.1) 0%,
-        transparent 50%
-      );
+      ellipse 80% 50% at 20% 0%,
+      rgba(68, 68, 78, 0.1) 0%,
+      transparent 50%
+    );
   pointer-events: none;
 }
 
@@ -122,11 +120,7 @@
 }
 
 .cta-submit {
-  background: linear-gradient(
-    135deg,
-    #715a5a,
-    #5a4a4a
-  );
+  background: linear-gradient(135deg, #715a5a, #5a4a4a);
   border: none;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -206,14 +200,23 @@
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.cta-social-link:hover .fa-facebook-f { color: #1877f2; }
-.cta-social-link:hover .fa-instagram { color: #e4405f; }
-.cta-social-link:hover .fa-x-twitter { color: #fff; }
-.cta-social-link:hover .fa-linkedin-in { color: #0a66c2; }
-.cta-social-link:hover .fa-threads { color: #fff; }
+.cta-social-link:hover .fa-facebook-f {
+  color: #1877f2;
+}
+.cta-social-link:hover .fa-instagram {
+  color: #e4405f;
+}
+.cta-social-link:hover .fa-x-twitter {
+  color: #fff;
+}
+.cta-social-link:hover .fa-linkedin-in {
+  color: #0a66c2;
+}
+.cta-social-link:hover .fa-threads {
+  color: #fff;
+}
 
 @media (max-width: 968px) {
-
   .cta-grid {
     grid-template-columns: 1fr;
     gap: 80px;
@@ -238,7 +241,6 @@
 }
 
 @media (max-width: 640px) {
-
   .cta-section {
     padding: 100px 24px;
   }
@@ -247,4 +249,3 @@
     font-size: 40px;
   }
 }
-

@@ -106,36 +106,6 @@
     );
   }
 
-  function replayCounters() {
-    const counters = document.querySelectorAll(".stat-number");
-    counters.forEach((counter) => {
-      counter.classList.remove("is-visible", "animation-complete");
-
-      const digitInners = counter.querySelectorAll(".digit-inner");
-      digitInners.forEach((inner) => {
-        inner.style.animationDelay = "0ms";
-      });
-
-      requestAnimationFrame(() => {
-        counter.classList.add("is-visible");
-
-        const digits = counter.querySelectorAll(".digit-stack");
-        digitInners.forEach((inner, index) => {
-          inner.style.animationDelay = index * CONFIG.staggerDelay + "ms";
-        });
-
-        setTimeout(
-          () => {
-            counter.classList.add("animation-complete");
-          },
-          CONFIG.animationDuration + digits.length * CONFIG.staggerDelay,
-        );
-      });
-    });
-  }
-
-  window.replayCounters = replayCounters;
-
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", initCounters);
   } else {

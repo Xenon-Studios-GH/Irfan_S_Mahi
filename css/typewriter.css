@@ -1,5 +1,5 @@
 #skills .skill-item td:first-child div {
-  font-family: 'Finlandica Headline', sans-serif;
+  font-family: "Finlandica Headline", sans-serif;
   min-height: 200px;
   visibility: visible;
 }
@@ -15,7 +15,9 @@
 }
 
 @keyframes blink {
-  50% { opacity: 0; }
+  50% {
+    opacity: 0;
+  }
 }
 
 #skills .skill-item td:last-child {
@@ -24,13 +26,13 @@
 }
 
 .decoder-text {
-  font-family: 'Lobster', cursive;
+  font-family: "Lobster", cursive;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.05em;
 }
 
 .watermark-text {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   transform: rotate(90deg);
 }
 

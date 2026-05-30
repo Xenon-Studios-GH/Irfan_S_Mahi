@@ -5,7 +5,6 @@
   let isAnimating = false;
 
   function expandNavbar() {
-
     if (isAnimating || navbar.classList.contains("expand")) return;
     isAnimating = true;
 
@@ -18,7 +17,6 @@
   }
 
   function collapseNavbar() {
-
     if (isAnimating || !navbar.classList.contains("expand")) return;
     isAnimating = true;
 
@@ -36,7 +34,8 @@
     const threshold = viewportHeight * 0.8;
 
     const footer = document.getElementById("footer");
-    const footerInView = footer && footer.getBoundingClientRect().top < viewportHeight;
+    const footerInView =
+      footer && footer.getBoundingClientRect().top < viewportHeight;
 
     if (scrollY > threshold && !footerInView) {
       expandNavbar();
