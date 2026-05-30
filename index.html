@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Mono&family=Inter:wght@300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Mono&family=Inter:wght@300;400;500;600;700&family=Della+Respira&family=Syne+Tactile&family=Orbitron:wght@400;700&family=Lobster&family=Finlandica+Headline&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/collab.css">
     <link rel="stylesheet" href="css/collab-counter.css">
@@ -238,11 +238,17 @@
         </div>
     </section>
 
-    <section id="skills" class="skills-section min-h-screen flex flex-col items-center justify-start px-8 py-20">
-        <h2 class="text-4xl font-bold text-light mb-4">Skills</h2>
-        <p class="text-light/60 text-lg mb-12">What I bring to the table</p>
-        <div class="w-full max-w-7xl mx-auto">
-            <table class="w-full border-collapse">
+    <div class="watermark fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-50">
+            <span class="watermark-text text-[clamp(3rem,10vw,8rem)] font-bold text-light/15 uppercase tracking-wider" style="transform:rotate(90deg)">Experience</span>
+    </div>
+
+    <section id="skills" class="skills-section min-h-screen flex flex-col items-center justify-start px-8 py-20 relative overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto relative z-10">
+            <table class="w-full border-collapse table-fixed">
+                <colgroup>
+                    <col style="width:385px">
+                    <col>
+                </colgroup>
                 <tbody>
                     <tr class="skill-item border-b border-light/10">
                         <td class="py-8 pr-4 align-top">
