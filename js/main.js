@@ -63,56 +63,6 @@ function initScrollReveal() {
   });
 }
 
-const SKILL_BREAKPOINT = 960;
-
-function initPixelPerfectSkills() {
-  const skillsSection = document.getElementById("skills");
-  if (!skillsSection) return;
-
-  const videoWrapper = skillsSection.querySelector(".video-wrapper");
-  const skillsContainer = skillsSection.querySelector(".w-\\[40\\%\\]");
-
-  function updateLayout() {
-    const width = window.innerWidth;
-
-    if (width <= SKILL_BREAKPOINT) {
-      if (videoWrapper) {
-        videoWrapper.style.position = "relative";
-        videoWrapper.style.top = "auto";
-        videoWrapper.style.width = "100%";
-      }
-      if (skillsContainer) {
-        skillsContainer.style.width = "100%";
-      }
-
-      if (videoWrapper && skillsContainer) {
-        const parent = videoWrapper.parentElement;
-        const children = Array.from(parent.children);
-        const videoIndex = children.indexOf(videoWrapper);
-        const skillsIndex = children.indexOf(skillsContainer);
-
-        if (videoIndex > skillsIndex) {
-          parent.insertBefore(videoWrapper, skillsContainer);
-        }
-      }
-    }
-
-    else {
-      if (videoWrapper) {
-        videoWrapper.style.position = "sticky";
-        videoWrapper.style.top = "20px";
-        videoWrapper.style.width = "60%";
-      }
-      if (skillsContainer) {
-        skillsContainer.style.width = "40%";
-      }
-    }
-  }
-
-  updateLayout();
-  window.addEventListener("resize", debounce(updateLayout, 100));
-}
-
 function initPixelPerfectScroll() {
 
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -246,7 +196,6 @@ function initPixelPerfectAccessibility() {
 document.addEventListener("DOMContentLoaded", () => {
   initParticles();
   initScrollReveal();
-  initPixelPerfectSkills();
   initPixelPerfectScroll();
   initPixelPerfectTouch();
   initPixelPerfectAccessibility();

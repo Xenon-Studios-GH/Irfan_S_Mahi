@@ -13,7 +13,6 @@
       };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,7 +24,6 @@
     <link rel="stylesheet" href="css/activity-carousel.css">
     <link rel="stylesheet" href="css/cta.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/video.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
@@ -242,62 +240,31 @@
     <section id="skills" class="skills-section min-h-screen flex flex-col items-center justify-start px-8 py-20">
         <h2 class="text-4xl font-bold text-light mb-4">Skills</h2>
         <p class="text-light/60 text-lg mb-12">What I bring to the table</p>
-        <div class="w-full max-w-7xl flex gap-12 items-start justify-center">
-            <div class="video-wrapper sticky top-20 w-[60%]">
-                <div class="video-glow"></div>
-                <div class="video-frame">
-                    <div class="plyr video-player" id="skillsPlayer">
-                        <video id="skillsVideo" playsinline controls muted>
-                            <source src="assets/video/HeroSection_background_Video.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
-            <div class="w-[40%]">
-                <h3 class="text-2xl font-bold text-light mb-8">My Expertise</h3>
-                <div class="space-y-4">
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">01</span>
-                        <p class="text-light text-lg">Video Editing</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">02</span>
-                        <p class="text-light text-lg">Motion Graphics</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">03</span>
-                        <p class="text-light text-lg">3D Animation</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">04</span>
-                        <p class="text-light text-lg">Visual Effects</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">05</span>
-                        <p class="text-light text-lg">Color Grading</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">06</span>
-                        <p class="text-light text-lg">Sound Design</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">07</span>
-                        <p class="text-light text-lg">Compositing</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">08</span>
-                        <p class="text-light text-lg">Rotoscoping</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">09</span>
-                        <p class="text-light text-lg">Title Design</p>
-                    </div>
-                    <div class="skill-item bg-secondary/30 px-6 py-4 rounded-lg border border-light/10">
-                        <span class="text-accent font-mono text-sm">10</span>
-                        <p class="text-light text-lg">Typography</p>
-                    </div>
-                </div>
-            </div>
+        <div class="w-full max-w-7xl mx-auto">
+            <table class="w-full border-collapse">
+                <tbody>
+                    <tr class="skill-item border-b border-light/10">
+                        <td class="text-light/50 text-lg py-4 pr-4">Seamless cuts, precise pacing, narrative storytelling, audio syncing, color-matched transitions, and professional-grade post-production editing that brings your vision to life</td>
+                        <td class="text-light text-2xl font-semibold text-right py-4">Video Editing</td>
+                    </tr>
+                    <tr class="skill-item border-b border-light/10">
+                        <td class="text-light/50 text-lg py-4 pr-4">Dynamic typography, animated logos, lower thirds, kinetic text, branded motion packages, and broadcast-quality motion design that captivates audiences</td>
+                        <td class="text-light text-2xl font-semibold text-right py-4">Motion Graphics</td>
+                    </tr>
+                    <tr class="skill-item border-b border-light/10">
+                        <td class="text-light/50 text-lg py-4 pr-4">Cinematic 3D modeling, texturing, UV mapping, lighting, camera animation, particle systems, and immersive visual storytelling for films and commercials</td>
+                        <td class="text-light text-2xl font-semibold text-right py-4">3D Animation</td>
+                    </tr>
+                    <tr class="skill-item border-b border-light/10">
+                        <td class="text-light/50 text-lg py-4 pr-4">Green screen compositing, particle simulations, rotoscoping, motion tracking, chroma keying, smoke/fire simulation, and cinematic VFX that makes the impossible look real</td>
+                        <td class="text-light text-2xl font-semibold text-right py-4">Visual Effects</td>
+                    </tr>
+                    <tr class="skill-item border-b border-light/10">
+                        <td class="text-light/50 text-lg py-4 pr-4">Precision color correction, primary and secondary grading, look development, LUT creation, skin tone matching, mood enhancement, and cinematic color science for consistent visual language</td>
+                        <td class="text-light text-2xl font-semibold text-right py-4">Color Grading</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -676,9 +643,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.7.8/plyr.polyfilled.min.js"></script>
     <script src="js/navbar.js"></script>
-    <script src="js/video.js"></script>
     <script src="js/collab.js"></script>
     <script src="js/collab-counter.js"></script>
     <script src="js/brand-carousel.js"></script>

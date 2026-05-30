@@ -43,21 +43,6 @@ python -m http.server 8000
 npx serve .
 ```
 
-## Project Structure
-
-```
-mahi/
-├── assets/
-│   ├── img/          # Hero image
-│   ├── logo/         # Brand logos
-│   └── video/        # Background/showreel video
-├── css/              # 11 component-scoped CSS files
-├── js/               # 10 modular JS files
-├── docs/             # Technical blueprint
-├── index.html        # Single entry point
-└── README.md
-```
-
 ## Design
 
 Dark cinematic aesthetic with a warm accent palette (`#715A5A` rose/clay). Features a unique Apple-inspired dynamic island navigation bar, glassmorphism surfaces, radial gradient lighting, and smooth scroll-triggered animations.
