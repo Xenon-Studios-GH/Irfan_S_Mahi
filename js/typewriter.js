@@ -7,10 +7,12 @@
   }
 
   function decodeText(element, text, totalDuration) {
+    element.textContent = text;
+    if (totalDuration <= 0 || !text) return;
     element.textContent = "";
     const chars = text.split("");
     let currentIndex = 0;
-    const perCharTime = totalDuration / chars.length;
+    const perCharTime = Math.max(totalDuration / chars.length, 16);
     const intervals = [];
 
     function updateFrame(index) {

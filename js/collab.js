@@ -4,14 +4,17 @@
 
 function initCollabAnimations() {
   const cards = document.querySelectorAll(".collab-card");
+  if (!cards.length) return;
 
   const cardObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, index) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
+          const index = Array.from(cards).indexOf(entry.target);
           setTimeout(() => {
             entry.target.classList.add("visible");
           }, index * 150);
+          cardObserver.unobserve(entry.target);
         }
       });
     },
@@ -19,5 +22,4 @@ function initCollabAnimations() {
   );
 
   cards.forEach((card) => cardObserver.observe(card));
-
-
+}

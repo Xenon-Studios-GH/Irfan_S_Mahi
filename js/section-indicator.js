@@ -13,6 +13,7 @@ function initSectionIndicator() {
     let currentId = null;
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
@@ -21,6 +22,14 @@ function initSectionIndicator() {
         currentId = section.id;
       }
     });
+
+    if (!currentId) {
+      if (scrollY < 100 && sections.length > 0) {
+        currentId = sections[0].id;
+      } else if (scrollY + vh >= docHeight - 10 && sections.length > 0) {
+        currentId = sections[sections.length - 1].id;
+      }
+    }
 
     items.forEach((item) => {
       const sectionId = item.dataset.section;
