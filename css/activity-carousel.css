@@ -171,6 +171,76 @@
   #activities .mb-16 {
     margin-bottom: 32px;
   }
+
+  .activity-card {
+    width: 240px;
+  }
+
+  .reel-thumbnail {
+    height: 130px;
+  }
+
+  .reel-icon {
+    font-size: 1.2rem;
+  }
+
+  .reel-title {
+    font-size: 0.9rem;
+  }
+
+  .reel-desc {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .activity-card {
+    width: 200px;
+  }
+
+  .reel-thumbnail {
+    height: 110px;
+  }
+
+  .reel-content {
+    padding: 12px;
+  }
+
+  .reel-icon {
+    font-size: 1rem;
+  }
+
+  .reel-title {
+    font-size: 0.85rem;
+  }
+
+  .reel-desc {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .activity-card {
+    width: 170px;
+  }
+
+  .reel-play {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  #activities h2 {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 399px) {
+  #activities h2 {
+    font-size: 24px !important;
+  }
 }
 
 @media (max-width: 480px) {
@@ -184,5 +254,3 @@
     gap: 12px;
   }
 }
-
-

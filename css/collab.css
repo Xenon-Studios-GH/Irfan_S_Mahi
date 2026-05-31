@@ -10,7 +10,11 @@
   transform: translateX(-50%);
   width: 800px;
   height: 400px;
-  background: radial-gradient(ellipse at center, rgba(113, 90, 90, 0.15), transparent);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(113, 90, 90, 0.15),
+    transparent
+  );
   filter: blur(60px);
   pointer-events: none;
 }
@@ -219,5 +223,30 @@
 
   .collab-card-name {
     font-size: 15px;
+  }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+  .collab-section {
+    padding: 40px 24px !important;
+    min-height: auto !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .collab-section {
+    padding: 40px 12px !important;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 399px) {
+  .collab-section {
+    padding: 48px 16px !important;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 439px) {
+  .collab-section {
+    padding: 48px 20px !important;
   }
 }

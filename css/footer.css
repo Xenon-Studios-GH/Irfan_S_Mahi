@@ -170,3 +170,9 @@
     font-size: 0.6rem;
   }
 }
+
+@media (min-width: 320px) and (max-width: 359px) {
+  .footer-main {
+    padding: 28px 12px 16px !important;
+  }
+}

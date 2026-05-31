@@ -1,5 +1,5 @@
 #skills .skill-item td:first-child {
-  color: #D3DAD9;
+  color: #d3dad9;
   width: auto;
   white-space: nowrap;
 }
@@ -50,5 +50,17 @@
 @media (max-width: 480px) {
   #skills .skill-item td:last-child div {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .watermark-text {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .watermark {
+    display: none;
   }
 }
