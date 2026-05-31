@@ -219,7 +219,7 @@
 @media (max-width: 968px) {
   .cta-grid {
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 60px;
   }
 
   .cta-left,
@@ -242,10 +242,84 @@
 
 @media (max-width: 640px) {
   .cta-section {
-    padding: 100px 24px;
+    padding: 80px 20px;
   }
 
   .cta-headline {
-    font-size: 40px;
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .cta-grid {
+    gap: 40px;
+  }
+
+  .cta-subheadline {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .cta-label {
+    font-size: 0.6rem;
+  }
+
+  .cta-label::before {
+    width: 20px;
+  }
+
+  .cta-input {
+    padding: 16px 20px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+  }
+
+  .cta-submit {
+    padding: 16px 32px;
+    font-size: 0.9rem;
+    border-radius: 12px;
+  }
+
+  .cta-contact-item {
+    padding: 12px;
+  }
+
+  .cta-contact-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
+  }
+
+  .cta-social-link {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-headline {
+    font-size: 28px;
+  }
+
+  .cta-grid {
+    gap: 32px;
+  }
+
+  .cta-contact-list {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .cta-socials {
+    gap: 10px;
+  }
+
+  .cta-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
   }
 }

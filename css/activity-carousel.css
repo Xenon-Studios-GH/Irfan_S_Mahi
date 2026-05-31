@@ -146,4 +146,43 @@
   letter-spacing: 0.15em;
 }
 
+@media (max-width: 768px) {
+  .activity-carousel-wrapper::before,
+  .activity-carousel-wrapper::after {
+    width: 60px;
+  }
+
+  .activity-track {
+    padding: 12px 24px !important;
+  }
+
+  #activities {
+    padding: 60px 16px;
+  }
+
+  #activities h2 {
+    font-size: 28px;
+  }
+
+  #activities .text-lg {
+    font-size: 14px;
+  }
+
+  #activities .mb-16 {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .activity-carousel-wrapper::before,
+  .activity-carousel-wrapper::after {
+    width: 30px;
+  }
+
+  .activity-track {
+    padding: 8px 12px !important;
+    gap: 12px;
+  }
+}
+
 

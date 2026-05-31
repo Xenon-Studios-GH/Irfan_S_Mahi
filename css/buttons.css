@@ -267,26 +267,72 @@
   filter: brightness(0.9);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .hero-btns {
-    top: 80px;
-    right: 20px;
+    top: 24px;
+    right: 24px;
+    gap: 10px;
   }
   .hero-btns-bottom {
-    bottom: 30px;
-    left: 20px;
+    bottom: 24px;
+    left: 24px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-btns {
+    top: 20px;
+    right: 16px;
+    gap: 8px;
+  }
+  .hero-btns-bottom {
+    bottom: 80px;
+    left: 16px;
+    gap: 8px;
+  }
+
+  .animated-button,
+  .btn-view-work {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .btn-about,
+  .bubbles {
+    padding: 8px 18px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-btns {
-    top: 70px;
-    right: 16px;
-    gap: 8px;
+    top: 16px;
+    right: 12px;
+    gap: 6px;
   }
   .hero-btns-bottom {
-    bottom: 30px;
-    left: 16px;
-    gap: 8px;
+    bottom: 60px;
+    left: 12px;
+    gap: 6px;
+  }
+
+  .animated-button,
+  .btn-view-work {
+    padding: 8px 16px;
+    font-size: 11px;
+  }
+
+  .btn-about,
+  .bubbles {
+    padding: 6px 14px;
+    font-size: 11px;
+  }
+
+  .company-card {
+    bottom: 12px;
+    right: 12px;
+    min-width: 140px;
+    padding: 12px 16px !important;
   }
 }

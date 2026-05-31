@@ -85,3 +85,49 @@
 .carousel-item:hover span {
   color: #fff;
 }
+
+@media (max-width: 768px) {
+  .brand-carousel::before,
+  .brand-carousel::after {
+    width: 60px;
+  }
+
+  .brand-carousel {
+    padding: 24px 0;
+  }
+
+  .carousel-item {
+    padding: 14px 24px !important;
+    min-width: 140px;
+  }
+
+  .carousel-item span {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-carousel::before,
+  .brand-carousel::after {
+    width: 40px;
+  }
+
+  .brand-carousel {
+    padding: 16px 0;
+  }
+
+  .carousel-item {
+    padding: 10px 16px !important;
+    min-width: 110px;
+    border-radius: 10px;
+  }
+
+  .carousel-item span {
+    font-size: 0.65rem;
+    letter-spacing: 0.06em;
+  }
+
+  .carousel-track {
+    gap: 6px;
+  }
+}

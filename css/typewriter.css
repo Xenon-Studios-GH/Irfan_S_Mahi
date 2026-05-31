@@ -36,6 +36,17 @@
   transform: rotate(90deg);
 }
 
-#skills col:last-child {
-  width: 385px;
+@media (max-width: 768px) {
+  #skills .skill-item td:first-child {
+    white-space: normal;
+  }
+  #skills .skill-item td:last-child div {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #skills .skill-item td:last-child div {
+    font-size: 14px;
+  }
 }

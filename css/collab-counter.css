@@ -126,13 +126,29 @@
   letter-spacing: 2px;
 }
 
+@media (max-width: 1024px) {
+  .stats-container {
+    gap: 40px;
+  }
+}
+
 @media (max-width: 768px) {
   :root {
     --counter-digit-height: 40px;
   }
 
+  .stats-container {
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
   .stat-number {
     font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.6rem;
+    letter-spacing: 1.5px;
   }
 }
 
@@ -141,9 +157,18 @@
     --counter-digit-height: 35px;
   }
 
+  .stats-container {
+    gap: 16px;
+  }
+
   .stat-number {
     font-size: 1.5rem;
     min-height: 45px;
+  }
+
+  .stat-label {
+    font-size: 0.55rem;
+    letter-spacing: 1px;
   }
 }
 
