@@ -10,26 +10,26 @@ function initSectionIndicator() {
   const items = indicator.querySelectorAll(".section-indicator-item");
 
   function updateActive() {
-    let currentId = null;
     const scrollY = window.scrollY;
     const vh = window.innerHeight;
     const docHeight = document.documentElement.scrollHeight;
+    const viewportCenter = scrollY + vh / 2;
+
+    let currentId = null;
+    let closestDist = Infinity;
 
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
-      const mid = rect.top + rect.height / 2;
-      if (mid >= 0 && mid <= vh) {
+      const sectionTop = rect.top + scrollY;
+      const sectionBottom = sectionTop + rect.height;
+      const sectionMid = sectionTop + rect.height / 2;
+      const dist = Math.abs(sectionMid - viewportCenter);
+
+      if (dist < closestDist) {
+        closestDist = dist;
         currentId = section.id;
       }
     });
-
-    if (!currentId) {
-      if (scrollY < 100 && sections.length > 0) {
-        currentId = sections[0].id;
-      } else if (scrollY + vh >= docHeight - 10 && sections.length > 0) {
-        currentId = sections[sections.length - 1].id;
-      }
-    }
 
     items.forEach((item) => {
       const sectionId = item.dataset.section;

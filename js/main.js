@@ -10,7 +10,11 @@
 }
 
 function initScrollReveal() {
-  document.querySelectorAll("section").forEach((section) => {
+  if (typeof gsap === "undefined") return;
+  const animatedSections = document.querySelectorAll(
+    "section:not(#skills):not(#collab):not(#footer)",
+  );
+  animatedSections.forEach((section) => {
     gsap.from(section.children, {
       opacity: 0,
       y: 30,

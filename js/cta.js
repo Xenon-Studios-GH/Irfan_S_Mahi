@@ -6,8 +6,14 @@ function initCTAForm() {
   const form = document.getElementById("ctaForm");
   if (!form) return;
 
+  let isSubmitting = false;
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
+
+    const btn = form.querySelector(".cta-submit");
+    if (!btn || isSubmitting) return;
+    isSubmitting = true;
 
     const name = form.querySelector("[name='name']").value.trim();
     const email = form.querySelector("[name='email']").value.trim();
@@ -15,6 +21,7 @@ function initCTAForm() {
     const message = form.querySelector("[name='message']").value.trim();
 
     if (!name || !email) {
+      isSubmitting = false;
       if (!name) {
         form.querySelector("[name='name']").style.borderColor =
           "rgba(255, 100, 100, 0.5)";
@@ -44,7 +51,6 @@ function initCTAForm() {
 
     const whatsappUrl = `https://wa.me/8801723034312?text=${encodeURIComponent(text)}`;
 
-    const btn = form.querySelector(".cta-submit");
     btn.textContent = "Opening WhatsApp...";
     btn.disabled = true;
 
@@ -52,6 +58,7 @@ function initCTAForm() {
       window.open(whatsappUrl, "_blank");
       btn.textContent = "Send Message \u2192";
       btn.disabled = false;
+      isSubmitting = false;
       form.reset();
     }, 800);
   });

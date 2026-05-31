@@ -3,7 +3,9 @@
 });
 
 function initBrandCarousel() {
-  const carousels = document.querySelectorAll(".carousel-track");
+  const carousels = document.querySelectorAll(
+    ".brand-carousel .carousel-track",
+  );
 
   carousels.forEach((track) => {
     const items = track.querySelectorAll(".carousel-item");

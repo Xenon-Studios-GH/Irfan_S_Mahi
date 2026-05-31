@@ -78,15 +78,17 @@
       const name = row.querySelector("td:first-child");
 
       if (desc) {
-        desc.dataset.original = desc.dataset.text;
-        delete desc.dataset.text;
         descriptions.push(desc);
       }
 
       if (name) {
-        name.dataset.original = name.textContent.trim();
+        const text = name.textContent.trim();
         name.innerHTML = '<span class="decoder-text"></span>';
-        skillNames.push(name.querySelector(".decoder-text"));
+        const decoderEl = name.querySelector(".decoder-text");
+        skillNames.push({
+          element: decoderEl,
+          text: text,
+        });
       }
     });
 
@@ -98,18 +100,12 @@
             let delay = 0;
             rows.forEach((_, index) => {
               setTimeout(() => {
-                const duration = descriptions[index]
-                  ? typeText(
-                      descriptions[index],
-                      descriptions[index].dataset.original,
-                    )
+                const descEl = descriptions[index];
+                const duration = descEl
+                  ? typeText(descEl, descEl.dataset.text)
                   : 0;
-                if (skillNames[index])
-                  decodeText(
-                    skillNames[index],
-                    skillNames[index].closest("td").dataset.original,
-                    duration,
-                  );
+                const skill = skillNames[index];
+                if (skill) decodeText(skill.element, skill.text, duration);
               }, delay);
               delay += 800;
             });
@@ -141,7 +137,8 @@
         currentOpacity = targetOpacity;
       watermark.style.opacity = currentOpacity;
       watermark.style.visibility = currentOpacity > 0 ? "visible" : "hidden";
-      if (currentOpacity !== targetOpacity) raf = requestAnimationFrame(animate);
+      if (currentOpacity !== targetOpacity)
+        raf = requestAnimationFrame(animate);
       else raf = null;
     }
 

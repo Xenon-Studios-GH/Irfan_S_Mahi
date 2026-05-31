@@ -1,8 +1,20 @@
-﻿function initPixelPerfectNavbar() {
+﻿function throttle(fn, limit) {
+  let inThrottle;
+  return function (...args) {
+    if (!inThrottle) {
+      fn(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+function initPixelPerfectNavbar() {
   const navbar = document.querySelector(".dynamic-island");
   if (!navbar) return;
 
   let isAnimating = false;
+  let lastFooterTop = null;
 
   function expandNavbar() {
     if (isAnimating || navbar.classList.contains("expand")) return;
@@ -34,8 +46,14 @@
     const threshold = viewportHeight * 0.8;
 
     const footer = document.getElementById("footer");
-    const footerInView =
-      footer && footer.getBoundingClientRect().top < viewportHeight;
+    let footerInView = false;
+    if (footer) {
+      const rect = footer.getBoundingClientRect();
+      lastFooterTop = rect.top;
+      footerInView = rect.top < viewportHeight;
+    } else if (lastFooterTop !== null) {
+      footerInView = lastFooterTop < viewportHeight;
+    }
 
     if (scrollY > threshold && !footerInView) {
       expandNavbar();
@@ -44,7 +62,9 @@
     }
   }
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
+  window.addEventListener("scroll", throttle(handleScroll, 100), {
+    passive: true,
+  });
 }
 
 document.addEventListener("DOMContentLoaded", initPixelPerfectNavbar);
