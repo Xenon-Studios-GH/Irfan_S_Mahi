@@ -9,32 +9,6 @@
   };
 }
 
-function initParticles() {
-  const container = document.getElementById("heroParticles");
-  if (!container) return;
-
-  const particleCount = 30;
-
-  for (let i = 0; i < particleCount; i++) {
-    const particle = document.createElement("div");
-    particle.className = "particle";
-
-    particle.style.left = Math.random() * 100 + "%";
-    particle.style.top = Math.random() * 100 + "%";
-
-    particle.style.animationDelay = Math.random() * 15 + "s";
-
-    particle.style.animationDuration = 15 + Math.random() * 10 + "s";
-
-    particle.style.width = 2 + Math.random() * 4 + "px";
-    particle.style.height = particle.style.width;
-
-    particle.style.opacity = Math.random() * 0.5 + 0.2;
-
-    container.appendChild(particle);
-  }
-}
-
 function initScrollReveal() {
   gsap.registerPlugin(ScrollTrigger);
   document.querySelectorAll("section").forEach((section) => {
@@ -146,7 +120,6 @@ function initPixelPerfectAccessibility() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  initParticles();
   initScrollReveal();
   initPixelPerfectScroll();
   initPixelPerfectTouch();
