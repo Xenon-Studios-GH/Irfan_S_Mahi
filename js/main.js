@@ -10,7 +10,6 @@
 }
 
 function initScrollReveal() {
-  gsap.registerPlugin(ScrollTrigger);
   document.querySelectorAll("section").forEach((section) => {
     gsap.from(section.children, {
       opacity: 0,
@@ -21,7 +20,7 @@ function initScrollReveal() {
       scrollTrigger: {
         trigger: section,
         start: "top 90%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
   });

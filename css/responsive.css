@@ -215,14 +215,14 @@
 }
 
 @media (max-width: 768px) {
-  .carousel-track {
+  .brand-carousel .carousel-track {
     font-size: 1rem;
     gap: 30px;
   }
 }
 
 @media (max-width: 540px) {
-  .carousel-track {
+  .brand-carousel .carousel-track {
     font-size: 0.85rem;
     gap: 24px;
   }
@@ -771,6 +771,7 @@
 
   .collab-section {
     padding: 40px 24px !important;
+    min-height: auto !important;
   }
 
   .cta-section {
@@ -816,8 +817,12 @@
 }
 
 @media (hover: none) and (pointer: coarse) {
-  a,
-  button {
+  nav a,
+  nav button,
+  .hero-btns a,
+  .hero-btns button,
+  .hero-btns-bottom a,
+  .hero-btns-bottom button {
     min-height: 44px;
     min-width: 44px;
   }
