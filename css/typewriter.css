@@ -1,7 +1,14 @@
+#skills .skill-item td:first-child {
+  color: #D3DAD9;
+  width: auto;
+  white-space: nowrap;
+}
+
 #skills .skill-item td:last-child div {
   font-family: "Inter", sans-serif;
   min-height: 200px;
   visibility: visible;
+  color: rgba(211, 218, 217, 0.5);
 }
 
 #skills .skill-item td:last-child div::after {
@@ -18,11 +25,6 @@
   50% {
     opacity: 0;
   }
-}
-
-#skills .skill-item td:first-child {
-  width: auto;
-  white-space: nowrap;
 }
 
 .decoder-text {

@@ -13,6 +13,78 @@ body {
   width: 100%;
 }
 
+.text-light {
+  color: #D3DAD9;
+}
+
+.text-light\/5 {
+  color: rgba(211, 218, 217, 0.05);
+}
+
+.text-light\/10 {
+  color: rgba(211, 218, 217, 0.1);
+}
+
+.text-light\/15 {
+  color: rgba(211, 218, 217, 0.15);
+}
+
+.text-light\/20 {
+  color: rgba(211, 218, 217, 0.2);
+}
+
+.text-light\/25 {
+  color: rgba(211, 218, 217, 0.25);
+}
+
+.text-light\/30 {
+  color: rgba(211, 218, 217, 0.3);
+}
+
+.text-light\/40 {
+  color: rgba(211, 218, 217, 0.4);
+}
+
+.text-light\/45 {
+  color: rgba(211, 218, 217, 0.45);
+}
+
+.text-light\/50 {
+  color: rgba(211, 218, 217, 0.5);
+}
+
+.text-light\/60 {
+  color: rgba(211, 218, 217, 0.6);
+}
+
+.text-light\/70 {
+  color: rgba(211, 218, 217, 0.7);
+}
+
+.text-light\/80 {
+  color: rgba(211, 218, 217, 0.8);
+}
+
+.text-light\/90 {
+  color: rgba(211, 218, 217, 0.9);
+}
+
+.text-accent {
+  color: #715A5A;
+}
+
+.border-light\/10 {
+  border-color: rgba(211, 218, 217, 0.1);
+}
+
+.border-light\/8 {
+  border-color: rgba(211, 218, 217, 0.08);
+}
+
+.border-light\/5 {
+  border-color: rgba(211, 218, 217, 0.05);
+}
+
 img {
   max-width: 100%;
   height: auto;
