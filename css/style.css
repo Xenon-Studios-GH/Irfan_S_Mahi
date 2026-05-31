@@ -81,6 +81,10 @@ body {
   border-color: rgba(211, 218, 217, 0.08);
 }
 
+.border-light\/4 {
+  border-color: rgba(211, 218, 217, 0.04);
+}
+
 .border-light\/5 {
   border-color: rgba(211, 218, 217, 0.05);
 }

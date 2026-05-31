@@ -28,9 +28,10 @@
 
     function revealNext() {
       if (currentIndex >= chars.length) {
-      intervals.forEach(clearInterval);
-      element.textContent = text;
-      return;
+        intervals.forEach(clearInterval);
+        intervals.length = 0;
+        element.textContent = text;
+        return;
       }
 
       const charInterval = setInterval(() => {

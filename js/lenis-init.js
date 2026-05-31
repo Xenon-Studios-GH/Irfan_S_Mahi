@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+  gsap.registerPlugin(ScrollTrigger);
   window.lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.lagSmoothing(0);
 });
