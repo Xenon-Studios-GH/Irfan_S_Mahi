@@ -1,16 +1,16 @@
-#skills .skill-item td:first-child div {
+#skills .skill-item td:last-child div {
   font-family: "Finlandica Headline", sans-serif;
   min-height: 200px;
   visibility: visible;
 }
 
-#skills .skill-item td:first-child div::after {
+#skills .skill-item td:last-child div::after {
   content: "|";
   animation: blink 0.7s step-end infinite;
   color: rgba(113, 90, 90, 0.8);
 }
 
-#skills .skill-item td:first-child div.typing-done::after {
+#skills .skill-item td:last-child div.typing-done::after {
   display: none;
 }
 
@@ -20,7 +20,7 @@
   }
 }
 
-#skills .skill-item td:last-child {
+#skills .skill-item td:first-child {
   width: auto;
   white-space: nowrap;
 }
@@ -36,6 +36,6 @@
   transform: rotate(90deg);
 }
 
-#skills col:first-child {
+#skills col:last-child {
   width: 385px;
 }

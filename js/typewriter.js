@@ -71,8 +71,8 @@
     const skillNames = [];
 
     rows.forEach((row) => {
-      const desc = row.querySelector("td:first-child div");
-      const name = row.querySelector("td:last-child");
+      const desc = row.querySelector("td:last-child div");
+      const name = row.querySelector("td:first-child");
 
       if (desc) {
         desc.dataset.original = desc.dataset.text;
