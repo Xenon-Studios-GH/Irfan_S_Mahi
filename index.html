@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irfan</title>
+    <title>Irfan Sadiq Mahi — Video Editor &amp; Motion Graphics Artist</title>
+    <meta name="description" content="Portfolio of Irfan Sadiq Mahi — professional video editor, motion graphics artist, and VFX artist based in Dhaka, Bangladesh.">
+    <meta property="og:title" content="Irfan Sadiq Mahi — Video Editor &amp; Motion Graphics Artist">
+    <meta property="og:description" content="Professional video editing, motion graphics, VFX, and color grading portfolio.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://irfan.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://irfan.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Space+Mono&family=Inter:wght@300;400;500;600;700&family=Della+Respira&family=Syne+Tactile&family=Orbitron:wght@400;700&family=Lobster&family=Finlandica+Headline&family=Fira+Code:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono&family=Sedgwick+Ave+Display&family=Orbitron:wght@400;700&family=Lobster&family=Fira+Code:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/collab.css">
     <link rel="stylesheet" href="css/collab-counter.css">
@@ -23,11 +30,30 @@
     <link rel="stylesheet" href="css/typewriter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/section-indicator.css">
-    <link rel="icon"
+    <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
-    <script src="js/tailwind-init.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/tailwind-config.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#37353E",
+              secondary: "#44444E",
+              accent: "#715A5A",
+              light: "#D3DAD9",
+              dark: "#1a1a1a",
+            },
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              space: ["Space Mono", "monospace"],
+              sedgwick: ["Sedgwick Ave Display", "cursive"],
+            },
+          },
+        },
+      };
+    </script>
+    <script defer src="js/tailwind-init.js"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-[#352f20] text-light font-sans antialiased">
@@ -133,7 +159,7 @@
             </div>
         </div>
         <div class="hero-wrapper relative flex items-center justify-center">
-            <img src="assets/img/irfan_webIMG.png" alt="Hero">
+            <img src="assets/img/irfan_webIMG.png" alt="Irfan Sadiq Mahi" loading="lazy">
         </div>
     </section>
 
@@ -847,21 +873,21 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <script src="js/lenis-init.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/collab.js"></script>
-    <script src="js/collab-counter.js"></script>
-    <script src="js/brand-carousel.js"></script>
-    <script src="js/activity-carousel.js"></script>
-    <script src="js/cta.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/section-indicator.js"></script>
-    <script src="js/typewriter.js"></script>
-    <script src="js/buttons.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
+    <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
+    <script defer src="js/lenis-init.js"></script>
+    <script defer src="js/navbar.js"></script>
+    <script defer src="js/collab.js"></script>
+    <script defer src="js/collab-counter.js"></script>
+    <script defer src="js/brand-carousel.js"></script>
+    <script defer src="js/activity-carousel.js"></script>
+    <script defer src="js/cta.js"></script>
+    <script defer src="js/footer.js"></script>
+    <script defer src="js/section-indicator.js"></script>
+    <script defer src="js/typewriter.js"></script>
+    <script defer src="js/buttons.js"></script>
+    <script defer src="js/main.js"></script>
 </body>
 
 </html>
