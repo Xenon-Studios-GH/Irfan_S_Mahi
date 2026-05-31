@@ -413,6 +413,14 @@
   letter-spacing: 0.02em;
 }
 
+.company-card-list span sub {
+  font-size: 0.6rem;
+  color: rgba(211, 218, 217, 0.4);
+  font-weight: 400;
+  bottom: 0;
+  letter-spacing: 0.04em;
+}
+
 .keyboard-nav *:focus {
   outline: 2px solid #715a5a !important;
   outline-offset: 2px !important;
