@@ -4,11 +4,11 @@ Personal portfolio website for **Irfan Sadiq Mahi**, a professional video editor
 
 ## Sections
 
-- **Hero** — Full-screen intro with portrait, name watermark, scrolling role carousel, and particle background
+- **Hero** — Full-screen intro with portrait, name watermark, scrolling role carousel, animated navigation buttons, and company cards
 - **Brand Carousel** — Infinite-scroll showcase of partner brands
 - **About** — Bio with workspace cards linking to past collaborations (TechBuddy BD, Xenon Studios, MrNomster, Dribbling BD)
 - **Skills** — Table layout with synchronized decoder + typing scroll-triggered text effects and a floating watermark
-- **Collaborations** — Project cards with 3D tilt parallax, animated stats counters, and staggered scroll reveals
+- **Collaborations** — Career timeline cards in a 6-column grid, animated stats counters, and staggered scroll reveals
 - **Activities** — Infinite-scroll reel cards showing recent work
 - **Contact** — Contact form that opens WhatsApp with pre-filled message, contact info with mailto/wa.me links, and social profiles
 - **Footer** — Brand column with social links, navigation, and contact details
@@ -21,7 +21,7 @@ Personal portfolio website for **Irfan Sadiq Mahi**, a professional video editor
 - **JavaScript (ES6+)** — IntersectionObserver, GSAP ScrollTrigger, Lenis smooth scroll, scroll-based section indicator
 - **GSAP + ScrollTrigger** — Scroll-triggered reveal animations
 - **Lenis** — Smooth scrolling with GSAP integration
-- **Google Fonts** — Inter, Space Mono, Sedgwick Ave Display, Orbitron, Lobster, Della Respira, Syne Tactile, Finlandica Headline
+- **Google Fonts** — Inter, Space Mono, Sedgwick Ave Display, Orbitron, Lobster, Fira Code
 - **Font Awesome 6.7.2** — Icons
 
 ## Getting Started
