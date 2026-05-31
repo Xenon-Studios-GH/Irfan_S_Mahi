@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/typewriter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="css/section-indicator.css">
@@ -88,7 +89,12 @@
 
     <section id="hero" class="w-full min-h-screen flex items-center justify-center overflow-hidden relative">
         <div class="hero-btns absolute top-[40px] right-[40px] flex flex-row gap-[12px] z-[20]">
-            <a href="#cta" class="hero-btn primary">Hire Me</a>
+            <button class="animated-button" data-href="#cta">
+                <i class="fa-solid fa-arrow-right arr-2"></i>
+                <span class="text">Hire Me</span>
+                <span class="circle"></span>
+                <i class="fa-solid fa-arrow-right arr-1"></i>
+            </button>
             <a href="#collab" class="hero-btn secondary">View Work</a>
         </div>
         <div class="hero-btns-bottom absolute bottom-[40px] left-[40px] flex flex-col gap-[12px] z-[20]">
@@ -358,68 +364,20 @@
                 <div class="stat-label">Client Satisfaction</div>
             </div>
             <div class="stat-item text-center relative z-[1]">
-                <div class="stat-number" data-target="99" data-suffix="+"></div>
+                <div class="stat-number" data-target="150" data-suffix="+"></div>
                 <div class="stat-label">Projects Completed</div>
             </div>
         </div>
 
         <div class="collab-grid grid gap-[32px] max-w-[1400px] mx-auto relative z-[1] items-stretch">
             <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-3">
-                <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-youtube text-[32px]"></i>
-                </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Content Creator</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Creating gaming content and building a passionate community at Mr. Nomster</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
-                    <span class="collab-card-year collab-current">December 27, 2023 - Present</span>
-                </div>
-                <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-3">
-                <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-trophy text-[32px]"></i>
-                </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Ambassador, Content Developer</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Promoting ICT education and developing content to inspire students across Bangladesh</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
-                    <span class="collab-card-year collab-current">April 17, 2025 - Present</span>
-                </div>
-                <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
-                <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-box text-[32px]"></i>
-                </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Building a reliable delivery service to simplify logistics for local businesses</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
-                    <span class="collab-card-year collab-current">July 27, 2025 - Present</span>
-                </div>
-                <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
-                <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-film text-[32px]"></i>
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-2">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-film text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">Xenon Studios</span>
                 </div>
                 <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder</h3>
                 <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Running a creative studio delivering video production, motion design and visual content</p>
@@ -433,10 +391,33 @@
             </div>
 
             <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-4">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-laptop-code text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">ICT Olympiad Bangladesh</span>
+                </div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Ambassador, Content Developer</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Promoting ICT education across Bangladesh by organizing olympiads, developing learning content, and mentoring students to build skills in technology and innovation for a digital future</p>
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                    <span class="collab-card-year collab-current">April 17, 2025 - Present</span>
+                </div>
                 <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-futbol text-[32px]"></i>
+                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-2">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-futbol text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">Dribbling BD</span>
                 </div>
                 <h3 class="text-[24px] font-[600] text-light mb-[12px]">Co-Founder</h3>
                 <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Building a football community platform connecting players and organizing local events</p>
@@ -450,10 +431,13 @@
             </div>
 
             <div
-                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-2">
-                <div
-                    class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-rocket text-[32px]"></i>
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-2">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-code text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">TechBuddy BD</span>
                 </div>
                 <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder & CEO</h3>
                 <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1 collab-former">Led a tech startup providing digital solutions and IT services to small businesses</p>
@@ -467,13 +451,56 @@
             </div>
 
             <div
-                class="collab-card collab-featured relative rounded-[24px] p-[48px] overflow-hidden cursor-pointer opacity-0 translate-y-10 col-span-4">
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-2">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-truck text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">GoDrop Bangladesh</span>
+                </div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Building a reliable delivery service to simplify logistics for local businesses</p>
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                    <span class="collab-card-year collab-current">July 27, 2025 - Present</span>
+                </div>
                 <div
-                    class="collab-card-icon w-[88px] h-[88px] rounded-[24px] flex items-center justify-center mb-[24px]">
-                    <i class="fa-solid fa-graduation-cap text-[32px]"></i>
+                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div
+                class="collab-card relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-2">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-youtube text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">Mr. Nomster</span>
+                </div>
+                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Content Creator</h3>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Creating gaming content and building a passionate community around gameplay and entertainment</p>
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                    <span class="collab-card-year collab-current">December 27, 2023 - Present</span>
+                </div>
+                <div
+                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div
+                class="collab-card collab-featured relative rounded-[24px] p-[32px] overflow-hidden cursor-pointer col-span-4">
+                <div class="flex items-center gap-[16px] mb-[24px]">
+                    <div
+                        class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-handshake text-[32px]"></i>
+                    </div>
+                    <span class="text-[18px] font-[500] text-light/70">10 Minute School</span>
                 </div>
                 <h3 class="text-[24px] font-[600] text-light mb-[12px]">Direct Sales Affiliate Marketer</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1 collab-former">Drove student enrollment through direct sales and affiliate marketing for online education</p>
+                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1 collab-former">Drove student enrollment through direct sales and affiliate marketing strategies, connecting learners with online educational programs and helping them achieve academic growth</p>
                 <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
                     <span class="collab-card-year collab-former-tag">February 2023 - March 2025</span>
                 </div>
@@ -831,6 +858,7 @@
     <script src="js/footer.js"></script>
     <script src="js/section-indicator.js"></script>
     <script src="js/typewriter.js"></script>
+    <script src="js/buttons.js"></script>
     <script src="js/main.js"></script>
 </body>
 
