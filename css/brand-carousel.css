@@ -88,7 +88,6 @@
 }
 
 @media (max-width: 768px) {
-
   .brand-carousel::before,
   .brand-carousel::after {
     width: 60px;
@@ -125,7 +124,6 @@
 }
 
 @media (max-width: 480px) {
-
   .brand-carousel::before,
   .brand-carousel::after {
     width: 40px;

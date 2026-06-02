@@ -152,6 +152,7 @@ img {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
@@ -161,12 +162,15 @@ img {
   #hero {
     padding: 100px 32px 80px;
   }
+
   .hero-wrapper img {
     max-height: 700px;
   }
+
   .hero-wrapper::before {
     font-size: 72px;
   }
+
   .hero-text-carousel span {
     font-size: 36px;
   }
@@ -177,16 +181,20 @@ img {
     padding: 120px 24px 100px;
     min-height: auto;
   }
+
   .hero-wrapper img {
     max-height: 550px;
     width: 100%;
   }
+
   .hero-wrapper::before {
     font-size: 48px;
   }
+
   .hero-text-carousel {
     top: 80px;
   }
+
   .hero-text-carousel span {
     font-size: 24px;
   }
@@ -196,15 +204,19 @@ img {
   #hero {
     padding: 100px 20px 80px;
   }
+
   .hero-wrapper img {
     max-height: 400px;
   }
+
   .hero-wrapper::before {
     font-size: 32px;
   }
+
   .hero-text-carousel {
     top: 60px;
   }
+
   .hero-text-carousel span {
     font-size: 18px;
   }
@@ -215,19 +227,24 @@ img {
     padding: 80px 16px 60px;
     min-height: auto;
   }
+
   .hero-wrapper img {
     max-height: 280px;
   }
+
   .hero-wrapper::before {
     font-size: 20px;
   }
+
   .hero-text-carousel {
     top: 50px;
   }
+
   .hero-text-carousel span {
     font-size: 14px;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
   }
+
   .hero-wrapper {
     margin-top: 40px;
     margin-bottom: 16px;
@@ -274,6 +291,7 @@ img {
   .skills-section {
     padding: 80px 24px;
   }
+
   #skills .skill-item td:first-child {
     white-space: normal;
     word-break: break-word;
@@ -281,10 +299,12 @@ img {
     padding: 24px 0 8px !important;
     width: auto;
   }
+
   #skills .skill-item td:last-child {
     padding: 0 0 24px 0 !important;
     width: auto;
   }
+
   #skills .skill-item td:last-child div {
     max-width: 100%;
     min-height: auto;
@@ -295,6 +315,7 @@ img {
   #skills .skill-item td:first-child {
     font-size: 20px !important;
   }
+
   #skills .skill-item td:last-child div {
     font-size: 14px !important;
   }
@@ -306,16 +327,12 @@ img {
 
 .about-bg-gradient {
   background:
-    radial-gradient(
-      ellipse 100% 60% at 50% 100%,
+    radial-gradient(ellipse 100% 60% at 50% 100%,
       rgba(113, 90, 90, 0.12) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 60% 40% at 20% 0%,
+      transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 0%,
       rgba(68, 68, 78, 0.06) 0%,
-      transparent 50%
-    );
+      transparent 50%);
 }
 
 .about-container {
@@ -506,6 +523,7 @@ img {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -845,6 +863,7 @@ img {
 }
 
 @media (hover: none) and (pointer: coarse) {
+
   nav a,
   nav button,
   .hero-btns a,
