@@ -1,47 +1,21 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irfan Sadiq Mahi</title>
-    <meta name="description"
-        content="Portfolio of Irfan Sadiq Mahi — professional video editor, motion graphics artist, and VFX artist based in Dhaka, Bangladesh.">
-    <meta property="og:title" content="Irfan Sadiq Mahi">
-    <meta property="og:description"
-        content="Professional video editing, motion graphics, VFX, and color grading portfolio.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://irfan.com">
-    <meta property="og:image" content="https://irfan.com/assets/img/irfan_webIMG.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://irfan.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xenon Studios — Irfan S. Mahi</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono&family=Sedgwick+Ave+Display&family=Orbitron:wght@400;700&family=Lobster&family=Fira+Code:wght@400;500&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/collab.css">
-    <link rel="stylesheet" href="css/collab-counter.css">
-    <link rel="stylesheet" href="css/brand-carousel.css">
-    <link rel="stylesheet" href="css/activity-carousel.css">
-    <link rel="stylesheet" href="css/cta.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/typewriter.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="css/section-indicator.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
-    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+        rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        var _twOrigWarn = console.warn;
-        console.warn = function (m) {
-            if (typeof m === "string" && m.indexOf("cdn.tailwindcss.com") !== -1) return;
-            _twOrigWarn.apply(console, arguments);
-        };
         tailwind.config = {
             theme: {
                 extend: {
@@ -52,35 +26,20 @@
                         light: "#D3DAD9",
                         dark: "#1a1a1a",
                     },
-                    fontFamily: {
-                        inter: ["Inter", "sans-serif"],
-                        space: ["Space Mono", "monospace"],
-                        sedgwick: ["Sedgwick Ave Display", "cursive"],
-                    },
                 },
             },
         };
     </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="bg-[#352f20] text-light font-sans antialiased">
-    <nav
-        class="dynamic-island fixed bottom-[20px] left-1/2 z-[9999] flex items-center justify-center w-[60px] h-[60px] opacity-0 rounded-full">
-        <div class="island-content flex items-center justify-center gap-[8px] opacity-0 w-full">
-            <ul class="island-menu left flex items-center gap-[36px]">
-                <li><a href="#activities">Activity</a></li>
-                <li><a href="#cta">Contact</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-            <span class="island-logo">Irfan</span>
-            <ul class="island-menu right flex items-center gap-[36px]">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#collab">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
-
+<body>
+    <!-- SECTION INDICATOR -->
     <div class="section-indicator fixed top-[24px] left-[24px] z-[9998] flex flex-col gap-[8px] pointer-events-none">
         <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300"
             data-section="hero">
@@ -120,127 +79,97 @@
         </div>
     </div>
 
-    <section id="hero" class="w-full min-h-screen flex items-center justify-center overflow-hidden relative">
-        <div class="hero-btns absolute top-[40px] right-[40px] flex flex-row gap-[12px] z-[20]">
-            <button class="animated-button" data-href="#cta">
-                <i class="fa-solid fa-arrow-right arr-2"></i>
-                <span class="text">Hire Me</span>
-                <span class="circle"></span>
-                <i class="fa-solid fa-arrow-right arr-1"></i>
-            </button>
-            <a href="#collab" class="btn-view-work">View Work</a>
+    <!-- DYNAMIC ISLAND NAV -->
+    <nav
+        class="dynamic-island fixed bottom-[20px] left-1/2 z-[9999] flex items-center justify-center w-[60px] h-[60px] opacity-0 rounded-full">
+        <div class="island-content flex items-center justify-center gap-[8px] opacity-0 w-full">
+            <ul class="island-menu left flex items-center gap-[36px]">
+                <li><a href="#activities">Activity</a></li>
+                <li><a href="#cta">Contact</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+            <span class="island-logo">Irfan</span>
+            <ul class="island-menu right flex items-center gap-[36px]">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#collab">Projects</a></li>
+            </ul>
         </div>
-        <div class="hero-btns-bottom absolute bottom-[40px] left-[40px] flex flex-col gap-[12px] z-[20]">
-            <a href="#about" class="btn-about">About Me</a>
-            <a href="#skills" class="bubbles">
-                <span class="text">My Skills</span>
-            </a>
-        </div>
-        <div class="company-card absolute bottom-[40px] right-[40px] z-[20] rounded-[16px] p-[16px_20px] min-w-[160px]">
-            <div class="company-card-label">Worked with</div>
-            <div class="company-card-list flex flex-col gap-[6px]">
-                <span>techbuddy <sub>tech brand partner</sub></span>
-                <span>xenon studios <sub>co-founder & creative lead</sub></span>
-                <span>MrNomster <sub>content collaboration</sub></span>
-                <span>Dribbling BD <sub>sports media partner</sub></span>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative w-full h-screen overflow-hidden bg-cover bg-center font-['Inter']">
+        <div
+            class="relative z-20 h-full max-w-8xl mx-auto px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center justify-center gap-8 md:gap-12">
+            <!-- LEFT: Text -->
+            <div class="text-center md:text-left md:w-2/5 flex flex-col justify-center">
+                <p class="hero-line text-black text-lg md:text-xl font-light tracking-wide" data-delay="0">
+                    Hi, I am
+                </p>
+                <h1 class="hero-line text-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mt-2"
+                    data-delay="0.2">
+                    Irfan S. Mahi
+                </h1>
+                <p class="hero-line text-gray-500 text-base sm:text-lg md:text-xl font-semibold mt-3 tracking-wide"
+                    data-delay="0.4">
+                    Founder Of Xenon Studios / Visual Creator
+                </p>
+
+                <!-- Social Icons -->
+                <div class="hero-line flex gap-7 mt-16 justify-center md:justify-start" data-delay="0.6">
+                    <a href="#" class="icon icon-fb">
+                        <i class="fab fa-facebook-f text-black text-xl"></i>
+                    </a>
+                    <a href="#" class="icon icon-ig">
+                        <i class="fab fa-instagram text-black text-xl"></i>
+                    </a>
+                    <a href="#" class="icon icon-x">
+                        <i class="fab fa-x-twitter text-black text-xl"></i>
+                    </a>
+                    <a href="#" class="icon icon-in">
+                        <i class="fab fa-linkedin-in text-black text-xl"></i>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="hero-text-carousel absolute top-[150px] w-full text-center overflow-hidden pointer-events-none z-0">
-            <div class="carousel-track flex gap-[60px] justify-center">
-                <span>Video Editor</span>
-                <span>Motion Graphics</span>
-                <span>Visual Effects</span>
-                <span>Content Creator</span>
-                <span>Video Editor</span>
-                <span>Motion Graphics</span>
-                <span>Visual Effects</span>
-                <span>Content Creator</span>
-                <span>Video Editor</span>
-                <span>Motion Graphics</span>
-                <span>Visual Effects</span>
-                <span>Content Creator</span>
-                <span>Video Editor</span>
-                <span>Motion Graphics</span>
-                <span>Visual Effects</span>
-                <span>Content Creator</span>
+
+            <!-- RIGHT: Profile Image -->
+            <div class="md:w-3/5 flex justify-center md:justify-end">
+                <div id="profile-img-wrap" class="hero-image relative">
+                    <img src="assets/img/irfan_webIMG.png" alt="Irfan S. Mahi" class="w-full max-w-[800px] h-auto" />
+                </div>
             </div>
-        </div>
-        <div class="hero-wrapper relative flex items-center justify-center">
-            <img src="assets/img/irfan_webIMG.png" alt="Irfan Sadiq Mahi" fetchpriority="high">
         </div>
     </section>
 
-    <section class="brand-carousel relative max-w-[1600px] p-[40px_0] overflow-hidden">
-        <div class="carousel-1">
-            <div class="carousel-track flex gap-[8px] w-max p-[20px_0]">
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>XENON STUDIOS</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>DIGITAL EMPIRE</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>TECH BUddY</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>FUTURE ACADEMY</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>MEDIA NETWORK</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>BRAND LAB</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>CREATIVE ALLIANCE</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>EDU TECH BD</span>
-                </div>
-            </div>
-        </div>
-        <div class="carousel-2">
-            <div class="carousel-track flex gap-[8px] w-max p-[20px_0]">
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>XENON STUDIOS</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>DIGITAL EMPIRE</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>TECH BUddY</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>FUTURE ACADEMY</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>MEDIA NETWORK</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>BRAND LAB</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>CREATIVE ALLIANCE</span>
-                </div>
-                <div
-                    class="carousel-item flex-shrink-0 flex items-center justify-center p-[20px_40px] rounded-[16px] relative overflow-hidden min-w-[200px]">
-                    <span>EDU TECH BD</span>
-                </div>
+    <!-- BANNER SECTION -->
+    <section class="w-full px-3 lg:px-12 py-8 md:py-12" style="background-color: var(--banner);">
+        <div class="max-w-7xl mx-auto text-left">
+            <h2 class="text-[#6D9886] text-sm md:text-base font-bold tracking-widest uppercase mb-4">
+                My Philosophy
+            </h2>
+            <p class="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed font-light max-w-4xl">
+                "Your first customer isn't buying your product. They're buying your courage to start. Every successful
+                company
+                was once an idea that looked ordinary to everyone else."
+            </p>
+            <div class="mt-8 flex justify-start">
+                <button class="button" style="--clr: #7808d0">
+                    <span class="button__icon-wrapper">
+                        <svg viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg" class="button__icon-svg"
+                            width="10">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
+                        </svg>
+                        <svg viewBox="0 0 14 15" fill="none" width="10" xmlns="http://www.w3.org/2000/svg"
+                            class="button__icon-svg button__icon-svg--copy">
+                            <path
+                                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </span>
+                    Read More Blogs
+                </button>
             </div>
         </div>
     </section>
@@ -251,18 +180,18 @@
         <div
             class="about-container relative z-[1] max-w-[1200px] w-full grid grid-cols-[1.2fr_1fr] gap-[80px] items-center">
             <div class="about-left flex flex-col gap-[24px]">
-                <span class="about-label inline-flex items-center gap-[12px] text-accent uppercase">About Me</span>
-                <h2 class="about-headline font-[700] text-light">
+                <span class="about-label inline-flex items-center gap-[12px] uppercase font-bold">About Me</span>
+                <h2 class="about-headline font-[700]">
                     <span class="about-headline-line block">Transforming Ideas</span>
                     <span class="about-headline-line block">Into Visual Stories</span>
                 </h2>
-                <p class="about-description text-[16px] text-light/70 font-[300] max-w-[520px]">
+                <p class="about-description text-[16px] font-bold max-w-[520px]">
                     I'm Irfan Sadiq Mahi, a professional video editor and motion graphics artist with over 5 years of
                     experience crafting visual narratives that captivate and inspire. Based in Dhaka, Bangladesh, I've
                     had the privilege of working with brands like TechBuddy, Xenon Studios, and MrNomster — each
                     collaboration refining my storytelling instincts and pushing my creative boundaries.
                 </p>
-                <p class="about-description-secondary text-[14px] text-light/45 font-[300] max-w-[520px]">
+                <p class="about-description-secondary text-[14px] font-bold max-w-[520px]">
                     From video editing and color grading to 3D animation and VFX, I bring a meticulous eye for detail to
                     every project. I obsess over rhythm, pacing, and color psychology — the invisible threads that turn
                     a sequence of clips into an unforgettable experience. Whether it's a cinematic brand film or a
@@ -327,7 +256,7 @@
     <div
         class="watermark fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none z-50">
         <span
-            class="watermark-text text-[clamp(3rem,10vw,8rem)] font-bold text-light/15 uppercase tracking-wider">Experience</span>
+            class="watermark-text text-[clamp(3rem,10vw,8rem)] font-bold text-white/[0.06] uppercase tracking-wider">Experience</span>
     </div>
 
     <section id="skills"
@@ -343,44 +272,44 @@
                         <td class="text-light text-4xl font-semibold py-8 align-top whitespace-nowrap">Video Editing
                         </td>
                         <td class="py-8 pl-4 align-top">
-                            <div class="text-light/50 text-lg max-w-[385px]"
-                                data-text="Seamless cuts, precise pacing, narrative storytelling, audio syncing, color-matched transitions, and professional-grade post-production editing that brings your vision to life">
-                            </div>
+                            <div class="text-light/50 text-lg max-w-[385px]">Seamless cuts, precise pacing, narrative
+                                storytelling, audio syncing, color-matched transitions, and professional-grade
+                                post-production editing that brings your vision to life</div>
                         </td>
                     </tr>
                     <tr class="skill-item border-b border-light/10">
                         <td class="text-light text-4xl font-semibold py-8 align-top whitespace-nowrap">Motion Graphics
                         </td>
                         <td class="py-8 pl-4 align-top">
-                            <div class="text-light/50 text-lg max-w-[385px]"
-                                data-text="Dynamic typography, animated logos, lower thirds, kinetic text, branded motion packages, and broadcast-quality motion design that captivates audiences">
-                            </div>
+                            <div class="text-light/50 text-lg max-w-[385px]">Dynamic typography, animated logos, lower
+                                thirds, kinetic text, branded motion packages, and broadcast-quality motion design that
+                                captivates audiences</div>
                         </td>
                     </tr>
                     <tr class="skill-item border-b border-light/10">
                         <td class="text-light text-4xl font-semibold py-8 align-top whitespace-nowrap">3D Animation</td>
                         <td class="py-8 pl-4 align-top">
-                            <div class="text-light/50 text-lg max-w-[385px]"
-                                data-text="Cinematic 3D modeling, texturing, UV mapping, lighting, camera animation, particle systems, and immersive visual storytelling for films and commercials">
-                            </div>
+                            <div class="text-light/50 text-lg max-w-[385px]">Cinematic 3D modeling, texturing, UV
+                                mapping, lighting, camera animation, particle systems, and immersive visual storytelling
+                                for films and commercials</div>
                         </td>
                     </tr>
                     <tr class="skill-item border-b border-light/10">
                         <td class="text-light text-4xl font-semibold py-8 align-top whitespace-nowrap">Visual Effects
                         </td>
                         <td class="py-8 pl-4 align-top">
-                            <div class="text-light/50 text-lg max-w-[385px]"
-                                data-text="Green screen compositing, particle simulations, rotoscoping, motion tracking, chroma keying, smoke/fire simulation, and cinematic VFX that makes the impossible look real">
-                            </div>
+                            <div class="text-light/50 text-lg max-w-[385px]">Green screen compositing, particle
+                                simulations, rotoscoping, motion tracking, chroma keying, smoke/fire simulation, and
+                                cinematic VFX that makes the impossible look real</div>
                         </td>
                     </tr>
                     <tr class="skill-item">
                         <td class="text-light text-4xl font-semibold py-8 align-top whitespace-nowrap">Color Grading
                         </td>
                         <td class="py-8 pl-4 align-top">
-                            <div class="text-light/50 text-lg max-w-[385px]"
-                                data-text="Precision color correction, primary and secondary grading, look development, LUT creation, skin tone matching, mood enhancement, and cinematic color science for consistent visual language">
-                            </div>
+                            <div class="text-light/50 text-lg max-w-[385px]">Precision color correction, primary and
+                                secondary grading, look development, LUT creation, skin tone matching, mood enhancement,
+                                and cinematic color science for consistent visual language</div>
                         </td>
                     </tr>
                 </tbody>
@@ -391,8 +320,9 @@
     <section id="collab"
         class="collab-section min-h-screen p-[120px_32px] relative overflow-hidden flex flex-col items-center justify-center">
         <div class="collab-header text-center mb-[80px] relative">
-            <h2 class="font-[700] text-light mb-[16px]">Collaborations</h2>
-            <p class="text-[18px] text-light/60 max-w-[500px] mx-auto">Projects I've worked on with amazing people and
+            <h2 class="font-[700] mb-[16px]">Collaborations</h2>
+            <p class="text-[18px] text-white/70 font-bold max-w-[500px] mx-auto">Projects I've worked on with amazing
+                people and
                 brands</p>
         </div>
         <div class="stats-container flex gap-[80px] mb-[80px] justify-center relative overflow-hidden">
@@ -417,16 +347,16 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-film text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">Xenon Studios</span>
+                    <span class="text-[18px] font-[500] text-white/80">Xenon Studios</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Running a
+                <h3 class="text-[24px] font-[600] mb-[12px]">Founder</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Running a
                     creative studio delivering video production, motion design and visual content</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">January 2026 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -437,17 +367,17 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-laptop-code text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">ICT Olympiad Bangladesh</span>
+                    <span class="text-[18px] font-[500] text-white/80">ICT Olympiad Bangladesh</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Ambassador, Content Developer</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Promoting
+                <h3 class="text-[24px] font-[600] mb-[12px]">Ambassador, Content Developer</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Promoting
                     ICT education across Bangladesh by organizing olympiads, developing learning content, and mentoring
                     students to build skills in technology and innovation for a digital future</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">April 17, 2025 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -458,16 +388,16 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-futbol text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">Dribbling BD</span>
+                    <span class="text-[18px] font-[500] text-white/80">Dribbling BD</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Co-Founder</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Building a
+                <h3 class="text-[24px] font-[600] mb-[12px]">Co-Founder</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Building a
                     football community platform connecting players and organizing local events</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">May 2026 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -478,16 +408,16 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-code text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">TechBuddy BD</span>
+                    <span class="text-[18px] font-[500] text-white/80">TechBuddy BD</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder & CEO</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Leading a
+                <h3 class="text-[24px] font-[600] mb-[12px]">Founder & CEO</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Leading a
                     tech startup providing digital solutions and IT services to small businesses</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">June 28, 2025 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -498,16 +428,16 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-truck text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">GoDrop Bangladesh</span>
+                    <span class="text-[18px] font-[500] text-white/80">GoDrop Bangladesh</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Founder</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Building a
+                <h3 class="text-[24px] font-[600] mb-[12px]">Founder</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Building a
                     reliable delivery service to simplify logistics for local businesses</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">July 27, 2025 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -518,16 +448,16 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-youtube text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">Mr. Nomster</span>
+                    <span class="text-[18px] font-[500] text-white/80">Mr. Nomster</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Content Creator</h3>
-                <p class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1">Creating
+                <h3 class="text-[24px] font-[600] mb-[12px]">Content Creator</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1">Creating
                     gaming content and building a passionate community around gameplay and entertainment</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-current">December 27, 2023 - Present</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
@@ -539,25 +469,24 @@
                         class="collab-card-icon w-[72px] h-[72px] rounded-[20px] flex items-center justify-center flex-shrink-0">
                         <i class="fa-solid fa-handshake text-[32px]"></i>
                     </div>
-                    <span class="text-[18px] font-[500] text-light/70">10 Minute School</span>
+                    <span class="text-[18px] font-[500] text-white/80">10 Minute School</span>
                 </div>
-                <h3 class="text-[24px] font-[600] text-light mb-[12px]">Direct Sales Affiliate Marketer</h3>
-                <p
-                    class="collab-card-description text-[15px] text-light/60 leading-[1.7] mb-[20px] flex-1 collab-former">
+                <h3 class="text-[24px] font-[600] mb-[12px]">Direct Sales Affiliate Marketer</h3>
+                <p class="collab-card-description text-[15px] leading-[1.7] mb-[20px] flex-1 collab-former">
                     Drove student enrollment through direct sales and affiliate marketing strategies, connecting
                     learners with online educational programs and helping them achieve academic growth</p>
-                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t border-light/8 mt-auto">
+                <div class="collab-card-meta flex items-center gap-[16px] pt-[20px] border-t mt-auto">
                     <span class="collab-card-year collab-former-tag">February 2023 - March 2025</span>
                 </div>
                 <div
-                    class="collab-card-arrow absolute bottom-[32px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
+                    class="collab-card-arrow absolute bottom-[22px] right-[32px] w-[48px] h-[48px] rounded-full flex items-center justify-center text-[20px] text-accent">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="activities" class="py-20 px-8">
+    <section id="activities" class="py-20 px-8 bg-[#1d1d1d]">
         <div class="text-center mb-16">
             <h2 class="text-4xl font-bold text-light mb-4">Recent Activities</h2>
             <p class="text-light/60 text-lg">Stay updated with my latest work</p>
@@ -707,7 +636,7 @@
             <div class="cta-grid grid grid-cols-[1.5fr_1fr] gap-[120px] items-center">
                 <div class="cta-left pr-[80px]">
                     <span
-                        class="cta-label inline-flex items-center gap-[16px] text-accent uppercase mb-[32px] pl-[32px]">Get
+                        class="cta-label inline-flex items-center gap-[16px] text-accent font-bold uppercase mb-[32px] pl-[32px]">Get
                         in Touch</span>
                     <h2 class="cta-headline text-light mb-[32px] font-[700]">
                         <span class="cta-headline-line block">Let's Build</span>
@@ -741,7 +670,7 @@
 
                 <div class="cta-right pl-[60px] relative">
                     <span
-                        class="cta-label inline-flex items-center gap-[16px] text-accent uppercase mb-[32px] pl-[32px]">Contact
+                        class="cta-label inline-flex items-center gap-[16px] text-accent font-bold uppercase mb-[32px] pl-[32px]">Contact
                         Info</span>
 
                     <div class="cta-contact-list flex flex-col gap-[28px] mb-[56px]">
@@ -783,7 +712,7 @@
                         </div>
                     </div>
 
-                    <p class="cta-contact-label text-light/30 uppercase mb-[28px]">Follow Me</p>
+                    <p class="cta-contact-label text-light/30 font-bold uppercase mb-[28px]">Follow Me</p>
 
                     <div class="cta-socials flex gap-[16px]">
                         <a href="https://www.facebook.com/irfansadiqmahi7" target="_blank" rel="noopener"
@@ -842,7 +771,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-column-title uppercase mb-[24px]">Navigation</h4>
+                    <h4 class="footer-column-title font-bold uppercase mb-[24px]">Navigation</h4>
                     <div class="footer-links flex flex-col gap-[14px]">
                         <a href="#hero" class="footer-link text-[14px] text-light/50 no-underline">Home</a>
                         <a href="#about" class="footer-link text-[14px] text-light/50 no-underline">About</a>
@@ -854,7 +783,7 @@
                 </div>
 
                 <div class="footer-column">
-                    <h4 class="footer-column-title uppercase mb-[24px]">Contact</h4>
+                    <h4 class="footer-column-title font-bold uppercase mb-[24px]">Contact</h4>
                     <div class="footer-links flex flex-col gap-[14px]">
                         <div class="footer-contact-item flex items-start gap-[12px] mb-[16px]">
                             <span class="footer-contact-icon text-[0.9rem] opacity-50 mt-[3px]"><i
@@ -891,21 +820,15 @@
         </div>
     </footer>
 
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/gsap.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.7/ScrollTrigger.min.js"></script>
-    <script defer src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script>
-    <script defer src="js/lenis-init.js"></script>
-    <script defer src="js/navbar.js"></script>
-    <script defer src="js/collab.js"></script>
-    <script defer src="js/collab-counter.js"></script>
-    <script defer src="js/brand-carousel.js"></script>
-    <script defer src="js/activity-carousel.js"></script>
-    <script defer src="js/cta.js"></script>
-    <script defer src="js/footer.js"></script>
-    <script defer src="js/section-indicator.js"></script>
-    <script defer src="js/typewriter.js"></script>
-    <script defer src="js/buttons.js"></script>
-    <script defer src="js/main.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
