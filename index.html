@@ -11,7 +11,8 @@
     <meta property="og:image" content="https://github.com/munthasirdevs/Irfan_S_Mahi/raw/main/assets/img/irfan_webIMG.png" />
     <meta property="og:url" content="https://github.com/Xenon-Studios-GH/Irfan_S_Mahi" />
     <meta name="theme-color" content="#1a1a1a" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    <link rel="alternate icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVQ4T2NkYPj/n4EBBJgYKAQMowYMQwMGAg0YNGDQAOoawMBAAwYNGDQA1Q0YNAAAFksEEZW0oYEAAAAASUVORK5CYII=" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -49,6 +50,24 @@
 </head>
 
 <body>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-[#0a0a0a]">
+        <div class="text-center">
+            <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" class="mb-10 mx-auto">
+                <circle cx="30" cy="30" r="26" fill="none" stroke="#715A5A" stroke-width="2" opacity="0.2"/>
+                <circle cx="30" cy="30" r="26" fill="none" stroke="#715A5A" stroke-width="2" stroke-linecap="round"
+                    stroke-dasharray="163" stroke-dashoffset="163" id="loader-ring">
+                    <animate attributeName="stroke-dashoffset" from="163" to="0" dur="2.5s" fill="freeze"/>
+                </circle>
+            </svg>
+            <div class="w-[200px] h-[3px] bg-white/10 rounded-full overflow-hidden mb-6">
+                <div id="loader-bar" class="h-full w-0 rounded-full transition-all duration-300 ease-out"
+                    style="background: linear-gradient(90deg, #715A5A, #6D9886);"></div>
+            </div>
+            <div id="loader-percent" class="font-['Space_Mono',monospace] text-[#D3DAD9] text-sm tracking-[0.3em]">0%</div>
+        </div>
+    </div>
+
     <!-- SECTION INDICATOR -->
     <div class="section-indicator fixed top-[24px] left-[24px] z-[9998] flex flex-col gap-[8px] pointer-events-none">
         <div class="section-indicator-item flex items-center gap-[12px] opacity-0 -translate-x-5 transition-all duration-300"
@@ -91,18 +110,18 @@
 
     <!-- DYNAMIC ISLAND NAV -->
     <nav
-        class="dynamic-island fixed bottom-[20px] left-1/2 z-[9999] flex items-center justify-center w-[60px] h-[60px] opacity-0 rounded-full">
+        class="dynamic-island fixed bottom-[20px] left-1/2 z-[9999] flex items-center justify-center w-[60px] h-[60px] rounded-full">
         <div class="island-content flex items-center justify-center gap-[8px] opacity-0 w-full">
             <ul class="island-menu left flex items-center gap-[36px]">
-                <li><a href="#activities">Activity</a></li>
-                <li><a href="#cta">Contact</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li data-order="5"><a href="#activities">Activity</a></li>
+                <li data-order="6"><a href="#cta">Contact</a></li>
+                <li data-order="3"><a href="#skills">Skills</a></li>
             </ul>
             <span class="island-logo">Irfan</span>
             <ul class="island-menu right flex items-center gap-[36px]">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#collab">Projects</a></li>
+                <li data-order="1"><a href="#hero">Home</a></li>
+                <li data-order="2"><a href="#about">About</a></li>
+                <li data-order="4"><a href="#collab">Projects</a></li>
             </ul>
         </div>
     </nav>
@@ -187,7 +206,7 @@
     <section id="about"
         class="about-section relative min-h-screen flex items-center justify-center p-[120px_32px] overflow-hidden">
         <div
-            class="about-container relative z-[1] max-w-[1200px] w-full grid grid-cols-[1.2fr_1fr] gap-[80px] items-center">
+            class="about-container relative z-[1] max-w-[1200px] w-full grid grid-cols-[1.2fr_1fr] gap-[80px] items-start">
             <div class="about-left flex flex-col gap-[24px]">
                 <span class="about-label inline-flex items-center gap-[12px] uppercase font-bold">About Me</span>
                 <h2 class="about-headline font-[700]">
@@ -206,10 +225,6 @@
                     a sequence of clips into an unforgettable experience. Whether it's a cinematic brand film or a
                     fast-paced social cut, my philosophy remains the same: precision, purpose, and passion.
                 </p>
-                <div class="about-btns flex gap-[16px] pt-[8px]">
-                    <a href="#cta" class="about-btn primary">Get in Touch</a>
-                    <a href="#collab" class="about-btn secondary">View Projects</a>
-                </div>
             </div>
             <div class="about-right flex items-center justify-center">
                 <div class="workspace-card relative w-full max-w-[420px]">
@@ -258,6 +273,10 @@
                         </div>
                     </a>
                 </div>
+            </div>
+            <div class="about-btns flex gap-[16px] pt-[8px]">
+                <a href="#cta" class="about-btn primary">Get in Touch</a>
+                <a href="#collab" class="about-btn secondary">View Projects</a>
             </div>
         </div>
     </section>
@@ -838,6 +857,58 @@
 
     <!-- Custom JS -->
     <script src="js/app.js"></script>
+
+    <!-- Loading Screen -->
+    <script>
+        (function () {
+            var loadingScreen = document.getElementById("loading-screen");
+            if (!loadingScreen) return;
+            var bar = document.getElementById("loader-bar");
+            var percent = document.getElementById("loader-percent");
+            if (!bar || !percent) return;
+
+            var progress = 0;
+            var duration = 2200;
+            var interval = 30;
+            var steps = duration / interval;
+            var increment = 100 / steps;
+
+            function updateLoader() {
+                progress += increment;
+                if (progress > 100) progress = 100;
+                var rounded = Math.round(progress);
+                bar.style.width = rounded + "%";
+                percent.textContent = rounded + "%";
+                if (progress < 100) {
+                    setTimeout(updateLoader, interval);
+                } else {
+                    setTimeout(function () {
+                        if (typeof gsap !== "undefined") {
+                            gsap.to(loadingScreen, {
+                                y: "-100%",
+                                duration: 0.8,
+                                ease: "power4.inOut",
+                                onComplete: function () {
+                                    loadingScreen.style.display = "none";
+                                    document.body.style.overflow = "";
+                                }
+                            });
+                        } else {
+                            loadingScreen.style.transform = "translateY(-100%)";
+                            loadingScreen.style.transition = "transform 0.8s ease-in-out";
+                            setTimeout(function () {
+                                loadingScreen.style.display = "none";
+                                document.body.style.overflow = "";
+                            }, 800);
+                        }
+                    }, 400);
+                }
+            }
+
+            document.body.style.overflow = "hidden";
+            setTimeout(updateLoader, 300);
+        })();
+    </script>
 </body>
 
 </html>

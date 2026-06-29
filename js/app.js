@@ -44,6 +44,8 @@ function throttle(func, limit) {
   requestAnimationFrame(raf);
   if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined") {
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.normalizeScroll(true);
+    ScrollTrigger.config({ ignoreMobileResize: true });
     window.lenis.on("scroll", () => ScrollTrigger.update());
     gsap.ticker.lagSmoothing(0);
   }
@@ -164,6 +166,7 @@ function throttle(func, limit) {
   const navbar = document.querySelector(".dynamic-island");
   if (!navbar) return;
 
+  const isMobile = window.innerWidth <= 768;
   let isAnimating = false;
 
   function expandNavbar() {
@@ -181,31 +184,57 @@ function throttle(func, limit) {
     isAnimating = true;
     navbar.classList.remove("expand");
     setTimeout(() => {
-      navbar.classList.remove("visible");
+      if (!isMobile) navbar.classList.remove("visible");
       isAnimating = false;
     }, 450);
   }
 
-  function handleScroll() {
-    const scrollY = window.scrollY;
-    const viewportHeight = window.innerHeight;
-    const threshold = viewportHeight * 0.8;
-    const footer = document.getElementById("footer");
-    let footerInView = false;
-    if (footer) {
-      const rect = footer.getBoundingClientRect();
-      footerInView = rect.top < viewportHeight;
-    }
-    if (scrollY > threshold && !footerInView) {
-      expandNavbar();
-    } else {
+  function toggleNavbar() {
+    if (navbar.classList.contains("expand")) {
       collapseNavbar();
+    } else {
+      expandNavbar();
     }
   }
 
-  window.addEventListener("scroll", throttle(handleScroll, 100), {
-    passive: true,
-  });
+  if (isMobile) {
+    navbar.classList.add("visible");
+    navbar.addEventListener("click", toggleNavbar);
+
+    document.querySelectorAll(".island-menu a").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.stopPropagation();
+        setTimeout(collapseNavbar, 400);
+      });
+    });
+
+    document.addEventListener("click", function (e) {
+      if (navbar.classList.contains("expand") && !navbar.contains(e.target)) {
+        collapseNavbar();
+      }
+    });
+  } else {
+    function handleScroll() {
+      const scrollY = window.scrollY;
+      const viewportHeight = window.innerHeight;
+      const threshold = viewportHeight * 0.8;
+      const footer = document.getElementById("footer");
+      let footerInView = false;
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        footerInView = rect.top < viewportHeight;
+      }
+      if (scrollY > threshold && !footerInView) {
+        expandNavbar();
+      } else {
+        collapseNavbar();
+      }
+    }
+
+    window.addEventListener("scroll", throttle(handleScroll, 100), {
+      passive: true,
+    });
+  }
 })();
 
 /* ========== SECTION INDICATOR ========== */
