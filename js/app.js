@@ -450,8 +450,7 @@ function throttle(func, limit) {
       .filter(Boolean)
       .join("\n");
 
-    const whatsappUrl =
-      `https://wa.me/8801723034312?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/8801723034312?text=${encodeURIComponent(text)}`;
 
     const originalText = btn.textContent;
     btn.textContent = "Opening WhatsApp...";

@@ -26,7 +26,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-p, h1, h2, h3, h4, h5, h6, span, a, li, td, div {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+li,
+td,
+div {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -52,11 +63,11 @@ img {
     background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 100%) !important;
   }
 
-  #hero > div > div:last-child {
+  #hero>div>div:last-child {
     display: none !important;
   }
 
-  #hero > div > div:first-child {
+  #hero>div>div:first-child {
     width: 100% !important;
     max-width: 100% !important;
     flex: none !important;
@@ -414,7 +425,7 @@ img {
   }
 
   .dynamic-island.expand::after {
-    content: '';
+    content: "";
     display: block;
     width: 32px;
     height: 4px;
@@ -430,12 +441,29 @@ img {
     display: none;
   }
 
-  .dynamic-island.expand .island-menu.left li:nth-child(1) { order: 5; }
-  .dynamic-island.expand .island-menu.left li:nth-child(2) { order: 6; }
-  .dynamic-island.expand .island-menu.left li:nth-child(3) { order: 3; }
-  .dynamic-island.expand .island-menu.right li:nth-child(1) { order: 1; }
-  .dynamic-island.expand .island-menu.right li:nth-child(2) { order: 2; }
-  .dynamic-island.expand .island-menu.right li:nth-child(3) { order: 4; }
+  .dynamic-island.expand .island-menu.left li:nth-child(1) {
+    order: 5;
+  }
+
+  .dynamic-island.expand .island-menu.left li:nth-child(2) {
+    order: 6;
+  }
+
+  .dynamic-island.expand .island-menu.left li:nth-child(3) {
+    order: 3;
+  }
+
+  .dynamic-island.expand .island-menu.right li:nth-child(1) {
+    order: 1;
+  }
+
+  .dynamic-island.expand .island-menu.right li:nth-child(2) {
+    order: 2;
+  }
+
+  .dynamic-island.expand .island-menu.right li:nth-child(3) {
+    order: 4;
+  }
 
   .island-logo {
     font-size: 18px;
@@ -691,7 +719,9 @@ img {
 tr.skill-item.touch-active {
   background: rgba(113, 90, 90, 0.4);
   transform: scale(0.98);
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 @media (max-width: 768px) {
@@ -747,13 +777,16 @@ tr.skill-item.touch-active {
   #hero .hero-image img {
     max-width: 500px !important;
   }
+
   #hero h1 {
     font-size: 3rem !important;
   }
+
   .collab-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+
   .collab-card {
     grid-column: span 3 !important;
   }
@@ -1033,8 +1066,7 @@ tr.skill-item.touch-active {
   letter-spacing: 2px;
 }
 
-.stat-number.animation-complete {
-}
+.stat-number.animation-complete {}
 
 @media (max-width: 768px) {
   .stats-container {
@@ -1065,12 +1097,15 @@ tr.skill-item.touch-active {
   #activities {
     padding: 48px 16px !important;
   }
+
   #activities h2 {
     font-size: 1.75rem !important;
   }
+
   .activity-carousel-wrapper {
     padding: 30px 0 !important;
   }
+
   .activity-track {
     animation-duration: 25s !important;
     padding: 12px 24px !important;
@@ -1145,12 +1180,10 @@ tr.skill-item.touch-active {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(113, 90, 90, 0.3),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(113, 90, 90, 0.3),
+      transparent);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -1178,11 +1211,9 @@ tr.skill-item.touch-active {
   inset: 0;
   background:
     linear-gradient(180deg, transparent 40%, rgba(0, 0, 0, 0.8) 100%),
-    radial-gradient(
-      ellipse at center top,
+    radial-gradient(ellipse at center top,
       rgba(113, 90, 90, 0.1) 0%,
-      transparent 60%
-    );
+      transparent 60%);
   z-index: 1;
 }
 
@@ -1233,31 +1264,23 @@ tr.skill-item.touch-active {
   width: 120%;
   height: 120%;
   background:
-    radial-gradient(
-      ellipse 100% 60% at 50% 100%,
+    radial-gradient(ellipse 100% 60% at 50% 100%,
       rgba(113, 90, 90, 0.15) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 80% 50% at 20% 0%,
+      transparent 60%),
+    radial-gradient(ellipse 80% 50% at 20% 0%,
       rgba(68, 68, 78, 0.1) 0%,
-      transparent 50%
-    );
+      transparent 50%);
   pointer-events: none;
 }
 
 .cta-bg-gradient {
   background:
-    radial-gradient(
-      ellipse 80% 50% at 50% 100%,
+    radial-gradient(ellipse 80% 50% at 50% 100%,
       rgba(113, 90, 90, 0.12) 0%,
-      transparent 60%
-    ),
-    radial-gradient(
-      ellipse 60% 40% at 20% 0%,
+      transparent 60%),
+    radial-gradient(ellipse 60% 40% at 20% 0%,
       rgba(68, 68, 78, 0.08) 0%,
-      transparent 50%
-    );
+      transparent 50%);
 }
 
 .cta-grid {
@@ -1276,12 +1299,10 @@ tr.skill-item.touch-active {
   transform: translateY(-50%);
   width: 2px;
   height: 70%;
-  background: linear-gradient(
-    180deg,
-    transparent,
-    rgba(113, 90, 90, 0.4),
-    transparent
-  );
+  background: linear-gradient(180deg,
+      transparent,
+      rgba(113, 90, 90, 0.4),
+      transparent);
 }
 
 .cta-label {
@@ -1343,12 +1364,10 @@ tr.skill-item.touch-active {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
   transition: left 0.8s ease;
 }
 
@@ -1377,11 +1396,9 @@ tr.skill-item.touch-active {
 }
 
 .cta-contact-icon {
-  background: linear-gradient(
-    135deg,
-    rgba(113, 90, 90, 0.3),
-    rgba(113, 90, 90, 0.1)
-  );
+  background: linear-gradient(135deg,
+      rgba(113, 90, 90, 0.3),
+      rgba(113, 90, 90, 0.1));
   border: 1px solid rgba(113, 90, 90, 0.2);
 }
 
@@ -1612,6 +1629,7 @@ tr.skill-item.touch-active {
 
 /* Print styles */
 @media print {
+
   .dynamic-island,
   .section-indicator,
   .watermark,
@@ -1619,15 +1637,18 @@ tr.skill-item.touch-active {
   .activity-carousel-wrapper {
     display: none !important;
   }
+
   section {
     min-height: auto !important;
     padding: 40px 20px !important;
     page-break-inside: avoid;
   }
+
   body {
     background: #fff !important;
     color: #000 !important;
   }
+
   .about-section,
   .collab-section,
   .skills-section {
@@ -1646,71 +1667,92 @@ tr.skill-item.touch-active {
   .about-section {
     padding: 60px 16px !important;
   }
+
   .about-btn {
     padding: 12px 20px;
     font-size: 13px;
   }
+
   .collab-card {
     padding: 24px !important;
   }
+
   .collab-card-icon {
     width: 56px !important;
     height: 56px !important;
   }
+
   .collab-card-icon i {
     font-size: 24px !important;
   }
+
   .collab-section {
     padding: 48px 12px !important;
   }
+
   .collab-header {
     margin-bottom: 48px !important;
   }
+
   .cta-section {
     padding: 60px 16px !important;
   }
+
   .cta-input {
     padding: 18px 20px !important;
     font-size: 0.9rem !important;
   }
+
   .cta-submit {
     padding: 18px 32px !important;
     font-size: 0.9rem !important;
   }
+
   .cta-headline {
     font-size: clamp(32px, 10vw, 48px) !important;
   }
+
   .footer-main {
     padding: 40px 16px 30px !important;
   }
+
   .dynamic-island.expand {
     max-width: 240px !important;
   }
+
   .activity-card {
     width: 280px !important;
   }
+
   .activity-carousel-wrapper::before,
   .activity-carousel-wrapper::after {
     width: 40px !important;
   }
+
   .reel-thumbnail {
     height: 160px !important;
   }
+
   .reel-content {
     padding: 20px !important;
   }
+
   .stats-container {
     gap: 28px !important;
   }
+
   .stat-number {
     font-size: 2rem !important;
   }
+
   #skills .skill-item td:first-child {
     font-size: 18px !important;
   }
+
   .skills-section {
     padding: 60px 16px !important;
   }
+
   .about-container {
     gap: 40px !important;
   }
@@ -1721,42 +1763,53 @@ tr.skill-item.touch-active {
   #hero h1 {
     font-size: 2rem !important;
   }
+
   #hero .hero-line {
     font-size: 0.95rem !important;
   }
+
   #hero .hero-line.flex {
     gap: 12px !important;
     margin-top: 32px !important;
   }
+
   .icon {
     width: 36px !important;
     height: 36px !important;
     font-size: 18px !important;
   }
+
   .collab-card h3 {
     font-size: 20px !important;
   }
+
   .collab-card-description {
     font-size: 13px !important;
   }
+
   .collab-card-year {
     font-size: 10px !important;
     padding: 4px 8px !important;
   }
+
   .cta-social-link {
     width: 44px !important;
     height: 44px !important;
   }
+
   .activity-card {
     width: 240px !important;
   }
+
   .reel-play {
     width: 56px !important;
     height: 56px !important;
   }
+
   .reel-play i {
     font-size: 22px !important;
   }
+
   .watermark {
     display: none !important;
   }
@@ -1764,6 +1817,7 @@ tr.skill-item.touch-active {
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
