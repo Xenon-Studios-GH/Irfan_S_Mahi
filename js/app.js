@@ -348,6 +348,35 @@ function throttle(func, limit) {
   if (!form) return;
 
   let isSubmitting = false;
+  let statusTimeoutId = null;
+
+  const statusEl = document.createElement("div");
+  statusEl.className =
+    "cta-status text-[0.85rem] text-light/60 mt-[12px] transition-all duration-300";
+  form.appendChild(statusEl);
+
+  function setStatus(msg, isError) {
+    if (statusTimeoutId) clearTimeout(statusTimeoutId);
+    statusEl.textContent = msg;
+    statusEl.style.color = isError
+      ? "rgba(255, 100, 100, 0.8)"
+      : "rgba(52, 211, 153, 0.8)";
+    statusTimeoutId = setTimeout(() => {
+      if (statusEl.textContent === msg) {
+        statusEl.textContent = "";
+      }
+      statusTimeoutId = null;
+    }, 5000);
+  }
+
+  function flashInput(el) {
+    el.style.borderColor = "rgba(255, 100, 100, 0.5)";
+    el.style.transition = "border-color 0.3s ease";
+    el.focus();
+    setTimeout(() => {
+      el.style.borderColor = "";
+    }, 2000);
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -355,27 +384,30 @@ function throttle(func, limit) {
     if (!btn || isSubmitting) return;
     isSubmitting = true;
 
-    const name = form.querySelector("[name='name']").value.trim();
-    const email = form.querySelector("[name='email']").value.trim();
-    const project = form.querySelector("[name='project']").value.trim();
-    const message = form.querySelector("[name='message']").value.trim();
+    const nameEl = form.querySelector("[name='name']");
+    const emailEl = form.querySelector("[name='email']");
+    const projectEl = form.querySelector("[name='project']");
+    const messageEl = form.querySelector("[name='message']");
 
-    if (!name || !email) {
+    const name = nameEl.value.trim();
+    const email = emailEl.value.trim();
+    const project = projectEl.value.trim();
+    const message = messageEl.value.trim();
+
+    let hasError = false;
+
+    if (!name) {
+      flashInput(nameEl);
+      hasError = true;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      flashInput(emailEl);
+      hasError = true;
+    }
+
+    if (hasError) {
+      setStatus("Please fill in all required fields correctly.", true);
       isSubmitting = false;
-      if (!name) {
-        form.querySelector("[name='name']").style.borderColor =
-          "rgba(255, 100, 100, 0.5)";
-        setTimeout(() => {
-          form.querySelector("[name='name']").style.borderColor = "";
-        }, 1500);
-      }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        form.querySelector("[name='email']").style.borderColor =
-          "rgba(255, 100, 100, 0.5)";
-        setTimeout(() => {
-          form.querySelector("[name='email']").style.borderColor = "";
-        }, 1500);
-      }
       return;
     }
 
@@ -389,17 +421,24 @@ function throttle(func, limit) {
       .filter(Boolean)
       .join("\n");
 
-    const whatsappUrl = `https://wa.me/8801723034312?text=${encodeURIComponent(text)}`;
+    const whatsappUrl =
+      `https://wa.me/8801723034312?text=${encodeURIComponent(text)}`;
 
+    const originalText = btn.textContent;
     btn.textContent = "Opening WhatsApp...";
     btn.disabled = true;
 
     setTimeout(() => {
-      window.open(whatsappUrl, "_blank");
-      btn.textContent = "Send Message \u2192";
+      const win = window.open(whatsappUrl, "_blank");
+      if (!win || win.closed || typeof win.closed === "undefined") {
+        setStatus("Popup blocked. Please allow popups or try again.", true);
+      } else {
+        setStatus("Message sent successfully!", false);
+        form.reset();
+      }
+      btn.textContent = originalText;
       btn.disabled = false;
       isSubmitting = false;
-      form.reset();
     }, 800);
   });
 })();
