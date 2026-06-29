@@ -22,6 +22,13 @@ html {
 body {
   overflow-x: hidden;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, a, li, td, div {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 img {
@@ -509,6 +516,28 @@ img {
     width: 100%;
     text-align: center;
   }
+
+  .workspace-tool {
+    padding: 16px 18px !important;
+    gap: 14px !important;
+  }
+
+  .workspace-tool-icon {
+    width: 44px !important;
+    height: 44px !important;
+  }
+
+  .workspace-tool-icon i {
+    font-size: 1.3rem !important;
+  }
+
+  .workspace-tool-name {
+    font-size: 14px !important;
+  }
+
+  .workspace-tool-desc {
+    font-size: 10px !important;
+  }
 }
 
 /* Skills Section */
@@ -563,7 +592,30 @@ tr.skill-item.touch-active {
   }
 }
 
+/* Tablet landscape & medium screens */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  #hero .hero-image img {
+    max-width: 500px !important;
+  }
+  #hero h1 {
+    font-size: 3rem !important;
+  }
+  .collab-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .collab-card {
+    grid-column: span 3 !important;
+  }
+}
+
 /* Watermark */
+@media (max-width: 768px) {
+  .watermark {
+    display: none !important;
+  }
+}
+
 .watermark-text {
   font-family: "Orbitron", sans-serif;
   transform: rotate(90deg);
@@ -812,6 +864,13 @@ tr.skill-item.touch-active {
     flex-direction: column;
     gap: 48px;
   }
+
+  .stat-label {
+    font-size: 0.6rem;
+    max-width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media (max-width: 480px) {
@@ -823,6 +882,22 @@ tr.skill-item.touch-active {
 /* Activity Carousel */
 #activities {
   background: var(--banner);
+}
+
+@media (max-width: 768px) {
+  #activities {
+    padding: 48px 16px !important;
+  }
+  #activities h2 {
+    font-size: 1.75rem !important;
+  }
+  .activity-carousel-wrapper {
+    padding: 30px 0 !important;
+  }
+  .activity-track {
+    animation-duration: 25s !important;
+    padding: 12px 24px !important;
+  }
 }
 
 .activity-carousel-wrapper {
@@ -1201,6 +1276,22 @@ tr.skill-item.touch-active {
   .cta-socials {
     flex-wrap: wrap;
   }
+
+  .cta-submit-wrapper {
+    width: 100%;
+  }
+
+  .cta-submit {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .button {
+    white-space: normal;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* Footer Section */
@@ -1354,6 +1445,127 @@ tr.skill-item.touch-active {
 .keyboard-nav *:focus {
   outline: 2px solid var(--accent) !important;
   outline-offset: 2px !important;
+}
+
+/* Very small screens (< 400px) - compact mode */
+@media (max-width: 400px) {
+  .about-section {
+    padding: 60px 16px !important;
+  }
+  .about-btn {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+  .collab-card {
+    padding: 24px !important;
+  }
+  .collab-card-icon {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  .collab-card-icon i {
+    font-size: 24px !important;
+  }
+  .collab-section {
+    padding: 48px 12px !important;
+  }
+  .collab-header {
+    margin-bottom: 48px !important;
+  }
+  .cta-section {
+    padding: 60px 16px !important;
+  }
+  .cta-input {
+    padding: 18px 20px !important;
+    font-size: 0.9rem !important;
+  }
+  .cta-submit {
+    padding: 18px 32px !important;
+    font-size: 0.9rem !important;
+  }
+  .cta-headline {
+    font-size: clamp(32px, 10vw, 48px) !important;
+  }
+  .footer-main {
+    padding: 40px 16px 30px !important;
+  }
+  .dynamic-island.expand {
+    max-width: 240px !important;
+  }
+  .activity-card {
+    width: 280px !important;
+  }
+  .activity-carousel-wrapper::before,
+  .activity-carousel-wrapper::after {
+    width: 40px !important;
+  }
+  .reel-thumbnail {
+    height: 160px !important;
+  }
+  .reel-content {
+    padding: 20px !important;
+  }
+  .stats-container {
+    gap: 28px !important;
+  }
+  .stat-number {
+    font-size: 2rem !important;
+  }
+  #skills .skill-item td:first-child {
+    font-size: 18px !important;
+  }
+  .skills-section {
+    padding: 60px 16px !important;
+  }
+  .about-container {
+    gap: 40px !important;
+  }
+}
+
+/* Foldable / ultra-compact (< 360px) */
+@media (max-width: 360px) {
+  #hero h1 {
+    font-size: 2rem !important;
+  }
+  #hero .hero-line {
+    font-size: 0.95rem !important;
+  }
+  #hero .hero-line.flex {
+    gap: 12px !important;
+    margin-top: 32px !important;
+  }
+  .icon {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 18px !important;
+  }
+  .collab-card h3 {
+    font-size: 20px !important;
+  }
+  .collab-card-description {
+    font-size: 13px !important;
+  }
+  .collab-card-year {
+    font-size: 10px !important;
+    padding: 4px 8px !important;
+  }
+  .cta-social-link {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .activity-card {
+    width: 240px !important;
+  }
+  .reel-play {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  .reel-play i {
+    font-size: 22px !important;
+  }
+  .watermark {
+    display: none !important;
+  }
 }
 
 /* Reduced motion */
